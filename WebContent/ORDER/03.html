@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	* {
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.container{
+		width:1000px;
+		max-width:none !important;
+		display: flex
+	}
+	#title{
+		width:120px;
+		height:800px;
+		display:inline-block;
+		border:1px solid grey;
+		margin:5px;
+		padding:5px;
+	}
+	#content{
+		width:700px;
+		display:inline-block;
+		margin:5px;
+	}
+	.br{
+		margin-top:10px;
+	}
+	#buyerInfo table{
+		width:700px;
+	}
+	#buyerInfo2  tr  td{
+		border-top:2px solid grey;
+		border-bottom:1px solid grey;
+		height:50px;
+	}
+	.buy1{
+		text-align:right;
+		border-right:1px solid grey;
+		width:120px;
+		padding:10px;
+		font-weight:bold;
+	}
+	.buy2{
+		padding:10px;
+	}
+	#address1{
+		width:150px;
+		margin-bottom:8px;
+		margin-right:10px;
+	}
+	#address1Btn{
+		border-radius:5px;
+		background-color:white;
+	}
+	#address2{
+		width:300px;
+	}
+	#address3{
+		width:180px;
+	}
+	.phone input{
+		width:80px;
+	}
+	#deilveryRequest{
+		width:500px;
+		height:50px;
+	}
+	.right{
+		float:right;
+		position:relative;
+		right:60px;
+	}
+	.right span{
+		color:grey;
+	}
+	#paymentWindow div{
+		margin-top:10px;
+		width:320px;
+		height:450px;
+		display:inline-block;
+		margin:10px;
+	}
+	#paymentWindow table{
+		width:330px;
+	}
+	#paymentWindow tr td{
+		border-top:2px solid grey;
+		border-bottom:2px solid grey;
+		height:35px;
+	}
+	#paymentWindow td:first-child{
+		text-align:right;
+		padding-right:10px;
+	}
+	#paymentWindow:first-child{
+		margin-right:20px;
+	}
+	
+</style>
+</head>
+<body>
+
+<div class = "container">
+	<div id = "title">
+		<p>주문 관리</p>
+		<p style="color:red">* 스타일 숍 주문</p>
+		<p>* 주문 취소</p>
+		<p>* 교환/환불 신청</p>
+	</div>
+	<div id = "content">
+	<strong>&#124; 수령자 정보</strong>
+	<div class = "br"></div>
+	<form id = "buyerInfo" >
+		<table>
+			<tr>
+				<td>
+					<table id = "buyerInfo2">
+						<tr>
+							<td class = "buy1">이름(회사명)</td>
+							<td class = "buy2"><input type = "text"  name = "name" placeholder = "&nbsp;{받는 분 성함}" /></td>
+						</tr>
+						<tr>
+							<td class = "buy1">주소</td>
+							<td class = "buy2 address">
+								<div>
+									<input id = "address1" type = "text" name = "address1" placeholder = "{우편번호}"  /><button id = "address1Btn">우편번호 검색</button>
+								</div>
+								<div>
+									<input id = "address2" type = "text" name = "address2" placeholder = "{주소}" />
+									<input id = "address3" type = "text" name = "address3" placeholder = "{나머지 주소}"  />								
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class = "buy1">휴대폰 번호</td>
+							<td class = "buy2 phone">
+								<input type = "tel"  name = "phone1" />&#45;
+								<input type = "tel"  name = "phone2" />&#45;
+								<input type = "tel"  name = "phone3" />
+							</td>
+						</tr>
+						<tr>
+							<td class = "buy1">배송 요청사항</td>
+							<td class = "buy2">
+								<div>
+									<input id = "deilveryRequest" type = "text" name = "deilveryRequest" placeholder = "{배송 요청 사항 표기}">						
+								</div>
+								<div class = "right">
+									<span>0자 </span><b> /100자</b>	
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td id = "price">	
+					<strong>&#124; 결제 정보</strong>
+					<div id = "paymentWindow">
+						<div>
+							<strong>결제 방법 및 금액</strong>
+							<table>
+								<tr>
+									<td>
+										<strong>상품가격</strong>
+									</td>
+									<td>
+										<strong>{상품가격 표기}원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>포인트 사용</strong>
+									</td>
+									<td>
+										<strong>{사용 포인트 표기}원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>배송료</strong>
+									</td>
+									<td>
+										<strong>{배송료 표기}원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>총 결제 금액</strong>
+									</td>
+									<td>
+										<strong>{합계 금액 표기}원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>결제 방법</strong>
+									</td>
+									<td>
+										<strong>{신용카드,계좌이체}</strong>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div>
+							<strong>결제 로그</strong>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</div>
+
+</body>
+</html>
