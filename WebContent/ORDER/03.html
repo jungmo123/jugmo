@@ -3,36 +3,129 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
+	// 공통부분 시작
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
-	* {
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	body{
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
-		width:1000px;
+		width:1480px;
 		max-width:none !important;
-		display: flex
+		display: flex;
 	}
 	#title{
-		width:120px;
+		width:220px;
 		height:800px;
 		display:inline-block;
-		border:1px solid grey;
+		background-color:#F2F5F7;
 		margin:5px;
-		padding:5px;
+		padding:20px 0px 20px 20px;
+	}
+	#title p{
+		margin-left:30px;
+		color:#878787;
+	}
+	#title #submenu a{
+		display:block;
+		margin-left:30px;
+		margin-bottom:10px;
+		color:#878787;
+	}
+	#title div:nth-child(2){
+		width:100%;
+	}
+	#title div:nth-child(2) span:nth-child(1){
+		font-size:20px;
+		color:#FF6F43;
+	}
+	#title div:nth-child(2) span:nth-child(2){
+		font-size:20px;
+		color:#727272;
+		font-weight:bold;
+	}
+	hr{
+		display:block;
+		border-color:#BABABA;
+		margin-top:5px;
+		margin-bottom:5px;
+		height:1px;
+	}
+	.activeMenu{
+		color:#FF6F43 !important;
+	}
+	#logo a{
+		font-size:25px;
+		text-decoration:none;
+		color:#83858a;
+		font-weight:bold;
+	}
+	#logo span{
+		color:#FF6F43;
+	}
+	#Admin{
+		margin-bottom:80px;
+	}
+	#Admin h5{
+		color:#828282;
+		font-weight:100;
+		margin:0;
+	}
+	#topmenu{
+		width:300px;
+		margin-top:7px;
+		text-align:right;
+		float:right;
+	}
+	#topmenu a{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;
+	}
+	#topmenu a:nth-child(3){
+		color:#FF6F43;
+	}
+	.btn-group button{
+		width:100px;
+		border:0px;
+		text-align:center;
+	}
+	#menuName{
+		font-size:35px;
+		font-weight:200;
+		color:#5D646E;
+		margin-bottom:0;
+	}
+	#currentIdx{
+		margin-top:5px;
+		font-size:13px;
+		color:#878787;
+	}
+	#AllContent{
+		margin-left:20px;
+		margin-top:40px;
+	}
+	i .far{
+		margin-right:10px;
+		font-size:20px;
+		color:#FF6F43;
+		padding-bottom:5px;
 	}
 	#content{
-		width:700px;
+		width:1200px;
 		display:inline-block;
 		margin:5px;
 	}
-	.br{
-		margin-top:10px;
-	}
+	//공통부분 끝
 	#buyerInfo table{
 		width:700px;
+		margin-bottom:10px;
 	}
 	#buyerInfo2  tr  td{
 		border-top:2px solid grey;
@@ -79,20 +172,37 @@
 	.right span{
 		color:grey;
 	}
-	#paymentWindow div{
+	.br{
+		margin-top:10px;
+	}
+	#paymentWindow > div{
 		margin-top:10px;
 		width:320px;
-		height:450px;
+		height:200px;
 		display:inline-block;
 		margin:10px;
 	}
+	.divLeft{
+		width:45%;
+		float:left;
+		box-sizing:border-box;
+	}
+	.divRight{
+		width:45%;
+		float:right;
+		box-sizing:border-box;
+	}
+	.paymentRight div{
+		margin:10px 0px 0px 0px;
+	}
 	#paymentWindow table{
+		margin-top:10px;
 		width:330px;
 	}
 	#paymentWindow tr td{
 		border-top:2px solid grey;
 		border-bottom:2px solid grey;
-		height:35px;
+		height:33px;
 	}
 	#paymentWindow td:first-child{
 		text-align:right;
@@ -101,17 +211,57 @@
 	#paymentWindow:first-child{
 		margin-right:20px;
 	}
-	
+	#logDiv{
+		position:relative;
+		right:10px;
+	}
+	#manage > div{
+		margin-top:10px;
+		width:320px;
+		height:175px;
+		display:inline-block;
+		margin:10px;
+	}
+	#manage textarea{
+		line-height:23px;
+	}
+	#submitDiv{
+		text-align:center;
+	}
+	#submitDiv input{
+		width:100px;
+		margin-right:5px;
+	}
+	#submitDiv button{
+		width:100px;
+		margin-left:5px;
+		position:relative;
+		left:12px;
+	}
 </style>
 </head>
 <body>
 
 <div class = "container">
-	<div id = "title">
-		<p>주문 관리</p>
-		<p style="color:red">* 스타일 숍 주문</p>
-		<p>* 주문 취소</p>
-		<p>* 교환/환불 신청</p>
+		<div id = "title">
+		<div id = "logo">
+			<a href = "#" ><span>LALA&nbsp;</span>MARKET</a>
+			<div id = "Admin">
+				<h5>Administrator</h5>
+			</div>
+		</div>
+		<div>
+			<span>
+				<i class="far fa-edit"></i>		
+			</span>
+			<span>주문 관리</span>
+			<hr>	
+		</div>
+		<div id = "submenu">
+			<a href = "#"><span class = "activeMenu">스타일 숍 주문</span></a>
+			<a href = "#"><span>주문 취소</span></a>
+			<a href = "#"><span>교환/환불 신청</span></a>		
+		</div>
 	</div>
 	<div id = "content">
 	<strong>&#124; 수령자 정보</strong>
@@ -163,7 +313,7 @@
 				<td id = "price">	
 					<strong>&#124; 결제 정보</strong>
 					<div id = "paymentWindow">
-						<div>
+						<div class = "divtLeft">
 							<strong>결제 방법 및 금액</strong>
 							<table>
 								<tr>
@@ -208,9 +358,52 @@
 								</tr>
 							</table>
 						</div>
-						<div>
+						<div class = "divRight">
 							<strong>결제 로그</strong>
+							<div class = "br"></div>
+							<textarea name = "log" cols = "44" rows = "8">
+결제요청 결과
+
+결과 코드 : 0000(성공)
+
+결과 내용 : 결제 성공
+
+결제 방법 신용 카드
+							</textarea>
 						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>&#124; 관리</strong>
+					<div id = "manage">
+						<div class = "divLeft">
+							<strong>관리 이력</strong>
+							<div class = "br"></div>
+							<textarea name = "log" cols = "44" rows = "6">
+- {배송 요청 사항 표기}
+- 2023.08.16 10:10:35 주문
+- 2023.08.16 10:10:35 결제완료로 수정
+- 2023.08.16 10:10:35 배송 준비 중으로 수정
+- 2023.08.18 10:10:35 배송 완료로 수정
+							</textarea>		
+						</div>
+						<div class = "divRight">
+							<strong>상담 메모</strong>
+							<div class = "br"></div>
+							<textarea name = "log" cols = "44" rows = "6">
+							
+							</textarea>		
+						</div>				
+					</div>			
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id = "submitDiv">
+						<input type = "submit" value = "저장" />
+						<button>취소</button>
 					</div>
 				</td>
 			</tr>

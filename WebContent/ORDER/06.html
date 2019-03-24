@@ -15,7 +15,7 @@
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
-		width:1650px;
+		width:1480px;
 		max-width:none !important;
 		display: flex;
 	}
@@ -207,121 +207,92 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1200px;
+		width:650px;
 		display:inline-block;
 		margin:5px;
 	}
 	//공통부분 끝
-	button,input{
-		height:25px;
-		line-height:3px;
-	}
-	#orderBox{
-		height:50px;
-		border-radius:10px;
-		background-color:#F2F5F7;
-		margin:5px 0px 20px 0px;
-	}
-	#orderBox div{
-		height:50px;
-		padding-top:8px;
-		padding-left:10px;
-	}
-	#orderBox #firstLine div{
-		display:inline-block;
-		float:left;
-		width:33%;
-		padding-bottom:5px;
-	}
-	#orderitem{
-		margin-bottom:10px;
-	}
-	#deliberyForm div{
+	#stateInfo{
 		margin-top:10px;
-		display:inline-block;
 	}
-	#deliberyForm div:nth-child(1) .form-control,#deliberyForm div:nth-child(2) .form-control{
-		display:inline-block;
-		width:150px;
+	#stateInfo span{
+		margin-right:30px;
 	}
-	#deliberyForm div:nth-child(2){
+	#handlingState{
 		float:right;
 	}
-	#deliberyForm b{
-		margin-right:10px;
-	}
-	#orderitem table{
-		width:100%;
-		text-align:center;
-	}
-	#orderitem table tr{
-		border:1px solid lightgrey;
-		height:30px;
-	}
-	#orderitem table th{
-		text-align:center;
-		margin-left:10px;
-	}
-	.br{
+	#apply table{
 		margin-top:10px;
+		width:620px;
 	}
-	select{
-		width:80px;
-	}
-	#item{
-		width:300px;
-		line-height:28px;
-	}
-	#item div{
-		display:inline-block;
-		margin:5px;
-	}
-	#item strong{
-		margin-right:5px;
-	}
-	.itemName{
-		float:left;
-		margin-right:5px;
-	}
-	#image{
-		width:80px;
-		height:100px;
-		border:1px solid black;
-		margin:10px;
-		display:inline-block;
-	}
-	.left1{
-		position:relative;
-		right:1px;
-	}
-	.left2{
-		position:relative;
-		right:8px;		
-	}
-	#itemOption strong{
-		float:left;
-	}
-	#buyerInfo table{
-		width:700px;
-		height:50px;
-	}
-	#buyerInfo2  tr  td{
+	#apply table td{
 		border-top:1px solid grey;
 		border-bottom:1px solid grey;
-		width:50px;
-		height:50px;
+		height:30px;
 	}
-	.buy1{
-		text-align:right;
-		padding-right:10px;
-		font-weight:bold;
+	#firstTable tr td:nth-child(1){
+		width:150px;
+		border-right:1px solid grey;
+		background-color:#F2F5F7;
 	}
-	.buy2{
+	#secondTable tr td:nth-child(1){
+		width:141px;
+		border-right:1px solid grey;
+	}
+	table tr td:nth-child(1) strong{
+		float:right;
+		margin-right:10px;
+	}
+	#secondTable tr td:nth-child(2){
+		padding:10px;
+	}
+	table tr td:nth-child(2) span{
+		margin-left:10px;
+		width:200px;
+	}
+	table tr td:nth-child(2) div:nth-child(2){
+		width:100px;
+		border-left:1px solid grey;
+		border-right:1px solid grey;
+	}
+	table tr td:nth-child(3){
+		width:100px;
+		border-left:1px solid grey;
+		border-right:1px solid grey;
+		background-color:lightgrey;
+		text-align:center;
+	}
+	table tr td:nth-child(4){
 		padding-left:10px;
 	}
-	.phone input{
+	table td div{
+		display:inline-block;
+	}
+	#contentWrite{
+		position:relative;
+		top:2px;
+		height:100%;
+	}
+	#imgtd{
+		padding:9px;
+		line-height:23px;
+	}
+	button{
+		background-color:white;
+	}
+	#submitDiv{
+		margin-top:10px;
+		text-align:center;
+	}
+	#submitDiv button{
 		width:80px;
 	}
+	#delete{
+		float:right;
+		position:relative;
+		right:50px;
+	}
+}
 </style>
 </head>
 <body>
@@ -342,9 +313,9 @@
 			<hr>	
 		</div>
 		<div id = "submenu">
-			<a href = "#"><span class = "activeMenu">스타일 숍 주문</span></a>
+			<a href = "#"><span>스타일 숍 주문</span></a>
 			<a href = "#"><span>주문 취소</span></a>
-			<a href = "#"><span>교환/환불 신청</span></a>		
+			<a href = "#"><span class = "activeMenu">교환/환불 신청</span></a>		
 		</div>
 	</div>
 	<div id = "content">
@@ -398,163 +369,134 @@
 		<div id = "AllContent">
 			<div id = "menuBar">
 				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 주문관리 > 스타일 숍 주문 > 상세보기</p>
+				<p id = "currentIdx">&#124; 주문관리 > 교환/환불 > 상세보기</p>
 			</div>
-			<div id = "deliberyForm">
-				<div>
-					<b>주문 처리 상태</b>
-					<select class = "form-control">
-						<option>배송 준비중</option>
-					</select>
-					<button class = "form-control">교환 진행</button>			
+		<form>
+			<div id = "apply">
+				<div id = "stateInfo">
+					<span>접수일: 2023-10-15:56:10</span>
+					<span>처리 완료일 : -</span>
+					<span id = "handlingState">
+						<span>처리 상태</span>
+						<select>
+							<option>처리 전</option>
+						</select>			
+					</span>
 				</div>
 				<div>
-					<b>운송장번호</b>	
-					<select class = "form-control">
-						<option>택배회사</option>
-					</select>
-					<input class = "form-control" type = "text" name = "deliveryNumber" placeholder = "운송장번호 입력">
-					<button class = "form-control">배송 조회</button> 
-					<button class = "form-control">주문 취소하기</button>		
-				</div>
-			</div>
-				<div id = "orderBox">
-					<div id = "firstLine">
-						<div>
-							<b>주문일 : </b><span> {년,월,일,시,분,초}</span>					
-						</div>
-						<div>
-							<b>주문고객 : </b><span>이름 {ID}</span>
-						</div>
-						<div>
-							<b>주문번호 : </b><span>{주문번호}</span>
-						</div>			
-					</div>
-				</div>
-				<div id = "orderitem">
-				<strong>&#124; 주문 상품</strong>
-					<table class = "br">
+					<table id = "firstTable">
 						<tr>
-							<th>번호</th>
-							<th></th>
-							<th>상품 정보</th>
-							<th>수량</th>
-							<th>합계 금액</th>
-							<th>적립금액</th>
-						</tr>				
+							<td>						
+								<strong>접수번호</strong>
+							</td>
+							<td colspan = "3">
+								<span>{접수 번호}</span>
+							</td>
+						</tr>
 						<tr>
-							<td>
-								<span class = "number">2</span>
+							<td>						
+								<strong>신청 ID</strong>
 							</td>
 							<td>
-								<div id = "image">목록이미지</div>
-							</td>
-							<td id = "item">
 								<div>
-									<strong class = "itemName">상품명</strong>
-									<span>{상품명}</span>
-									<br>
-									<strong class = "itemName">옵션명</strong>
-									<select>
-										<option>선택옵션</option>
-									</select>
-									<br>
-									<strong class = "itemName">옵션명</strong>
-									<select class = "left1">
-										<option>선택옵션</option>
-									</select>						
-								</div>
-								<div>
-									<span>{상품가격}원</span>
-									<br>
-									<span>{옵션가격}원</span>
-									<br>
-									<span>{옵션가격}원</span>					
-							</div>						
-						</td>
-						<td>
-							<strong>{수량}</strong>
-							<span>개</span>					
-						</td>
-						<td>
-							<span>상품가격+<br>옵션가격}<br>*(수량)원</span>
-						</td>
-						<td>
-							<strong>{적립금}</strong><span>원</span>
-						</td>
-					</tr>
-						<tr>
-							<td>
-								<span class = "number">1</span>
+									<span>{아이디}</span>
+								</div>															
 							</td>
 							<td>
-								<div id = "image">목록이미지</div>
-							</td>
-							<td id = "item">
-								<div id = "itemOption">
-									<strong id = "itemName">자수 실크 린넨 브라우스</strong>
-									<br>
-									<strong>색상: </strong>
-									<select>
-										<option>C형</option>
-									</select>
-									<br>
-									<strong>디자인: </strong>
-									<select class = "left2">
-										<option>블랙</option>
-									</select>						
-								</div>
 								<div>
-									<strong>20,000원</strong>
-									<br>
-									<strong>-</strong>
-									<br>
-									<strong>2,000원</strong>					
-							</div>						
-						</td>
-						<td>
-							<strong>1개</strong>		
-						</td>
-						<td>
-							<span>22,000원</span>
-						</td>
-						<td>
-							<strong>220원</strong>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div>
-				<br>
-				<strong>&#124; 배송 정보</strong>
-				<div class = "br"></div>
-				<strong>주문자 정보</strong>	
-				<form id = "buyerInfo" >
-					<table>
-						<tr>
+									<strong>신청자명</strong>
+								</div>															
+							</td>
 							<td>
-								<table id = "buyerInfo2">
-									<tr>
-										<td class = "buy1">이름</td>
-										<td class = "buy2"><input type = "text"  name = "name" placeholder = "&nbsp;{주문자명}" /></td>
-									</tr>
-									<tr>
-										<td class = "buy1">휴대폰 번호</td>
-										<td class = "buy2 phone">
-											<input type = "tel"  name = "phone1" />&#45;
-											<input type = "tel"  name = "phone2" />&#45;
-											<input type = "tel"  name = "phone3" />
-										</td>
-									</tr>
-								</table>
+								<div>
+									<span>{이름}</span>
+								</div>															
+							</td>														
+						</tr>
+						<tr>
+							<td>						
+								<strong>휴대폰 번호</strong>
+							</td>
+							<td colspan = "3">
+								<span>{휴대폰 번호}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>상품</strong>
+							</td>
+							<td colspan = "3">
+								<span>{상품명}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>교환/환불 선택</strong>
+							</td>
+							<td colspan = "3">
+								<span>{선택 사항 표기}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>사유 선택</strong>
+							</td>
+							<td colspan = "3">
+								<span>{선택 사항 표기}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>내용 작성</strong>
+							</td>
+							<td colspan = "3" id = "tdcontentWrite">
+								<textarea id = "contentWrite" cols="65" rows="5">
+	
+	
+  {입력한 내용 표기}</textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>이미지</strong>
+							</td>
+							<td id = "imgtd" colspan = "3">
+								<span> - 20230413_112309641.jpg</span><br>
+								<span> - 20230413_112309642.jpg</span><br>
+								<span> - 20230413_112309643.jpg</span>
+								<button style = "float:right">다운로드</button>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>배송비 결제 금액</strong>
+							</td>
+							<td colspan = "3">
+								<span>{결제된 금액 표기}원</span>
 							</td>
 						</tr>
 					</table>
-				</form>
-			</div>
-	  	</div>		
-		</div>
-  	</div>
+					<table id = "secondTable">
+						<tr>
+							<td>						
+								<strong>처리 사항 메모</strong>
+							</td>
+							<td>
+								<textarea cols="60" rows="5"placeholder= "처리 사항을 작성해주세요"></textarea>
+							</td>
+						</tr>
+					</table>
+					<div id = "submitDiv">
+						<button type = "submit">저장</button>
+						<button type = "button">취소</button>
+						<button type = "button" id = "delete">삭제하기</button>
+					</div>
+				</div>
+			</div> 
+		</form>
+	</div>
+</div>
+</div>
 
 </body>
 </html>

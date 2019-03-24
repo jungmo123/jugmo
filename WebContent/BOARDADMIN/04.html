@@ -3,8 +3,12 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/F247F31F-B608-414D-BF78-424F5507F96B/main.js" charset="UTF-8"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 	// 공통부분 시작
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
@@ -15,7 +19,7 @@
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
-		width:1650px;
+		width:1480px;
 		max-width:none !important;
 		display: flex;
 	}
@@ -118,6 +122,9 @@
 		margin-bottom:10px;
 		color:#878787;
 	}
+	#title #submenu a:nth-child(2),#title #submenu a:nth-child(3){
+		margin-left:40px;
+	}
 	#title div:nth-child(2){
 		width:100%;
 	}
@@ -193,6 +200,7 @@
 	}
 	#currentIdx{
 		margin-top:5px;
+		margin-bottom:20px;
 		font-size:13px;
 		color:#878787;
 	}
@@ -207,120 +215,87 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1200px;
+		width:800px;
 		display:inline-block;
 		margin:5px;
 	}
 	//공통부분 끝
-	button,input{
-		height:25px;
-		line-height:3px;
+	ul{
+		padding-left:15px;
+		font-size:13px;
+		line-height:20px;
 	}
-	#orderBox{
-		height:50px;
-		border-radius:10px;
-		background-color:#F2F5F7;
-		margin:5px 0px 20px 0px;
+	ul ul{
+		padding-left:5px;
 	}
-	#orderBox div{
-		height:50px;
-		padding-top:8px;
-		padding-left:10px;
+	ul li a{
+		color:black;
 	}
-	#orderBox #firstLine div{
-		display:inline-block;
-		float:left;
-		width:33%;
-		padding-bottom:5px;
-	}
-	#orderitem{
-		margin-bottom:10px;
-	}
-	#deliberyForm div{
-		margin-top:10px;
-		display:inline-block;
-	}
-	#deliberyForm div:nth-child(1) .form-control,#deliberyForm div:nth-child(2) .form-control{
-		display:inline-block;
-		width:150px;
-	}
-	#deliberyForm div:nth-child(2){
-		float:right;
-	}
-	#deliberyForm b{
-		margin-right:10px;
-	}
-	#orderitem table{
-		width:100%;
-		text-align:center;
-	}
-	#orderitem table tr{
-		border:1px solid lightgrey;
-		height:30px;
-	}
-	#orderitem table th{
-		text-align:center;
+	#write{
+		margin-top:20px;
 		margin-left:10px;
 	}
-	.br{
-		margin-top:10px;
+	.form-control{
+		display:inline;
 	}
-	select{
-		width:80px;
+	#writeT input[type="text"]{
+		margin-left:20px;
+		width:500px;
 	}
-	#item{
-		width:300px;
-		line-height:28px;
+	#writeC{
+		margin-top:20px;
 	}
-	#item div{
-		display:inline-block;
+	#writeC ul{
+		display:block;
+		border-color:#878787;
+	}
+	#writeC ul .active{
+		border-color:color:#878787;
+	}
+	#writeArea{
+		border-top:0px;
+		border-color:#878787;
+		resize: none;
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		border-left:1px solid #878787;
+		border-top:1px solid #878787;
+		border-right:1px solid #878787;
+	}
+	.nav-tabs > li > a:hover{
+	  background-color: white !important;
+  	  border-radius: 5px 5px 0px 0px;
+  	  border-left:1px solid white;
+	  border-top:1px solid white;
+	  border-right:1px solid white;
+	  border-bottom:1px solid #878787;
+      color:#000;
+	} 
+	textarea:focus {
+	outline:none;
+	}
+	.tab-content{
+		width:100%;
+		height:400px;
+	}
+	.tab-content textarea{
+		border-top:0px;
+		border-left:1px solid #878787;
+	  	border-right:1px solid #878787;
+	 	border-bottom:1px solid #878787;
+	 	padding:10px;
+		width:100%;
+		height:100%;
+		resize: none;
+	}
+	#buttonGroup{
+		margin:25px;
+		text-align:center;
+	}
+	#buttonGroup button{
 		margin:5px;
-	}
-	#item strong{
-		margin-right:5px;
-	}
-	.itemName{
-		float:left;
-		margin-right:5px;
-	}
-	#image{
-		width:80px;
-		height:100px;
-		border:1px solid black;
-		margin:10px;
-		display:inline-block;
-	}
-	.left1{
-		position:relative;
-		right:1px;
-	}
-	.left2{
-		position:relative;
-		right:8px;		
-	}
-	#itemOption strong{
-		float:left;
-	}
-	#buyerInfo table{
-		width:700px;
-		height:50px;
-	}
-	#buyerInfo2  tr  td{
-		border-top:1px solid grey;
-		border-bottom:1px solid grey;
-		width:50px;
-		height:50px;
-	}
-	.buy1{
-		text-align:right;
-		padding-right:10px;
-		font-weight:bold;
-	}
-	.buy2{
-		padding-left:10px;
-	}
-	.phone input{
-		width:80px;
 	}
 </style>
 </head>
@@ -338,13 +313,21 @@
 			<span>
 				<i class="far fa-edit"></i>		
 			</span>
-			<span>주문 관리</span>
+			<span>게시판 관리</span>
 			<hr>	
 		</div>
 		<div id = "submenu">
-			<a href = "#"><span class = "activeMenu">스타일 숍 주문</span></a>
-			<a href = "#"><span>주문 취소</span></a>
-			<a href = "#"><span>교환/환불 신청</span></a>		
+			<a href = "#"><span>공지사항</span></a>
+			<a href = "#"><span>- 스타일 숍 공지</span></a>
+			<a href = "#" class = "activeMenu"><span>- 고객센터 공지</span></a>
+			<a href = "#"><span>커뮤니티</span></a>
+			<a href = "#"><span>상품 문의</span></a>
+			<a href = "#"><span>1:1 문의</span></a>
+			<a href = "#"><span>상품평</span></a>
+			<a href = "#"><span>자주 하는 질문</span></a>
+			<a href = "#"><span>이벤트</span></a>
+			<a href = "#"><span>허위 상품 접수</span></a>
+			<a href = "#"><span>게시판 카테고리 관리</span></a>		
 		</div>
 	</div>
 	<div id = "content">
@@ -398,163 +381,34 @@
 		<div id = "AllContent">
 			<div id = "menuBar">
 				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 주문관리 > 스타일 숍 주문 > 상세보기</p>
+				<p id = "currentIdx">&#124; 게시판 관리 > 공지 사항 > 글쓰기</p>
 			</div>
-			<div id = "deliberyForm">
-				<div>
-					<b>주문 처리 상태</b>
-					<select class = "form-control">
-						<option>배송 준비중</option>
-					</select>
-					<button class = "form-control">교환 진행</button>			
+		<form>
+		<div id = "write">
+			<div id = "writeT">
+				<strong>제목</strong>
+				<input type = "text" class = "form-control" name = "title" />
+				<input id = "importantNotice" type = "checkbox" name = "important" />
+				<label for = "importantNotice">중요 공지</label>
+			</div>
+			<div id = "writeC">
+				<ul class = "nav nav-tabs">
+					<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
+					<li><a data-toggle="tab" href = "#">HTML</a></li>
+				</ul>
+				<div class="tab-content">
+					<textarea name = "document" placeholder="내용을 입력해주세요!"></textarea>
 				</div>
-				<div>
-					<b>운송장번호</b>	
-					<select class = "form-control">
-						<option>택배회사</option>
-					</select>
-					<input class = "form-control" type = "text" name = "deliveryNumber" placeholder = "운송장번호 입력">
-					<button class = "form-control">배송 조회</button> 
-					<button class = "form-control">주문 취소하기</button>		
-				</div>
 			</div>
-				<div id = "orderBox">
-					<div id = "firstLine">
-						<div>
-							<b>주문일 : </b><span> {년,월,일,시,분,초}</span>					
-						</div>
-						<div>
-							<b>주문고객 : </b><span>이름 {ID}</span>
-						</div>
-						<div>
-							<b>주문번호 : </b><span>{주문번호}</span>
-						</div>			
-					</div>
-				</div>
-				<div id = "orderitem">
-				<strong>&#124; 주문 상품</strong>
-					<table class = "br">
-						<tr>
-							<th>번호</th>
-							<th></th>
-							<th>상품 정보</th>
-							<th>수량</th>
-							<th>합계 금액</th>
-							<th>적립금액</th>
-						</tr>				
-						<tr>
-							<td>
-								<span class = "number">2</span>
-							</td>
-							<td>
-								<div id = "image">목록이미지</div>
-							</td>
-							<td id = "item">
-								<div>
-									<strong class = "itemName">상품명</strong>
-									<span>{상품명}</span>
-									<br>
-									<strong class = "itemName">옵션명</strong>
-									<select>
-										<option>선택옵션</option>
-									</select>
-									<br>
-									<strong class = "itemName">옵션명</strong>
-									<select class = "left1">
-										<option>선택옵션</option>
-									</select>						
-								</div>
-								<div>
-									<span>{상품가격}원</span>
-									<br>
-									<span>{옵션가격}원</span>
-									<br>
-									<span>{옵션가격}원</span>					
-							</div>						
-						</td>
-						<td>
-							<strong>{수량}</strong>
-							<span>개</span>					
-						</td>
-						<td>
-							<span>상품가격+<br>옵션가격}<br>*(수량)원</span>
-						</td>
-						<td>
-							<strong>{적립금}</strong><span>원</span>
-						</td>
-					</tr>
-						<tr>
-							<td>
-								<span class = "number">1</span>
-							</td>
-							<td>
-								<div id = "image">목록이미지</div>
-							</td>
-							<td id = "item">
-								<div id = "itemOption">
-									<strong id = "itemName">자수 실크 린넨 브라우스</strong>
-									<br>
-									<strong>색상: </strong>
-									<select>
-										<option>C형</option>
-									</select>
-									<br>
-									<strong>디자인: </strong>
-									<select class = "left2">
-										<option>블랙</option>
-									</select>						
-								</div>
-								<div>
-									<strong>20,000원</strong>
-									<br>
-									<strong>-</strong>
-									<br>
-									<strong>2,000원</strong>					
-							</div>						
-						</td>
-						<td>
-							<strong>1개</strong>		
-						</td>
-						<td>
-							<span>22,000원</span>
-						</td>
-						<td>
-							<strong>220원</strong>
-						</td>
-					</tr>
-				</table>
+			<div id = "buttonGroup">
+				<button type = "submit" class = "btn btn-default">작성 완료</button>
+				<button class = "btn btn-default">작성 취소</button>
 			</div>
-			<div>
-				<br>
-				<strong>&#124; 배송 정보</strong>
-				<div class = "br"></div>
-				<strong>주문자 정보</strong>	
-				<form id = "buyerInfo" >
-					<table>
-						<tr>
-							<td>
-								<table id = "buyerInfo2">
-									<tr>
-										<td class = "buy1">이름</td>
-										<td class = "buy2"><input type = "text"  name = "name" placeholder = "&nbsp;{주문자명}" /></td>
-									</tr>
-									<tr>
-										<td class = "buy1">휴대폰 번호</td>
-										<td class = "buy2 phone">
-											<input type = "tel"  name = "phone1" />&#45;
-											<input type = "tel"  name = "phone2" />&#45;
-											<input type = "tel"  name = "phone3" />
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</form>
-			</div>
-	  	</div>		
 		</div>
-  	</div>
+		</form>
+	</div>
+</div>
+</div>
 
 </body>
 </html>

@@ -15,7 +15,7 @@
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
-		width:1650px;
+		width:1480px;
 		max-width:none !important;
 		display: flex;
 	}
@@ -207,120 +207,137 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1200px;
+		width:1100px;
 		display:inline-block;
 		margin:5px;
 	}
 	//공통부분 끝
-	button,input{
-		height:25px;
-		line-height:3px;
+	#content .container:nth-child(1){
+		margin-top:20px;
 	}
-	#orderBox{
-		height:50px;
+	#search{
+		padding:10px 5px 2px 20px;
+		margin-top:20px;
+		margin-bottom:40px;
+		border:1px solid #F2F5F7;
 		border-radius:10px;
 		background-color:#F2F5F7;
-		margin:5px 0px 20px 0px;
 	}
-	#orderBox div{
-		height:50px;
-		padding-top:8px;
-		padding-left:10px;
+	#input-group{
+		width:500px;
+		display:inline;
 	}
-	#orderBox #firstLine div{
-		display:inline-block;
-		float:left;
-		width:33%;
-		padding-bottom:5px;
-	}
-	#orderitem{
-		margin-bottom:10px;
-	}
-	#deliberyForm div{
-		margin-top:10px;
+	#input1{
+		width:210px;
 		display:inline-block;
 	}
-	#deliberyForm div:nth-child(1) .form-control,#deliberyForm div:nth-child(2) .form-control{
+	#input2{
+		width:210px;
 		display:inline-block;
-		width:150px;
 	}
-	#deliberyForm div:nth-child(2){
-		float:right;
+	#dateForm{
+		width:100%;
+		display:inline-block;		
 	}
-	#deliberyForm b{
+	#dateForm span{
+		position:relative;
+		bottom:11px;
 		margin-right:10px;
 	}
-	#orderitem table{
+	#input-group span{
+		margin-right:0;
+	}
+	#textarea{
+		width:100px;
+	}
+	#keyword{
+		float:right;
+		position:relative;
+		bottom:2px;
+	}
+	#keyword .form-control{
+		display:inline-block;
+	}
+	#keyword select{
+		width:110px;
+		position:relative;
+		top:1px;
+	}
+	#keyword span{
+		position:relative;
+		bottom:1px;
+		right:8px;
+	}
+	#keyword input{
+		width:140px;
+	}
+	.glyphicon-search{
+		border:0px;
+		background-color:#F2F5F7;
+		margin:5px;
+		font-size:25px;
+		color:#878787;
+	}
+	#keyword button{
+		padding:0px 5px 0px 5px;
+		margin:0px 10px 5px 10px;
+	}
+	#resultbox tr:nth-child(1) th{
+		border-top:1px solid #878787;
+	}
+	#resultbox tr:last-child td{
+		border-bottom:1px solid #878787;
+	}
+	#resultbox table{
 		width:100%;
 		text-align:center;
 	}
-	#orderitem table tr{
-		border:1px solid lightgrey;
-		height:30px;
+	#resultbox table tr{
+		border:1px solid #F2F5F7;
+		height:60px;
 	}
-	#orderitem table th{
+	#resultbox table th{
 		text-align:center;
 		margin-left:10px;
 	}
-	.br{
-		margin-top:10px;
+	#Trheader{
+		background-color:#F2F5F7;
 	}
-	select{
-		width:80px;
+	#orderState{
+		margin-bottom:10px;
+		margin-left:10px;
 	}
-	#item{
-		width:300px;
-		line-height:28px;
+	#orderState a{
+		color:#878787;
+		text-decoration:none;
 	}
-	#item div{
-		display:inline-block;
-		margin:5px;
-	}
-	#item strong{
-		margin-right:5px;
-	}
-	.itemName{
-		float:left;
-		margin-right:5px;
-	}
-	#image{
-		width:80px;
-		height:100px;
-		border:1px solid black;
-		margin:10px;
-		display:inline-block;
-	}
-	.left1{
-		position:relative;
-		right:1px;
-	}
-	.left2{
-		position:relative;
-		right:8px;		
-	}
-	#itemOption strong{
-		float:left;
-	}
-	#buyerInfo table{
-		width:700px;
-		height:50px;
-	}
-	#buyerInfo2  tr  td{
-		border-top:1px solid grey;
-		border-bottom:1px solid grey;
-		width:50px;
-		height:50px;
-	}
-	.buy1{
-		text-align:right;
-		padding-right:10px;
+	#orderState span:nth-child(1){
+		margin-right:30px;
+		color:#494949;
 		font-weight:bold;
 	}
-	.buy2{
-		padding-left:10px;
+	.Y{
+		margin:0px 10px 0px 10px;
+		color:#FF6F43;
 	}
-	.phone input{
-		width:80px;
+	.download{
+		float:right;
+		position:relative;
+		bottom:12px;
+		right:10px;
+		margin-right:5px;
+	}
+	#pagination{
+		margin-top:30px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
 	}
 </style>
 </head>
@@ -342,8 +359,8 @@
 			<hr>	
 		</div>
 		<div id = "submenu">
-			<a href = "#"><span class = "activeMenu">스타일 숍 주문</span></a>
-			<a href = "#"><span>주문 취소</span></a>
+			<a href = "#"><span>스타일 숍 주문</span></a>
+			<a href = "#"><span class = "activeMenu">주문 취소</span></a>
 			<a href = "#"><span>교환/환불 신청</span></a>		
 		</div>
 	</div>
@@ -398,163 +415,133 @@
 		<div id = "AllContent">
 			<div id = "menuBar">
 				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 주문관리 > 스타일 숍 주문 > 상세보기</p>
+				<p id = "currentIdx">&#124; 주문관리 > 주문 취소</p>
 			</div>
-			<div id = "deliberyForm">
-				<div>
-					<b>주문 처리 상태</b>
-					<select class = "form-control">
-						<option>배송 준비중</option>
-					</select>
-					<button class = "form-control">교환 진행</button>			
-				</div>
-				<div>
-					<b>운송장번호</b>	
-					<select class = "form-control">
-						<option>택배회사</option>
-					</select>
-					<input class = "form-control" type = "text" name = "deliveryNumber" placeholder = "운송장번호 입력">
-					<button class = "form-control">배송 조회</button> 
-					<button class = "form-control">주문 취소하기</button>		
-				</div>
-			</div>
-				<div id = "orderBox">
-					<div id = "firstLine">
-						<div>
-							<b>주문일 : </b><span> {년,월,일,시,분,초}</span>					
+			<div id = "search">
+				<form id = "dateForm">
+					<span>주문일</span>
+					<div id = "input-group">
+						<div id = "input1">
+							<div class="input-group">
+							 <div class="input-group-addon">
+							 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
+							 </div>
+							<input type="date" class="form-control" id="inputSuccess4">
 						</div>
-						<div>
-							<b>주문고객 : </b><span>이름 {ID}</span>
 						</div>
-						<div>
-							<b>주문번호 : </b><span>{주문번호}</span>
-						</div>			
+						<span>~</span>
+						<div id = "input2">
+							<div class="input-group">
+								 <div class="input-group-addon">
+								 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
+								 </div>
+								<input type="date" class="form-control" id="inputSuccess4">
+							</div>		
+						</div>
+						<div id = "keyword">
+							<span>키워드 검색</span>
+							<select class = "form-control">
+								<option>주문자</option>
+							</select>
+							<input class = "form-control" id = "textarea" type = "text" name = "search" />
+							<button class ="btn btn-default glyphicon glyphicon-search"></button>	
+						</div>
 					</div>
-				</div>
-				<div id = "orderitem">
-				<strong>&#124; 주문 상품</strong>
-					<table class = "br">
-						<tr>
-							<th>번호</th>
-							<th></th>
-							<th>상품 정보</th>
-							<th>수량</th>
-							<th>합계 금액</th>
-							<th>적립금액</th>
-						</tr>				
-						<tr>
-							<td>
-								<span class = "number">2</span>
-							</td>
-							<td>
-								<div id = "image">목록이미지</div>
-							</td>
-							<td id = "item">
-								<div>
-									<strong class = "itemName">상품명</strong>
-									<span>{상품명}</span>
-									<br>
-									<strong class = "itemName">옵션명</strong>
-									<select>
-										<option>선택옵션</option>
-									</select>
-									<br>
-									<strong class = "itemName">옵션명</strong>
-									<select class = "left1">
-										<option>선택옵션</option>
-									</select>						
-								</div>
-								<div>
-									<span>{상품가격}원</span>
-									<br>
-									<span>{옵션가격}원</span>
-									<br>
-									<span>{옵션가격}원</span>					
-							</div>						
-						</td>
-						<td>
-							<strong>{수량}</strong>
-							<span>개</span>					
-						</td>
-						<td>
-							<span>상품가격+<br>옵션가격}<br>*(수량)원</span>
-						</td>
-						<td>
-							<strong>{적립금}</strong><span>원</span>
-						</td>
+				</form>
+			</div>
+			<div id = "orderState">
+				<span>&#124; 결제상태</span>
+				<a href = "#">결제 취소 전</a>
+				<span  class = "Y">&#124;</span>
+				<a href = "#">결제 취소 완료</a>
+				<button class = "btn btn-default download">결제 취소 완료 목록</button>
+				<button class = "btn btn-default download">목록 다운로드</button>
+			</div>
+			<div id = "resultbox">
+				<table>
+					<tr id = "Trheader">
+						<th>선택</th>
+						<th>번호</th>
+						<th>주문일</th>
+						<th>주문 취소일</th>
+						<th>주문 번호</th>
+						<th>주문 상품</th>
+						<th>주문자<br>(아이디)</th>
+						<th>결제 방법</th>
+						<th>결제 금액</th>
 					</tr>
-						<tr>
-							<td>
-								<span class = "number">1</span>
-							</td>
-							<td>
-								<div id = "image">목록이미지</div>
-							</td>
-							<td id = "item">
-								<div id = "itemOption">
-									<strong id = "itemName">자수 실크 린넨 브라우스</strong>
-									<br>
-									<strong>색상: </strong>
-									<select>
-										<option>C형</option>
-									</select>
-									<br>
-									<strong>디자인: </strong>
-									<select class = "left2">
-										<option>블랙</option>
-									</select>						
-								</div>
-								<div>
-									<strong>20,000원</strong>
-									<br>
-									<strong>-</strong>
-									<br>
-									<strong>2,000원</strong>					
-							</div>						
-						</td>
-						<td>
-							<strong>1개</strong>		
-						</td>
-						<td>
-							<span>22,000원</span>
-						</td>
-						<td>
-							<strong>220원</strong>
-						</td>
+					<tr id = "example">
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>{번호}</td>
+						<td>{년-월-일<br>시:분:초}</td>
+						<td>{년-월-일<br>시:분:초}</td>
+						<td>{년+월+일+<br>주문순번}</td>
+						<td>{상품 명}</td>
+						<td>{주문자명}<br>{아이디}</td>
+						<td>{결제 방법}원</td>
+						<td>{결제 금액}원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>3</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>실크 브라우스</td>
+						<td>User03</td>
+						<td>무통장 입금</td>
+						<td>115,000원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>2</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>청바지</td>
+						<td>User02</td>
+						<td>계좌 이체</td>
+						<td>15,000원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>1</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>반팔 티셔츠</td>
+						<td>User01</td>
+						<td>신용카드</td>
+						<td>15,000원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>1</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>반팔 티셔츠</td>
+						<td>User01</td>
+						<td>신용카드</td>
+						<td>15,000원</td>
 					</tr>
 				</table>
 			</div>
-			<div>
-				<br>
-				<strong>&#124; 배송 정보</strong>
-				<div class = "br"></div>
-				<strong>주문자 정보</strong>	
-				<form id = "buyerInfo" >
-					<table>
-						<tr>
-							<td>
-								<table id = "buyerInfo2">
-									<tr>
-										<td class = "buy1">이름</td>
-										<td class = "buy2"><input type = "text"  name = "name" placeholder = "&nbsp;{주문자명}" /></td>
-									</tr>
-									<tr>
-										<td class = "buy1">휴대폰 번호</td>
-										<td class = "buy2 phone">
-											<input type = "tel"  name = "phone1" />&#45;
-											<input type = "tel"  name = "phone2" />&#45;
-											<input type = "tel"  name = "phone3" />
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</form>
+			<div id = "pagination">
+				<div>
+					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+					<a href = "#"  class = "currentPage">1</a>
+					<a href = "#">2</a>
+					<a href = "#">3</a>
+					<a href = "#">4</a>
+					<a href = "#">5</a>
+					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+					<div id = "currentBar"></div>
+				</div>		
 			</div>
-	  	</div>		
 		</div>
   	</div>
+</div>
 
 </body>
 </html>
