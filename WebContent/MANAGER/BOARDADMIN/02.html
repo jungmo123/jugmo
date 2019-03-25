@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
-	// 공통부분 시작
+	/* 공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	*{
 		font-family: 'Noto Sans KR', sans-serif;
@@ -171,8 +171,11 @@
 	#topmenu{
 		width:300px;
 		margin-top:7px;
+		margin-bottom:18px;
 		text-align:right;
 		float:right;
+		position:relative;
+		left:4px;
 	}
 	#topmenu a{
 		color:#878787;
@@ -180,7 +183,13 @@
 		margin-right:10px;
 		text-decoration:none;
 	}
-	#topmenu a:nth-child(3){
+	#topmenu span{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;		
+	}
+	#topmenu a:nth-child(5){
 		color:#FF6F43;
 	}
 	.btn-group button{
@@ -211,22 +220,11 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1100px;
+		width:800px;
 		display:inline-block;
 		margin:5px;
 	}
-	//공통부분 끝
-	ul{
-		padding-left:15px;
-		font-size:13px;
-		line-height:20px;
-	}
-	ul ul{
-		padding-left:5px;
-	}
-	ul li a{
-		color:black;
-	}
+	/* 공통부분 끝 */
 	#searchBar{
 		text-align:center;
 		margin-top:10px;
@@ -250,8 +248,9 @@
 		margin-top:10px;
 		margin-bottom:10px;
 	}
-	table tr th:nth-child(1),table tr td:nth-child(1),table tr th:nth-child(2)
-	,table tr th:nth-child(3){
+	table tr th,
+	table tr td:nth-child(1),
+	table tr td:nth-child(3){
 		text-align:center;
 	}
 	#table tr:nth-child(1) th {
@@ -305,14 +304,13 @@
 		<div id = "submenu">
 			<a href = "#"><span>공지사항</span></a>
 			<a href = "#" ><span>- 스타일 숍 공지</span></a>
-			<a href = "#"><span>- 고객센터 공지</span></a>
-			<a href = "#" class = "activeMenu"><span>커뮤니티</span></a>
+			<a href = "#" class = "activeMenu"><span>- 고객센터 공지</span></a>
+			<a href = "#"><span>커뮤니티</span></a>
 			<a href = "#"><span>상품 문의</span></a>
 			<a href = "#"><span>1:1 문의</span></a>
 			<a href = "#"><span>상품평</span></a>
 			<a href = "#"><span>자주 하는 질문</span></a>
 			<a href = "#"><span>이벤트</span></a>
-			<a href = "#"><span>허위 상품 접수</span></a>
 			<a href = "#"><span>게시판 카테고리 관리</span></a>		
 		</div>
 	</div>
@@ -321,8 +319,10 @@
 			<div id = "topmenu">
 				<span>
 					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
-					<a href = "#">로그아웃</a>		
+					<span>&#124;</span>
+					<a href = "#">로그아웃</a>			
 				</span>		
 			</div>			
 			<div class = "container">
@@ -366,8 +366,8 @@
 	</div>
 		<div id = "AllContent">
 			<div id = "menuBar">
-				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 게시판 관리 > 커뮤니티 목록</p>
+				<p id = "menuName">Board Managament</p>
+				<p id = "currentIdx">&#124; 게시판 관리 > 공지사항</p>
 			</div>
 		<form>
 			<div id = "searchBar">
@@ -383,7 +383,6 @@
 						<tr>
 							<th>번호</th>
 							<th>제목</th>
-							<th>작성자</th>
 							<th>작성일</th>
 						</tr>
 					</thead>
@@ -391,61 +390,56 @@
 						<tr>
 							<td><span class = "badge">중요</span></td>
 							<td>폭설로 인한 배송 지연 안내</td>
-							<td>admin</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
+							<td>10</td>
+							<td>{제목표기}</td>
+							<td>{작성일 표기</td>
+						</tr>
+						<tr>
 							<td>9</td>
-							<td>모바일에서 결제를 하면,상품 주문이 되었다고 했는데.... [1]</td>
-							<td>like9</td>
+							<td>택배사 물량 폭주로 배송 불가 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>8</td>
-							<td>스타일 숍에서 구매를 했는데요. 입금은 어떻게 하면 되나....</td>
-							<td>like8</td>
+							<td>신용카드 무이자 할부 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>7</td>
-							<td>주문 취소 했는데 결제한 카드는 언제 취소되나요?</td>
-							<td>like7</td>
+							<td>신상품 입고 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>6</td>
-							<td>상품평을 등록 하려고 하는데,주문내용을 확인할 수....</td>
-							<td>like6</td>
+							<td>오픈 숍 이용 시 주의사항 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>5</td>
-							<td>주문 취소 했는데 결제한 카드는 언제 취소되나요?</td>
-							<td>like5</td>
+							<td>신용카드 무이자 할부 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>4</td>
-							<td>구매 했는데 적립금이 적립이 안되었어요!</td>
-							<td>like4</td>
+							<td>신상품 입고 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>3</td>
-							<td>포인트는 어떻게 사용하나요?</td>
-							<td>like3</td>
+							<td>오픈 숍 이용 시 주의사항 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>2</td>
-							<td>제주도인데 배송이 되나요?</td>
-							<td>like2</td>
+							<td>1월 신상품 입고 안내</td>
 							<td>2023-01-01</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td>옷이 사진과 많이 다른데 환불이 가능한가요?</td>
-							<td>like1</td>
+							<td>게시글 제목이 표기 됩니다.</td>
 							<td>2023-01-01</td>
 						</tr>
 					</tbody>

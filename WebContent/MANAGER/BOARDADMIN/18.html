@@ -5,17 +5,16 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
-	// 공통부분 시작
+	/* 공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	*{
 		font-family: 'Noto Sans KR', sans-serif;
 	}
-	body{
-		font-family: 'Noto Sans KR', sans-serif;
-	}
 	.container{
-		width:1480px;
+		width:1100px;
 		max-width:none !important;
 		display: flex;
 	}
@@ -118,6 +117,9 @@
 		margin-bottom:10px;
 		color:#878787;
 	}
+	#title #submenu a:nth-child(2),#title #submenu a:nth-child(3){
+		margin-left:40px;
+	}
 	#title div:nth-child(2){
 		width:100%;
 	}
@@ -168,8 +170,11 @@
 	#topmenu{
 		width:300px;
 		margin-top:7px;
+		margin-bottom:18px;
 		text-align:right;
 		float:right;
+		position:relative;
+		left:4px;
 	}
 	#topmenu a{
 		color:#878787;
@@ -177,7 +182,13 @@
 		margin-right:10px;
 		text-decoration:none;
 	}
-	#topmenu a:nth-child(3){
+	#topmenu span{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;		
+	}
+	#topmenu a:nth-child(5){
 		color:#FF6F43;
 	}
 	.btn-group button{
@@ -193,6 +204,7 @@
 	}
 	#currentIdx{
 		margin-top:5px;
+		margin-bottom:10px;
 		font-size:13px;
 		color:#878787;
 	}
@@ -207,48 +219,58 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1100px;
+		width:800px;
 		display:inline-block;
 		margin:5px;
 	}
-	//공통부분 끝
-	#content .container:nth-child(1){
-		margin-top:20px;
-	}
-	#search{
-		padding:10px 5px 2px 20px;
-		margin-top:20px;
-		margin-bottom:40px;
-		border:1px solid #F2F5F7;
-		border-radius:10px;
+	/* 공통부분 끝 */
+	#event{
 		background-color:#F2F5F7;
+		padding:10px;
+		border-radius:10px;
 	}
-	#input-group{
-		width:500px;
-		display:inline;
+	#eventForm div:first-child input{
+		margin:10px 0px 10px 0px;
 	}
-	#input1{
-		width:210px;
-		display:inline-block;
+	#eventForm div:first-child textarea{
+		resize:none;
 	}
-	#input2{
-		width:210px;
-		display:inline-block;
-	}
-	#dateForm{
+	#eventForm{
 		width:100%;
 		display:inline-block;		
 	}
-	#dateForm span{
+	#input-group{
+		display:inline;
+	}
+	#input1,#input2{
+		display:inline-block;
+	}
+	#input1 input,#input2 input{
+	  border: 1px solid #c4c4c4;
+	  border-radius: 5px;
+	  background-color: #fff;
+	  padding: 3px 5px;
+	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+	  width: 120px;
+	}
+	[type="date"] {
+	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+	}
+	[type="date"]::-webkit-inner-spin-button {
+	  display: none;
+	}
+	[type="date"]::-webkit-calendar-picker-indicator {
+	  opacity: 0;
+	}
+	#viewDiv{
+		display:inline-block;
+		float:right;
 		position:relative;
-		bottom:11px;
-		margin-right:10px;
+		top:8px;
 	}
-	#input-group span{
-		margin-right:0;
-	}
-	#textarea{
-		width:100px;
+	#viewDiv input{
+		width:120px;
+		display:inline-block;
 	}
 	#keyword{
 		float:right;
@@ -271,73 +293,110 @@
 	#keyword input{
 		width:140px;
 	}
-	.glyphicon-search{
-		border:0px;
-		background-color:#F2F5F7;
-		margin:5px;
-		font-size:25px;
-		color:#878787;
-	}
 	#keyword button{
 		padding:0px 5px 0px 5px;
 		margin:0px 10px 5px 10px;
 	}
-	#resultbox tr:nth-child(1) th{
-		border-top:1px solid #878787;
-	}
-	#resultbox tr:last-child td{
-		border-bottom:1px solid #878787;
-	}
-	#resultbox table{
-		width:100%;
-		text-align:center;
-	}
-	#resultbox table tr{
-		border:1px solid #F2F5F7;
-		height:60px;
-	}
-	#resultbox table th{
-		text-align:center;
-		margin-left:10px;
-	}
-	#Trheader{
-		background-color:#F2F5F7;
-	}
-	#orderState{
-		margin-bottom:10px;
-		margin-left:10px;
-	}
-	#orderState a{
-		color:#878787;
-		text-decoration:none;
-	}
-	#orderState span:nth-child(1){
-		margin-right:30px;
-		color:#494949;
+	#eventForm div:nth-child(2) span{
 		font-weight:bold;
 	}
-	.Y{
-		margin:0px 10px 0px 10px;
-		color:#FF6F43;
-	}
-	.download{
-		float:right;
-		position:relative;
-		bottom:12px;
-		right:10px;
-		margin-right:5px;
-	}
-	#pagination{
+	#eventBody{
 		margin-top:30px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:10px;
+	}
+	#imgBox{
+		display:inline-block;
+		width:150px;
+		height:100px;
+		padding:5px;
+		border:1px solid #878787;
+		border-radius:10px;
+		text-align:center;
+		background-color:white;
+	}
+	#imgBox span{
+		font-size:12px;
+	}
+	#eventImg input{
+		display:inline-block;
+		width:300px;
+	}
+	#eventImg button{
+		display:inline-block;
+		width:90px;
+	}
+	#eventImg div:nth-child(2){
+		display:inline-block;
+		position:relative;
+		top:30px;
+		left:60px;
+	}
+	a{
+		color:#878787;
+	}
+	#write{
+		margin-top:20px;
+		margin-left:10px;
+	}
+	.form-control{
+		display:inline;
+	}
+	#writeC{
+		margin-top:20px;
+	}
+	#writeC ul{
+		display:block;
+		border-color:#878787;
+	}
+	#writeC ul .active{
+		border-color:color:#878787;
+	}
+	#writeArea{
+		border-top:0px;
+		border-color:#878787;
+		resize: none;
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		border-left:1px solid #878787;
+		border-top:1px solid #878787;
+		border-right:1px solid #878787;
+	}
+	.nav-tabs > li > a:hover{
+	  background-color: white !important;
+  	  border-radius: 5px 5px 0px 0px;
+  	  border-left:1px solid white;
+	  border-top:1px solid white;
+	  border-right:1px solid white;
+	  border-bottom:1px solid #878787;
+      color:#000;
+	} 
+	textarea:focus {
+	outline:none;
+	}
+	.tab-content{
+		width:100%;
+		height:400px;
+	}
+	.tab-content textarea{
+		border-top:0px;
+		border-left:1px solid #878787;
+	  	border-right:1px solid #878787;
+	 	border-bottom:1px solid #878787;
+	 	padding:10px;
+		width:100%;
+		height:100%;
+		resize: none;
+	}
+	#buttonGroup{
+		margin:25px;
 		text-align:center;
 	}
-	#pagination .currentPage{
-		color:#727272 !important;
-		font-weight:bold;
-	}
-	#pagination a{
-		color:#878787;
-		margin-right:10px;
+	#buttonGroup button{
+		margin:5px;
 	}
 </style>
 </head>
@@ -355,13 +414,20 @@
 			<span>
 				<i class="far fa-edit"></i>		
 			</span>
-			<span>주문 관리</span>
+			<span>게시판 관리</span>
 			<hr>	
 		</div>
 		<div id = "submenu">
-			<a href = "#"><span>스타일 숍 주문</span></a>
-			<a href = "#"><span>주문 취소</span></a>
-			<a href = "#"><span class = "activeMenu">교환/환불 신청</span></a>		
+			<a href = "#"><span>공지사항</span></a>
+			<a href = "#"><span>- 스타일 숍 공지</span></a>
+			<a href = "#"><span>- 고객센터 공지</span></a>
+			<a href = "#"><span>커뮤니티</span></a>
+			<a href = "#"><span>상품 문의</span></a>
+			<a href = "#"><span>1:1 문의</span></a>
+			<a href = "#"><span>상품평</span></a>
+			<a href = "#"><span>자주 하는 질문</span></a>
+			<a href = "#" class = "activeMenu"><span>이벤트</span></a>
+			<a href = "#"><span>게시판 카테고리 관리</span></a>		
 		</div>
 	</div>
 	<div id = "content">
@@ -369,8 +435,10 @@
 			<div id = "topmenu">
 				<span>
 					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
-					<a href = "#">로그아웃</a>		
+					<span>&#124;</span>
+					<a href = "#">로그아웃</a>			
 				</span>		
 			</div>			
 			<div class = "container">
@@ -407,138 +475,70 @@
 					</div>
 					<div class="nav-underline"></div>
 				</div>	
-		</div>
+			</div>
 		<div id = "hr" >
 			<hr>
 		</div>
 	</div>
 		<div id = "AllContent">
 			<div id = "menuBar">
-				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 주문관리 >교환/환불</p>
+				<p id = "menuName">Board Managament</p>
+				<p id = "currentIdx">&#124; 게시판관리 > 이벤트 등록/수정하기</p>
 			</div>
-			<div id = "search">
-				<form id = "dateForm">
-					<span>주문일</span>
-					<div id = "input-group">
-						<div id = "input1">
-							<div class="input-group">
-							 <div class="input-group-addon">
-							 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
-							 </div>
-							<input type="date" class="form-control" id="inputSuccess4">
+			<form>
+				<div id = "event">
+					<div id = "eventForm">
+						<div>
+							<input type = "text" name = "title" class = "form-control" placeholder = "제목을 입력하세요!"/>
+							<textarea class = "form-control" placeholder = "이벤트 요약 내용을 입력하세요!"></textarea>
 						</div>
-						</div>
-						<span>~</span>
-						<div id = "input2">
-							<div class="input-group">
-								 <div class="input-group-addon">
-								 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
-								 </div>
-								<input type="date" class="form-control" id="inputSuccess4">
-							</div>		
-						</div>
-						<div id = "keyword">
-							<span>키워드 검색</span>
-							<select class = "form-control">
-								<option>신청자</option>
-							</select>
-							<input class = "form-control" id = "textarea" type = "text" name = "search" />
-							<button class ="btn btn-default glyphicon glyphicon-search"></button>	
+						<div>
+							<span>이벤트 기간</span>
+							<div id = "input-group">
+								<div id = "input1">
+									<input type="date" name="dateofbirth" class="dateInput">
+								</div>
+								<span>~</span>
+								<div id = "input2">
+									<input type="date" name="dateofbirth" class="dateInput">		
+								</div>
+								<div id = "viewDiv">
+									<span>조회수 :</span>
+									<input class = "form-control" type = "text" name = "viewcount" />
+								</div>
+							</div>					
 						</div>
 					</div>
-				</form>
-			</div>
-			<div id = "orderState">
-				<span>&#124; 처리상태</span>
-				<a href = "#">처리 전</a>
-				<span  class = "Y">&#124;</span>
-				<a href = "#">처리 완료</a>
-				<button class = "btn btn-default download">선택항목처리완료 목록</button>
-				<button class = "btn btn-default download">목록 다운로드</button>
-			</div>
-			<div id = "resultbox">
-				<table>
-					<tr id = "Trheader">
-						<th>선택</th>
-						<th>번호</th>
-						<th>주문일</th>
-						<th>주문 취소일</th>
-						<th>주문 번호</th>
-						<th>주문 상품</th>
-						<th>주문자<br>(아이디)</th>
-						<th>결제 방법</th>
-						<th>결제 금액</th>
-					</tr>
-					<tr id = "example">
-						<td><input type= "checkbox" name = "check" /></td>
-						<td>{번호}</td>
-						<td>{년-월-일<br>시:분:초}</td>
-						<td>{년-월-일<br>시:분:초}</td>
-						<td>{년+월+일+<br>주문순번}</td>
-						<td>{상품 명}</td>
-						<td>{주문자명}<br>{아이디}</td>
-						<td>{결제 방법}원</td>
-						<td>{결제 금액}원</td>
-					</tr>
-					<tr>
-						<td><input type= "checkbox" name = "check" /></td>
-						<td>3</td>
-						<td>2023-08-23<br>11:30:21</td>
-						<td>2023-08-24<br>11:30:21</td>
-						<td>230822003</td>
-						<td>실크 브라우스</td>
-						<td>User03</td>
-						<td>무통장 입금</td>
-						<td>115,000원</td>
-					</tr>
-					<tr>
-						<td><input type= "checkbox" name = "check" /></td>
-						<td>2</td>
-						<td>2023-08-23<br>11:30:21</td>
-						<td>2023-08-24<br>11:30:21</td>
-						<td>230822003</td>
-						<td>청바지</td>
-						<td>User02</td>
-						<td>계좌 이체</td>
-						<td>15,000원</td>
-					</tr>
-					<tr>
-						<td><input type= "checkbox" name = "check" /></td>
-						<td>1</td>
-						<td>2023-08-23<br>11:30:21</td>
-						<td>2023-08-24<br>11:30:21</td>
-						<td>230822003</td>
-						<td>반팔 티셔츠</td>
-						<td>User01</td>
-						<td>신용카드</td>
-						<td>15,000원</td>
-					</tr>
-					<tr>
-						<td><input type= "checkbox" name = "check" /></td>
-						<td>1</td>
-						<td>2023-08-23<br>11:30:21</td>
-						<td>2023-08-24<br>11:30:21</td>
-						<td>230822003</td>
-						<td>반팔 티셔츠</td>
-						<td>User01</td>
-						<td>신용카드</td>
-						<td>15,000원</td>
-					</tr>
-				</table>
-			</div>
-			<div id = "pagination">
-				<div>
-					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
-					<a href = "#"  class = "currentPage">1</a>
-					<a href = "#">2</a>
-					<a href = "#">3</a>
-					<a href = "#">4</a>
-					<a href = "#">5</a>
-					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
-					<div id = "currentBar"></div>
-				</div>		
-			</div>
+				</div>
+				<div id = "eventBody">
+					<div id = "eventImg">
+						<div id = "imgBox">
+							<span>등록된 이미지가 없습니다.</span>						
+						</div>
+						<div>
+							<span>목록 이미지 : </span>
+							<input type = "text" name = "imgURL" class = "form-control"/>
+							<button class = "form-control">찾아보기</button>						
+						</div>
+
+					</div>
+					<div id = "write">
+						<div id = "writeC">
+							<ul class = "nav nav-tabs">
+								<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
+								<li><a data-toggle="tab" href = "#">HTML</a></li>
+							</ul>
+							<div class="tab-content">
+								<textarea name = "document" placeholder="내용을 입력해주세요!"></textarea>
+							</div>
+						</div>
+						<div id = "buttonGroup">
+							<button type = "submit" class = "btn btn-default">작성 완료</button>
+							<button class = "btn btn-default">작성 취소</button>
+						</div>
+					</div>					
+				</div>
+			</form>
 		</div>
   	</div>
 </div>

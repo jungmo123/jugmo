@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
-	// 공통부분 시작
+	/* 공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	*{
 		font-family: 'Noto Sans KR', sans-serif;
@@ -168,8 +168,11 @@
 	#topmenu{
 		width:300px;
 		margin-top:7px;
+		margin-bottom:18px;
 		text-align:right;
 		float:right;
+		position:relative;
+		left:4px;
 	}
 	#topmenu a{
 		color:#878787;
@@ -177,7 +180,13 @@
 		margin-right:10px;
 		text-decoration:none;
 	}
-	#topmenu a:nth-child(3){
+	#topmenu span{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;		
+	}
+	#topmenu a:nth-child(5){
 		color:#FF6F43;
 	}
 	.btn-group button{
@@ -207,92 +216,147 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:650px;
+		width:800px;
 		display:inline-block;
 		margin:5px;
 	}
-	//공통부분 끝
-	#stateInfo{
-		margin-top:10px;
+	/* 공통부분 끝 */
+	#content .container:nth-child(1){
+		margin-top:20px;
 	}
-	#stateInfo span{
-		margin-right:30px;
-	}
-	#handlingState{
-		float:right;
-	}
-	#apply table{
-		margin-top:10px;
-		width:620px;
-	}
-	#apply table td{
-		border-top:1px solid grey;
-		border-bottom:1px solid grey;
-		height:30px;
-	}
-	#firstTable tr td:nth-child(1){
-		width:150px;
-		border-right:1px solid grey;
+	#search{
+		padding:10px 5px 2px 20px;
+		margin-top:20px;
+		margin-bottom:40px;
+		border:1px solid #F2F5F7;
+		border-radius:10px;
 		background-color:#F2F5F7;
 	}
-	#secondTable tr td:nth-child(1){
-		width:141px;
-		border-right:1px solid grey;
+	[type="date"] {
+	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
 	}
-	table tr td:nth-child(1) strong{
-		float:right;
-		margin-right:10px;
+	[type="date"]::-webkit-inner-spin-button {
+	  display: none;
 	}
-	#secondTable tr td:nth-child(2){
-		padding:10px;
+	[type="date"]::-webkit-calendar-picker-indicator {
+	  opacity: 0;
 	}
-	table tr td:nth-child(2) span{
-		margin-left:10px;
-		width:200px;
+	#input1 input,#input2 input{
+	  border: 1px solid #c4c4c4;
+	  border-radius: 5px;
+	  background-color: #fff;
+	  padding: 3px 5px;
+	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+	  width: 120px;
 	}
-	table tr td:nth-child(2) div:nth-child(2){
-		width:100px;
-		border-left:1px solid grey;
-		border-right:1px solid grey;
+	#input-group{
+		display:inline;
 	}
-	table tr td:nth-child(3){
-		width:100px;
-		border-left:1px solid grey;
-		border-right:1px solid grey;
-		background-color:lightgrey;
-		text-align:center;
-	}
-	table tr td:nth-child(4){
-		padding-left:10px;
-	}
-	table td div{
+	#input1,#input2{
 		display:inline-block;
 	}
-	#contentWrite{
-		position:relative;
-		top:2px;
-		height:100%;
+	#dateForm{
+		width:100%;
+		display:inline-block;		
 	}
-	#imgtd{
-		padding:9px;
-		line-height:23px;
+	#dateForm span{
+		margin-right:10px;
 	}
-	button{
-		background-color:white;
+	#input-group span{
+		margin-right:0;
 	}
-	#submitDiv{
-		margin-top:10px;
-		text-align:center;
+	#textarea{
+		width:100px;
 	}
-	#submitDiv button{
-		width:80px;
-	}
-	#delete{
+	#keyword{
 		float:right;
 		position:relative;
-		right:50px;
+		bottom:2px;
 	}
-}
+	#keyword .form-control{
+		display:inline-block;
+	}
+	#keyword select{
+		width:110px;
+		position:relative;
+		top:1px;
+	}
+	#keyword span{
+		position:relative;
+		bottom:1px;
+		right:8px;
+	}
+	#keyword input{
+		width:140px;
+	}
+	.glyphicon-search{
+		border:0px;
+		background-color:#F2F5F7;
+		margin:5px;
+		font-size:25px;
+		color:#878787;
+	}
+	#keyword button{
+		padding:0px 5px 0px 5px;
+		margin:0px 10px 5px 10px;
+	}
+	#resultbox tr:nth-child(1) th{
+		border-top:1px solid #878787;
+	}
+	#resultbox tr:last-child td{
+		border-bottom:1px solid #878787;
+	}
+	#resultbox table{
+		width:100%;
+		text-align:center;
+	}
+	#resultbox table tr{
+		border:1px solid #F2F5F7;
+		height:60px;
+	}
+	#resultbox table th{
+		text-align:center;
+		margin-left:10px;
+	}
+	#Trheader{
+		background-color:#F2F5F7;
+	}
+	#orderState{
+		margin-bottom:10px;
+		margin-left:10px;
+	}
+	#orderState a{
+		color:#878787;
+		text-decoration:none;
+	}
+	#orderState span:nth-child(1){
+		margin-right:30px;
+		color:#494949;
+		font-weight:bold;
+	}
+	.Y{
+		margin:0px 10px 0px 10px;
+		color:#FF6F43;
+	}
+	.download{
+		float:right;
+		position:relative;
+		bottom:12px;
+		right:10px;
+		margin-right:5px;
+	}
+	#pagination{
+		margin-top:30px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
+	}
 </style>
 </head>
 <body>
@@ -323,7 +387,9 @@
 			<div id = "topmenu">
 				<span>
 					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
+					<span>&#124;</span>
 					<a href = "#">로그아웃</a>		
 				</span>		
 			</div>			
@@ -369,133 +435,122 @@
 		<div id = "AllContent">
 			<div id = "menuBar">
 				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 주문관리 > 교환/환불 > 상세보기</p>
+				<p id = "currentIdx">&#124; 주문관리 >교환/환불</p>
 			</div>
-		<form>
-			<div id = "apply">
-				<div id = "stateInfo">
-					<span>접수일: 2023-10-15:56:10</span>
-					<span>처리 완료일 : -</span>
-					<span id = "handlingState">
-						<span>처리 상태</span>
-						<select>
-							<option>처리 전</option>
-						</select>			
-					</span>
-				</div>
-				<div>
-					<table id = "firstTable">
-						<tr>
-							<td>						
-								<strong>접수번호</strong>
-							</td>
-							<td colspan = "3">
-								<span>{접수 번호}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>신청 ID</strong>
-							</td>
-							<td>
-								<div>
-									<span>{아이디}</span>
-								</div>															
-							</td>
-							<td>
-								<div>
-									<strong>신청자명</strong>
-								</div>															
-							</td>
-							<td>
-								<div>
-									<span>{이름}</span>
-								</div>															
-							</td>														
-						</tr>
-						<tr>
-							<td>						
-								<strong>휴대폰 번호</strong>
-							</td>
-							<td colspan = "3">
-								<span>{휴대폰 번호}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>상품</strong>
-							</td>
-							<td colspan = "3">
-								<span>{상품명}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>교환/환불 선택</strong>
-							</td>
-							<td colspan = "3">
-								<span>{선택 사항 표기}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>사유 선택</strong>
-							</td>
-							<td colspan = "3">
-								<span>{선택 사항 표기}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>내용 작성</strong>
-							</td>
-							<td colspan = "3" id = "tdcontentWrite">
-								<textarea id = "contentWrite" cols="65" rows="5">
-	
-	
-  {입력한 내용 표기}</textarea>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>이미지</strong>
-							</td>
-							<td id = "imgtd" colspan = "3">
-								<span> - 20230413_112309641.jpg</span><br>
-								<span> - 20230413_112309642.jpg</span><br>
-								<span> - 20230413_112309643.jpg</span>
-								<button style = "float:right">다운로드</button>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>배송비 결제 금액</strong>
-							</td>
-							<td colspan = "3">
-								<span>{결제된 금액 표기}원</span>
-							</td>
-						</tr>
-					</table>
-					<table id = "secondTable">
-						<tr>
-							<td>						
-								<strong>처리 사항 메모</strong>
-							</td>
-							<td>
-								<textarea cols="60" rows="5"placeholder= "처리 사항을 작성해주세요"></textarea>
-							</td>
-						</tr>
-					</table>
-					<div id = "submitDiv">
-						<button type = "submit">저장</button>
-						<button type = "button">취소</button>
-						<button type = "button" id = "delete">삭제하기</button>
+			<div id = "search">
+				<form id = "dateForm">
+					<span>주문일</span>
+					<div id = "input-group">
+						<div id = "input1">
+							<input type="date" name="dateofbirth" class="dateInput">
+						</div>
+						<span>~</span>
+						<div id = "input2">
+							<input type="date" name="dateofbirth" class="dateInput">		
+						</div>
+						<div id = "keyword">
+							<span>키워드 검색</span>
+							<select class = "form-control">
+								<option>신청자</option>
+							</select>
+							<input class = "form-control" id = "textarea" type = "text" name = "search" />
+							<button class ="btn btn-default glyphicon glyphicon-search"></button>	
+						</div>
 					</div>
-				</div>
-			</div> 
-		</form>
-	</div>
-</div>
+				</form>
+			</div>
+			<div id = "orderState">
+				<span>&#124; 처리상태</span>
+				<a href = "#">처리 전</a>
+				<span  class = "Y">&#124;</span>
+				<a href = "#">처리 완료</a>
+				<button class = "btn btn-default download">선택항목처리완료 목록</button>
+				<button class = "btn btn-default download">목록 다운로드</button>
+			</div>
+			<div id = "resultbox">
+				<table>
+					<tr id = "Trheader">
+						<th>선택</th>
+						<th>번호</th>
+						<th>주문일</th>
+						<th>주문 취소일</th>
+						<th>주문 번호</th>
+						<th>주문 상품</th>
+						<th>주문자<br>(아이디)</th>
+						<th>결제 방법</th>
+						<th>결제 금액</th>
+					</tr>
+					<tr id = "example">
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>{번호}</td>
+						<td>{년-월-일<br>시:분:초}</td>
+						<td>{년-월-일<br>시:분:초}</td>
+						<td>{년+월+일+<br>주문순번}</td>
+						<td>{상품 명}</td>
+						<td>{주문자명}<br>{아이디}</td>
+						<td>{결제 방법}원</td>
+						<td>{결제 금액}원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>3</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>실크 브라우스</td>
+						<td>User03</td>
+						<td>무통장 입금</td>
+						<td>115,000원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>2</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>청바지</td>
+						<td>User02</td>
+						<td>계좌 이체</td>
+						<td>15,000원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>1</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>반팔 티셔츠</td>
+						<td>User01</td>
+						<td>신용카드</td>
+						<td>15,000원</td>
+					</tr>
+					<tr>
+						<td><input type= "checkbox" name = "check" /></td>
+						<td>1</td>
+						<td>2023-08-23<br>11:30:21</td>
+						<td>2023-08-24<br>11:30:21</td>
+						<td>230822003</td>
+						<td>반팔 티셔츠</td>
+						<td>User01</td>
+						<td>신용카드</td>
+						<td>15,000원</td>
+					</tr>
+				</table>
+			</div>
+			<div id = "pagination">
+				<div>
+					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+					<a href = "#"  class = "currentPage">1</a>
+					<a href = "#">2</a>
+					<a href = "#">3</a>
+					<a href = "#">4</a>
+					<a href = "#">5</a>
+					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+					<div id = "currentBar"></div>
+				</div>		
+			</div>
+		</div>
+  	</div>
 </div>
 
 </body>

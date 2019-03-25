@@ -62,15 +62,31 @@
 		margin-top:7px;
 		text-align:right;
 	}
+	#topmenu{
+		width:300px;
+		margin-top:7px;
+		margin-bottom:18px;
+		text-align:right;
+		float:right;
+		position:relative;
+		left:4px;
+	}
 	#topmenu a{
-		color:black;
+		color:#878787;
 		font-size:11px;
 		margin-right:10px;
+		text-decoration:none;
+	}
+	#topmenu span{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;		
 	}
 	#topmenu a:hover{
 		text-decoration:none;
 	}
-	#topmenu a:nth-child(3){
+	#topmenu a:nth-child(5){
 		color:#FF6F43;
 	}
 	.btn-group{
@@ -318,9 +334,11 @@
 		</div>
 		<div id = "topmenu">
 			<span>
-				<a href = "#">이용자 화면 보기</a>
-				<a href = "#">사내 게시판</a>
-				<a href = "#">로그아웃</a>		
+					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
+					<a href = "#">사내 게시판</a>
+					<span>&#124;</span>
+					<a href = "#">로그아웃</a>			
 			</span>		
 		</div>
 	</div>

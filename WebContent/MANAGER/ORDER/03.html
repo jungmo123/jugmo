@@ -6,12 +6,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
-	// 공통부분 시작
+	/* 공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	*{
-		font-family: 'Noto Sans KR', sans-serif;
-	}
-	body{
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
@@ -79,8 +76,11 @@
 	#topmenu{
 		width:300px;
 		margin-top:7px;
+		margin-bottom:18px;
 		text-align:right;
 		float:right;
+		position:relative;
+		left:4px;
 	}
 	#topmenu a{
 		color:#878787;
@@ -88,7 +88,13 @@
 		margin-right:10px;
 		text-decoration:none;
 	}
-	#topmenu a:nth-child(3){
+	#topmenu span{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;		
+	}
+	#topmenu a:nth-child(5){
 		color:#FF6F43;
 	}
 	.btn-group button{
@@ -118,11 +124,11 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1200px;
+		width:800px;
 		display:inline-block;
 		margin:5px;
 	}
-	//공통부분 끝
+	/* 공통부분 끝 */
 	#buyerInfo table{
 		width:700px;
 		margin-bottom:10px;

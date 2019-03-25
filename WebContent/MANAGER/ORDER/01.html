@@ -6,12 +6,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
-	// 공통부분 시작
+	/* 공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	*{
-		font-family: 'Noto Sans KR', sans-serif;
-	}
-	body{
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
@@ -168,8 +165,11 @@
 	#topmenu{
 		width:300px;
 		margin-top:7px;
+		margin-bottom:18px;
 		text-align:right;
 		float:right;
+		position:relative;
+		left:4px;
 	}
 	#topmenu a{
 		color:#878787;
@@ -177,7 +177,13 @@
 		margin-right:10px;
 		text-decoration:none;
 	}
-	#topmenu a:nth-child(3){
+	#topmenu span{
+		color:#878787;
+		font-size:11px;
+		margin-right:10px;
+		text-decoration:none;		
+	}
+	#topmenu a:nth-child(5){
 		color:#FF6F43;
 	}
 	.btn-group button{
@@ -207,11 +213,11 @@
 		padding-bottom:5px;
 	}
 	#content{
-		width:1100px;
+		width:800px;
 		display:inline-block;
 		margin:5px;
 	}
-	//공통부분 끝
+	/* 공통부분 끝 */
 	#content .container:nth-child(1){
 		margin-top:20px;
 	}
@@ -224,24 +230,33 @@
 		background-color:#F2F5F7;
 	}
 	#input-group{
-		width:500px;
 		display:inline;
 	}
-	#input1{
-		width:210px;
+	#input1,#input2{
 		display:inline-block;
 	}
-	#input2{
-		width:210px;
-		display:inline-block;
+	#input1 input,#input2 input{
+	  border: 1px solid #c4c4c4;
+	  border-radius: 5px;
+	  background-color: #fff;
+	  padding: 3px 5px;
+	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+	  width: 120px;
+	}
+	[type="date"] {
+	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+	}
+	[type="date"]::-webkit-inner-spin-button {
+	  display: none;
+	}
+	[type="date"]::-webkit-calendar-picker-indicator {
+	  opacity: 0;
 	}
 	#dateForm{
 		width:100%;
 		display:inline-block;		
 	}
-	#dateForm span{
-		position:relative;
-		bottom:11px;
+	#dateForm span:first-child{
 		margin-right:10px;
 	}
 	#input-group span{
@@ -368,8 +383,10 @@
 			<div id = "topmenu">
 				<span>
 					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
-					<a href = "#">로그아웃</a>		
+					<span>&#124;</span>
+					<a href = "#">로그아웃</a>			
 				</span>		
 			</div>			
 			<div class = "container">
@@ -421,21 +438,12 @@
 					<span>주문일</span>
 					<div id = "input-group">
 						<div id = "input1">
-							<div class="input-group">
-							 <div class="input-group-addon">
-							 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
-							 </div>
-							<input type="date" class="form-control" id="inputSuccess4">
+							<input type="date" name="dateofbirth" class="dateInput">
 						</div>
 						</div>
 						<span>~</span>
 						<div id = "input2">
-							<div class="input-group">
-								 <div class="input-group-addon">
-								 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
-								 </div>
-								<input type="date" class="form-control" id="inputSuccess4">
-							</div>		
+							<input type="date" name="dateofbirth" class="dateInput">
 						</div>
 						<div id = "keyword">
 							<span>키워드 검색</span>

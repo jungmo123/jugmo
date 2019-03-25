@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	#pim .modal-header{
+		border:0;
+	}
+	#pim .modal-body{
+		padding:0px 15px 0px 15px;
+	}
+	#pim .modal-body textarea{
+		resize: none;
+	}
+	#pim .modal-footer{
+		border:0;
+		text-align:center;
+	}
+	#pim .modal-title{
+		font-weight:bold;
+	}
+	#pim hr{
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+
+	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#pim">Modal</button>
+	
+	<div class = "modal fade" id  ="pim">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;상품 문의 답변/수정하기</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<textarea class = "form-control" cols = "20" rows = "6" name = "modifyComment"></textarea>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
