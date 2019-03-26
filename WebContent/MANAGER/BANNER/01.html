@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel ="stylesheet" href = "../CSS/Navigation.css" />
+<style>
+	#AllContent strong{
+		color:#727272;
+	}
+	.nav{
+		margin-top:30px;
+	}
+	.nav a{
+		color:#878787;
+	}
+	.nav .active a{
+		color:#727272;
+		font-weight:bold;
+	}
+	#eventType,#bannerTitle{
+		margin-top:10px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
+	}
+	#eventType input[type='radio']{
+		margin-left:30px;
+	}
+	#eventType label{
+		color:#878787;
+	}
+	#bannerTitle{
+		margin-bottom:30px;
+	}
+	#bannerTitle > button{
+		float:right;
+		width:80px;
+		height:25px;
+		padding:0;
+		border-radius:20px;
+		position:relative;
+		bottom:3px;
+		color:#878787;
+	}
+	.bannerBody{
+		color:#878787;
+	}
+	.bannerBody div > div:first-child{
+		text-align:center;
+	}
+	.bannerBody #banner1{
+		display:inline-block;
+		width:80%;
+		height:100px;
+		border:1px solid #878787;;
+	}
+	.bannerBody div > div:first-child{
+		height:100px;
+		margin-bottom:20px;
+	}
+	.bannerBody div > div:last-child input[type='text']{
+		display:inline-block;
+		width:300px;
+		height:20px;
+	}
+	.bannerBody div > div:last-child button{
+		position:relative;
+		bottom:2px;
+		width:70px;
+		height:20px;
+		padding:0;
+		font-size:12px;
+		color:#878787;
+		margin-left:5px;
+	}
+	i{
+		margin-right:5px;
+	}
+	.bannerBody p > span{
+		font-size:12px;
+		width:100px;
+		margin-right:5px;
+	}
+	.bannerBody p{
+		position:relative;
+		left:85px;
+	}
+	.bannerBody p:nth-child(2) input[type='text']{
+		margin:0px 5px 0px 11px;
+	}
+	.bannerBody hr{
+		margin:20px 0px 20px 0px;
+	}
+	#buttonBox{
+		float:right;
+	}
+</style>
+</head>
+<body>
+
+<div class = "container">
+	<div id = "title">
+		<div id = "logo">
+			<a href = "#" ><span>LALA&nbsp;</span>MARKET</a>
+			<div id = "Admin">
+				<h5>Administrator</h5>
+			</div>
+		</div>
+		<div>
+			<span>
+				<i class="far fa-edit"></i>		
+			</span>
+			<span>베너 관리</span>
+			<hr>	
+		</div>
+		<div id = "submenu">
+			<a href = "#" class = "activeMenu"><span>GNB</span></a>
+		</div>
+	</div>
+	<div id = "content">
+		<div id = "navBar">
+			<div id = "topmenu">
+				<span>
+					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
+					<a href = "#">사내 게시판</a>
+					<span>&#124;</span>
+					<a href = "#">로그아웃</a>		
+				</span>		
+			</div>			
+			<div class = "container">
+				<div id = "nav" class = "btn-group">
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">주문관리</button>
+					</div>
+					<div class = "btn-group drop">
+						<button type = "button" class = "btn btn-default dropdown-toggle" type = "button" data-toggle="dropdown">게시판 관리</button>
+						<ul class= "dropdown-menu">
+							<li><a href = "#">서브메뉴 표기</a></li>
+							<li><a href = "#">서브메뉴 표기</a></li>
+							<li><a href = "#">서브메뉴 표기</a></li>
+							<li><a href = "#">서브메뉴 표기</a></li>
+						</ul>
+					</div>
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">회원 관리</button>
+					</div>
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">메인 관리</button>
+					</div>
+					<div class = "btn-group is-current">
+						<button type = "button" class = "btn btn-default">배너 관리</button>
+					</div>
+					<div class = "btn-group ">
+						<button type = "button" class = "btn btn-default">상품 관리</button>
+					</div>
+					<div class = "btn-group ">
+						<button type = "button" class = "btn btn-default">통계</button>
+					</div>
+					<div class = "btn-group ">
+						<button type = "button" class = "btn btn-default">정책 관리</button>
+					</div>
+					<div class="nav-underline"></div>
+				</div>	
+			</div>
+		<div id = "hr" >
+			<hr>
+		</div>
+	</div>
+		<div id = "AllContent">
+			<div id = "menuBar">
+				<p id = "menuName">Banner Managament</p>
+				<p id = "currentIdx">&#124; 배너관리 > GNB</p>
+			</div>
+			<ul class = "nav nav-tabs">
+				<li class = "active"><a href = "#home" data-toggle = "tab">상단 배너</a>
+				<li><a data-toggle="tab" href = "#menu1">우측 배너</a>
+				<li><a data-toggle="tab" href = "#menu2">좌측 배너</a>
+				<li><a data-toggle="tab" href = "#menu3">하단 배너</a>
+			</ul>
+			<div id = "eventType">
+				<strong>노출 방식</strong>
+				<input type="radio" name="eventType" id="slide" class="custom-control-input">
+				<label class="custom-control-label" for="slide">슬라이드</label>
+				<input type="radio" name="eventType" id="random" class="custom-control-input">
+				<label class="custom-control-label" for="random">랜덤</label>
+				<input type="radio" name="eventType" id="unvisible" class="custom-control-input">
+				<label class="custom-control-label" for="unvisible">노출되지 않음</label>				
+			</div>
+			<div id = "bannerTitle">
+				<strong>등록된 배너</strong>
+				<button class = "btn btn-default">배너 추가</button>
+			</div>
+			<div class = "bannerBody">
+				<div>
+					<div>
+						<input type = "checkbox" name = "banner1" />
+						<div id = "banner1"></div>
+					</div>
+					<div>
+						<p>
+							<span>배너 이미지</span>
+							<input type = "text" class = "form-control"  name = "bannerAddress"/>
+							<button class = "btn btn-default">찾아보기</button>
+						</p>
+						<p>
+							<span>링크 주소</span>
+							<input type = "text" class = "form-control"  name = "linkAddress"/>
+							<input type="radio" name="bannerLink" id="blank" class="custom-control-input">
+							<label class="custom-control-label" for="blank">새 창(Blank)</label>
+							<input type="radio" name="bannerLink" id="self" class="custom-control-input">
+							<label class="custom-control-label" for="self">본 창(Self)</label>
+						</p>
+						<p>
+							<span>대체 텍스트</span>
+							<input type = "text" class = "form-control"  name = "bannerAddress"/>
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div>
+					<div>
+						<input type = "checkbox" name = "banner1" />
+						<div id = "banner1"></div>
+					</div>
+					<div>
+						<p>
+							<span>배너 이미지</span>
+							<input type = "text" class = "form-control"  name = "bannerAddress"/>
+							<button class = "btn btn-default">찾아보기</button>
+						</p>
+						<p>
+							<span>링크 주소</span>
+							<input type = "text" class = "form-control"  name = "linkAddress"/>
+							<input type="radio" name="bannerLink" id="blank" class="custom-control-input">
+							<label class="custom-control-label" for="blank">새 창(Blank)</label>
+							<input type="radio" name="bannerLink" id="self" class="custom-control-input">
+							<label class="custom-control-label" for="self">본 창(Self)</label>
+						</p>
+						<p>
+							<span>대체 텍스트</span>
+							<input type = "text" class = "form-control"  name = "bannerAddress"/>
+						</p>
+					</div>				
+				</div>
+				<hr>
+			</div>
+			<div id = "buttonBox">
+				<button class = "btn btn-default">선택 삭제</button>
+				<button class = "btn btn-default">선택 수정</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

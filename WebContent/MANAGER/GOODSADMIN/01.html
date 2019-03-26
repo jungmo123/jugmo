@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">>
+<link rel ="stylesheet" href = "../CSS/Navigation.css" />
+<style>
+	body{
+		color:#878787;
+	}
+	#stateInfo{
+		margin-top:10px;
+	}
+	#stateInfo select{
+		margin-left:33px;
+	}
+	#stateInfo input{
+		width:200px;
+	}
+	#apply table{
+		margin-top:10px;
+		width:800px;
+	}
+	#apply table td{
+		border-top:1px solid grey;
+		border-bottom:1px solid grey;
+		height:50px;
+	}
+	#firstTable tr td:nth-child(1){
+		color:#727272;
+	}
+	#firstTable tr:first-child td:nth-child(2) input,
+	#firstTable tr:first-child td:nth-child(4) input{
+		width:100px;
+	}
+	#firstTable tr td:nth-child(6) input{
+		width:50px;
+	}
+	#firstTable tr td:nth-child(1),
+	#firstTable tr td:nth-child(3){
+		width:120px;
+		background-color:#F2F5F7;
+	}
+	#firstTable tr td:nth-child(2),
+	#firstTable tr td:nth-child(4){
+		width:140px;
+	}
+	#firstTable tr td:nth-child(5){
+		width:140px;
+		background-color:#F2F5F7;
+	}
+	#firstTable tr td:nth-child(6){
+		width:100px;
+	}
+	#firstTable tr td{
+		text-align:center;
+	}
+	#firstTable tr:first-child td input{
+		margin-right:10px;
+	}
+	#firstTable tr:nth-child(2) td p,
+	#firstTable tr:nth-child(3) td p{
+		margin:10px 0px 10px 0px;
+	}
+	#firstTable tr:nth-child(2) td input[type='radio'],
+	#firstTable tr:nth-child(3) td input[type='radio']{
+		margin-left:30px;
+	}
+	#firstTable tr:nth-child(2) td input[type='number']{
+		width:40px;
+		margin-right:5px;
+	}
+	#firstTable tr:nth-child(3) td input[type='number']{
+		width:70px;
+		margin-right:5px;
+	}
+</style>
+<body>
+
+<div class = "container">
+	<div id = "title">
+		<div id = "logo">
+			<a href = "#" ><span>LALA&nbsp;</span>MARKET</a>
+			<div id = "Admin">
+				<h5>Administrator</h5>
+			</div>
+		</div>
+		<div>
+			<span>
+				<i class="far fa-edit"></i>		
+			</span>
+			<span>상품 관리</span>
+			<hr>	
+		</div>
+		<div id = "submenu">
+			<a href = "#" class = "activeMenu"><span>상품 등록</span></a>
+			<a href = "#"><span>상품 목록</span></a>
+			<a href = "#"><span>카테고리 관리</span></a>
+		</div>
+	</div>
+	<div id = "content">
+		<div>
+			<div id = "topmenu">
+				<span>
+					<a href = "#">이용자 화면 보기</a>
+					<span>&#124;</span>
+					<a href = "#">사내 게시판</a>
+					<span>&#124;</span>
+					<a href = "#">로그아웃</a>		
+				</span>		
+			</div>			
+			<div class = "container">
+				<div id = "nav" class = "btn-group">
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">주문관리</button>
+					</div>
+					<div class = "btn-group drop">
+						<button type = "button" class = "btn btn-default dropdown-toggle" type = "button" data-toggle="dropdown">게시판 관리</button>
+						<ul class= "dropdown-menu">
+							<li><a href = "#">서브메뉴 표기</a></li>
+							<li><a href = "#">서브메뉴 표기</a></li>
+							<li><a href = "#">서브메뉴 표기</a></li>
+							<li><a href = "#">서브메뉴 표기</a></li>
+						</ul>
+					</div>
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">회원 관리</button>
+					</div>
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">메인 관리</button>
+					</div>
+					<div class = "btn-group">
+						<button type = "button" class = "btn btn-default">배너 관리</button>
+					</div>
+					<div class = "btn-group is-current">
+						<button type = "button" class = "btn btn-default">상품 관리</button>
+					</div>
+					<div class = "btn-group ">
+						<button type = "button" class = "btn btn-default">통계</button>
+					</div>
+					<div class = "btn-group ">
+						<button type = "button" class = "btn btn-default">정책 관리</button>
+					</div>
+					<div class="nav-underline"></div>
+				</div>	
+			</div>
+		<div id = "hr" >
+			<hr>
+		</div>
+	</div>
+		<div id = "AllContent">
+			<div id = "menuBar">
+				<p id = "menuName">Product Managament</p>
+				<p id = "currentIdx">&#124; 상품 관리 > 상품 등록</p>
+			</div>
+			<form>
+				<div id = "apply">
+					<div id = "stateInfo">
+						<strong>상품 정보 입력</strong>
+						<select>
+							<option>카테고리 선택</option>
+						</select>
+						<input type = "text" name = "productName" placeholder = "상품명을 입력하세요." />
+					</div>			
+					<div>
+						<table id = "firstTable">
+							<tr>
+								<td>						
+									<strong>판매 가격</strong>
+								</td>
+								<td>
+									<span><input type = "number" name = "price1">원</span>
+								</td>
+								<td>
+									<strong>정상 가격</strong>
+								</td>
+								<td>
+									<span><input type = "number" name = "price2">원</span>
+								</td>
+								<td>
+									<strong>최대 구매 개수</strong>
+								</td>
+								<td>
+									<span><input type = "number" name = "number">개</span>
+								</td>
+							</tr>
+							<tr>
+								<td>						
+									<strong>적립 포인트</strong>
+								</td>
+								<td colspan = "5">
+									<p>
+										<input type="radio" name="pointType" id="basic" class="custom-control-input">
+										<label class="custom-control-label" for="basic">기본 포인트 적용</label>
+										<input type="radio" name="pointType" id="exception" class="custom-control-input">
+										<label class="custom-control-label" for="exception">별도 포인트 적용 : 판매 가격의</label>
+										<input type = "number" name = "pointPercent" /><span>%</span>
+										<input type="radio" name="pointType" id="noPoint" class="custom-control-input">
+										<label class="custom-control-label" for="noPoint">포인트 없음</label>
+									</p>														
+								</td>												
+							</tr>
+							<tr>
+								<td>						
+									<strong>배송비</strong>
+								</td>
+								<td colspan = "5">
+									<p>
+										<input type="radio" name="deliveryCharge" id="basic" class="custom-control-input">
+										<label class="custom-control-label" for="basic">기본 배송비 적용</label>
+										<input type="radio" name="deliveryCharge" id="exception" class="custom-control-input">
+										<label class="custom-control-label" for="exception">별도 배송비 적용 : </label>
+										<input type = "number" name = "pointPercent" /><span>원</span>
+										<input type="radio" name="deliveryCharge" id="free" class="custom-control-input">
+										<label class="custom-control-label" for="free">무료 배송</label>
+									</p>														
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
