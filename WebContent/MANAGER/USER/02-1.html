@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	#date .modal-dialog{
+		width:200px;
+	}
+	#date .modal-header{
+		border:0;
+	}
+	#date .modal-body{
+		padding:0px 15px 0px 15px;
+	}
+	#date .modal-body div{
+		margin-bottom:10px;
+	}
+	#closeButton{
+		text-align:center;
+	}
+	#closeButton button{
+		width:100px;
+	}
+	#date .modal-body textarea{
+		resize: none;
+	}
+	#date .modal-footer{
+		border:0;
+		text-align:center;
+	}
+	#date .modal-title{
+		font-weight:bold;
+	}
+	#date hr{
+		margin:5px;
+	}
+	textarea{
+		text-align:center;
+	}
+</style>
+</head>
+<body>
+
+	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#date">Modal</button>
+	
+	<div class = "modal fade" id ="date">
+		<div class = "modal-dialog modal-sm">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;방문일 보기</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<div>
+						<strong>계정 : </strong>
+						<span>person</span>					
+					</div>
+					<textarea rows = "13">
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+2023-08-23 12:30:20
+</textarea>			<div id = "closeButton">
+						<button class = "btn btn-default">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

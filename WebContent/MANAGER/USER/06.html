@@ -3,10 +3,8 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 	/* 공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
@@ -117,9 +115,6 @@
 		margin-bottom:10px;
 		color:#878787;
 	}
-	#title #submenu a:nth-child(2),#title #submenu a:nth-child(3){
-		margin-left:40px;
-	}
 	#title div:nth-child(2){
 		width:100%;
 	}
@@ -224,114 +219,31 @@
 		margin:5px;
 	}
 	/* 공통부분 끝 */
-	#event{
-		background-color:#F2F5F7;
-		padding:10px;
-		border-radius:10px;
+	#mailForm{
+		margin-top:20px;
 	}
-	#eventForm div:first-child input{
-		margin:10px 0px 10px 0px;
-	}
-	#eventForm div:first-child textarea{
-		resize:none;
-	}
-	#eventForm{
-		width:100%;
-		display:inline-block;		
-	}
-	#input-group{
-		display:inline;
-	}
-	#input1,#input2{
-		display:inline-block;
-	}
-	#input1 input,#input2 input{
-	  border: 1px solid #c4c4c4;
-	  border-radius: 5px;
-	  background-color: #fff;
-	  padding: 3px 5px;
-	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
-	  width: 120px;
-	}
-	[type="date"] {
-	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-	}
-	[type="date"]::-webkit-inner-spin-button {
-	  display: none;
-	}
-	[type="date"]::-webkit-calendar-picker-indicator {
-	  opacity: 0;
-	}
-	#viewDiv{
-		display:inline-block;
-		float:right;
-		position:relative;
-		top:8px;
-	}
-	#viewDiv input{
-		width:120px;
-		display:inline-block;
-	}
-	#keyword{
-		float:right;
-		position:relative;
-		bottom:2px;
-	}
-	#keyword .form-control{
-		display:inline-block;
-	}
-	#keyword select{
-		width:110px;
-		position:relative;
-		top:1px;
-	}
-	#keyword span{
-		position:relative;
-		bottom:1px;
-		right:8px;
-	}
-	#keyword input{
-		width:140px;
-	}
-	#keyword button{
-		padding:0px 5px 0px 5px;
-		margin:0px 10px 5px 10px;
-	}
-	#eventForm div:nth-child(2) span{
-		font-weight:bold;
-	}
-	#eventBody{
-		margin-top:30px;
+	#mailAddress{
+		width:500px;
 		padding:10px;
 		background-color:#F2F5F7;
-		border-radius:10px;
+		border-radius:20px;
+		margin-bottom:10px;
 	}
-	#imgBox{
-		display:inline-block;
-		width:150px;
-		height:100px;
-		padding:5px;
-		border:1px solid #878787;
-		border-radius:10px;
-		text-align:center;
-		background-color:white;
-	}
-	#imgBox span{
-		font-size:12px;
-	}
-	#eventImg input{
+	#mailAddress input{
 		display:inline-block;
 		width:300px;
+		margin-left:10px;
 	}
-	#eventImg button{
-		display:inline-block;
-		width:90px;
+	#mailTitle{
+		width:500px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
 	}
-	#eventImg div:nth-child(2){
+	#mailTitle input{
 		display:inline-block;
-		position:relative;
-		top:30px;
-		left:60px;
+		width:300px;
+		margin-left:10px;
 	}
 	a{
 		color:#878787;
@@ -343,8 +255,15 @@
 	.form-control{
 		display:inline;
 	}
+	#writeT input[type="text"]{
+		margin-left:20px;
+		width:500px;
+	}
 	#writeC{
 		margin-top:20px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
 	}
 	#writeC ul{
 		display:block;
@@ -375,17 +294,19 @@
       color:#000;
 	} 
 	textarea:focus {
-	outline:none;
+		outline:none;
 	}
 	.tab-content{
 		width:100%;
-		height:400px;
+		height:200px;
 	}
 	.tab-content textarea{
 		border-top:0px;
 		border-left:1px solid #878787;
 	  	border-right:1px solid #878787;
 	 	border-bottom:1px solid #878787;
+	 	border-bottom-right-radius:10px;
+	 	border-bottom-left-radius:10px;
 	 	padding:10px;
 		width:100%;
 		height:100%;
@@ -397,6 +318,111 @@
 	}
 	#buttonGroup button{
 		margin:5px;
+	}
+	#detailBox{
+		margin:20px 0px 20px 0px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
+	}
+	#input1,#input2{
+		display:inline-block;
+		width:120px !important;
+	}
+	#input1 input,#input2 input{
+	  border: 1px solid #c4c4c4;
+	  border-radius: 5px;
+	  background-color: #fff;
+	  padding: 3px 5px;
+	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+	  width: 120px !important;
+	}
+	[type="date"] {
+	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+	}
+	[type="date"]::-webkit-inner-spin-button {
+	  display: none;
+	}
+	[type="date"]::-webkit-calendar-picker-indicator {
+	  opacity: 0;
+	}
+	#first div:first-child,
+	#first div:last-child,
+	#second div:first-child,
+	#second div:last-child{
+		display:inline-block;
+		width:350px;
+	}
+	#first div:nth-child(2) input{
+		display:inline-block;
+		margin-right:10px;
+		width:100px;
+	}
+	#first,#second,#third{
+		margin:10px;
+	}
+	#second div .form-control{
+		display:inline-block;
+	}
+	#second div:last-child input{
+		width:100px;
+		margin-right:10px;
+	}
+	#second div:last-child{
+		position:relative;
+		left:17px;
+	}
+	#second div:first-child span{
+		padding-right:18px;
+	}
+	#second label{
+		padding-right:10px;
+	}
+	#third label,#third span{
+		margin-right:20px;
+	}
+	#fourth{
+		text-align:center;
+	}
+	#receive{
+		margin-top:20px;
+	}
+	#searchBar{
+		text-align:center;
+		margin-top:10px;
+	}
+	input[type="text"]{
+		display:inline;
+		width:250px;
+	}
+	select{
+		display:inline !important;
+		width:130px !important;
+		position:relative;
+		top:1px;		
+	}
+	#searchBar .btn{
+		width:100px;
+		position:relative;
+		bottom:2px;
+	}
+	.table-hover{
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	table tr th,
+	table tr td{
+		text-align:center;
+	}
+	#table tr:nth-child(1) th {
+    border-top: 1px solid #878787;
+    border-bottom:0;
+	}
+	table tr th{
+		background-color:#F2F5F7;
+	}
+	tbody tr:last-child td{
+		border-bottom:1px solid #878787;
 	}
 </style>
 </head>
@@ -414,20 +440,15 @@
 			<span>
 				<i class="far fa-edit"></i>		
 			</span>
-			<span>게시판 관리</span>
+			<span>회원 관리</span>
 			<hr>	
 		</div>
 		<div id = "submenu">
-			<a href = "#"><span>공지사항</span></a>
-			<a href = "#"><span>- 스타일 숍 공지</span></a>
-			<a href = "#"><span>- 고객센터 공지</span></a>
-			<a href = "#"><span>커뮤니티</span></a>
-			<a href = "#"><span>상품 문의</span></a>
-			<a href = "#"><span>1:1 문의</span></a>
-			<a href = "#"><span>상품평</span></a>
-			<a href = "#"><span>자주 하는 질문</span></a>
-			<a href = "#" class = "activeMenu"><span>이벤트</span></a>
-			<a href = "#"><span>게시판 카테고리 관리</span></a>		
+			<a href = "#"><span>회원 목록</span></a>
+			<a href = "#"><span>탈퇴 회원 목록</span></a>
+			<a href = "#"><span>메일 관리</span></a>
+			<a href = "#"><span>SMS 관리</span></a>
+			<a href = "#" class = "activeMenu"><span>대량 메일 발송</span></a>		
 		</div>
 	</div>
 	<div id = "content">
@@ -438,7 +459,7 @@
 					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
 					<span>&#124;</span>
-					<a href = "#">로그아웃</a>			
+					<a href = "#">로그아웃</a>		
 				</span>		
 			</div>			
 			<div class = "container">
@@ -446,7 +467,7 @@
 					<div class = "btn-group">
 						<button type = "button" class = "btn btn-default">주문관리</button>
 					</div>
-					<div class = "btn-group drop is-current">
+					<div class = "btn-group drop">
 						<button type = "button" class = "btn btn-default dropdown-toggle" type = "button" data-toggle="dropdown">게시판 관리</button>
 						<ul class= "dropdown-menu">
 							<li><a href = "#">서브메뉴 표기</a></li>
@@ -455,7 +476,7 @@
 							<li><a href = "#">서브메뉴 표기</a></li>
 						</ul>
 					</div>
-					<div class = "btn-group">
+					<div class = "btn-group is-current">
 						<button type = "button" class = "btn btn-default">회원 관리</button>
 					</div>
 					<div class = "btn-group">
@@ -482,65 +503,152 @@
 	</div>
 		<div id = "AllContent">
 			<div id = "menuBar">
-				<p id = "menuName">Board Managament</p>
-				<p id = "currentIdx">&#124; 게시판관리 > 이벤트 등록/수정하기</p>
+				<p id = "menuName">Member Managament</p>
+				<p id = "currentIdx">&#124; 회원 관리 > 대량 메일 발송</p>
 			</div>
 			<form>
-				<div id = "event">
-					<div id = "eventForm">
-						<div>
-							<input type = "text" name = "title" class = "form-control" placeholder = "제목을 입력하세요!"/>
-							<textarea class = "form-control" placeholder = "이벤트 요약 내용을 입력하세요!"></textarea>
-						</div>
-						<div>
-							<span>이벤트 기간</span>
-							<div id = "input-group">
-								<div id = "input1">
-									<input type="date" name="dateofbirth" class="dateInput">
-								</div>
-								<span>~</span>
-								<div id = "input2">
-									<input type="date" name="dateofbirth" class="dateInput">		
-								</div>
-								<div id = "viewDiv">
-									<span>조회수 :</span>
-									<input class = "form-control" type = "text" name = "viewcount" />
-								</div>
-							</div>					
-						</div>
+				<div id = "mailForm">
+					<div id = "mailAddress">
+						<strong>발송 메일 주소</strong>
+						<input class = "form-control" type = "text" name = "emailAddress" />
 					</div>
-				</div>
-				<div id = "eventBody">
-					<div id = "eventImg">
-						<div id = "imgBox">
-							<span>등록된 이미지가 없습니다.</span>						
-						</div>
-						<div>
-							<span>목록 이미지 : </span>
-							<input type = "text" name = "imgURL" class = "form-control"/>
-							<button class = "form-control">찾아보기</button>						
-						</div>
-
+					<div id = "mailTitle">
+						<strong>제목</strong>
+						<input class = "form-control" type = "text" name = "emailTitle" value = "스타일 숍 회원 가입을 축하드립니다.">
 					</div>
-					<div id = "write">
-						<div id = "writeC">
-							<ul class = "nav nav-tabs">
-								<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
-								<li><a data-toggle="tab" href = "#">HTML</a></li>
-							</ul>
-							<div class="tab-content">
-								<textarea name = "document" placeholder="내용을 입력해주세요!"></textarea>
+					<div id = "mailContent">
+						<div id = "write">
+							<div id = "writeC">
+								<ul class = "nav nav-tabs">
+									<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
+									<li><a data-toggle="tab" href = "#">HTML</a></li>
+								</ul>
+								<div class="tab-content">
+									<textarea name = "document">								
+									</textarea>
+								</div>
+							</div>
+						</div>					
+					</div>
+					<div id = "receive">
+						<strong>수신대상</strong>
+						<div id = "detailBox">
+							<div id = "first">
+								<div>
+									<span>가입일</span>
+									<div id = "input1">
+										<input type="date" name="dateofbirth" class="dateInput">
+									</div>
+									<span>~</span>
+									<div id = "input2">
+										<input type="date" name="dateofbirth" class="dateInput">	
+									</div>						
+								</div>
+								<div>
+									<span>구매 금액</span>
+									<input class = "form-control" type = "number" name = "minPrice" />원
+									<span>&nbsp; ~ &nbsp;</span>
+									<input class = "form-control" type = "number" name = "maxPrice" />원
+								</div>
+							</div>
+							<div id = "second">
+								<div>
+									<span>회원 등급</span>
+									<input type = "checkbox" name = "one" id = "one" />
+									<label for = "one" >1</label>
+									<input type = "checkbox" name = "two" id = "two" />
+									<label for = "two" >2</label>
+									<input type = "checkbox" name = "three" id = "three" />
+									<label for = "three" >3</label>
+									
+								</div>
+								<div>
+									<span>적립금</span>
+									<input class = "form-control" type = "number" name = "minSaved" />원
+									<span>&nbsp; ~ &nbsp;</span>
+									<input class = "form-control" type = "number" name = "maxSaved" />원
+								</div>
+							</div>
+							<div id = "third">
+								<div>
+									<div class="custom-control custom-radio">
+										<span>메일 수신</span>
+										<input type="radio" name="mail" id="mailAgree" class="custom-control-input">
+										<label class="custom-control-label" for="mail">수신</label>
+										<input type="radio" name="mail" id="mailReject" class="custom-control-input">
+										<label class="custom-control-label" for="mailReject">거부</label>
+									</div>
+								</div>
+							</div>
+							<div id = "fourth">
+								<button class = "btn btn-default">검색</button>
 							</div>
 						</div>
-						<div id = "buttonGroup">
-							<button type = "submit" class = "btn btn-default">작성 완료</button>
-							<button class = "btn btn-default">작성 취소</button>
-						</div>
-					</div>					
+					</div>
+					<div id = "receiveList">
+						<table id = "table" class = "table table-hover">
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>번호</th>
+									<th>가입일</th>
+									<th>이름</th>
+									<th>아이디</th>
+									<th>회원등급</th>
+									<th>방문수</th>
+									<th>구매 금액</th>
+									<th>적립금</th>
+									<th>메일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type = "checkbox" /></td>
+									<td>3</td>
+									<td>2023-08-23</td>
+									<td>고객센터</td>
+									<td>user2</td>
+									<td>3</td>
+									<td>55</td>
+									<td>125,000원</td>
+									<td>2,500원</td>
+									<td>거부</td>
+								</tr>
+								<tr>
+									<td><input type = "checkbox" /></td>
+									<td>2</td>
+									<td>2023-08-23</td>
+									<td>관리자</td>
+									<td>user3</td>
+									<td>4</td>
+									<td>230</td>
+									<td>125,000원</td>
+									<td>2,500원</td>
+									<td>수신</td>
+								</tr>
+								<tr>
+									<td><input type = "checkbox" /></td>
+									<td>1</td>
+									<td>2023-08-23</td>
+									<td>관리자</td>
+									<td>user4</td>
+									<td>5</td>
+									<td>1001</td>
+									<td>125,000원</td>
+									<td>2,500원</td>
+									<td>수신</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>
+				<div id = "buttonGroup">
+					<button type = "submit" class = "btn btn-default">검색된 회원 모두 발송</button>
+					<button class = "btn btn-default">선택 회원만 발송</button>
 				</div>
 			</form>
 		</div>
-  	</div>
+	</div>
 </div>
 
 </body>

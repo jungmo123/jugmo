@@ -230,24 +230,33 @@
 		background-color:#F2F5F7;
 	}
 	#input-group{
-		width:500px;
 		display:inline;
 	}
-	#input1{
-		width:210px;
+	#input1,#input2{
 		display:inline-block;
 	}
-	#input2{
-		width:210px;
-		display:inline-block;
+	#input1 input,#input2 input{
+	  border: 1px solid #c4c4c4;
+	  border-radius: 5px;
+	  background-color: #fff;
+	  padding: 3px 5px;
+	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+	  width: 120px;
+	}
+	[type="date"] {
+	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+	}
+	[type="date"]::-webkit-inner-spin-button {
+	  display: none;
+	}
+	[type="date"]::-webkit-calendar-picker-indicator {
+	  opacity: 0;
 	}
 	#dateForm{
 		width:100%;
 		display:inline-block;		
 	}
 	#dateForm span{
-		position:relative;
-		bottom:11px;
 		margin-right:10px;
 	}
 	#input-group span{
@@ -378,7 +387,7 @@
 					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
 					<span>&#124;</span>
-					<a href = "#">로그아웃</a>		
+					<a href = "#">로그아웃</a>			
 				</span>		
 			</div>			
 			<div class = "container">
@@ -430,21 +439,11 @@
 					<span>주문일</span>
 					<div id = "input-group">
 						<div id = "input1">
-							<div class="input-group">
-							 <div class="input-group-addon">
-							 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
-							 </div>
-							<input type="date" class="form-control" id="inputSuccess4">
-						</div>
+							<input type="date" name="dateofbirth" class="dateInput">
 						</div>
 						<span>~</span>
 						<div id = "input2">
-							<div class="input-group">
-								 <div class="input-group-addon">
-								 	<span class="glyphicon glyphicon glyphicon-calendar"></span>
-								 </div>
-								<input type="date" class="form-control" id="inputSuccess4">
-							</div>		
+							<input type="date" name="dateofbirth" class="dateInput">
 						</div>
 						<div id = "keyword">
 							<span>키워드 검색</span>

@@ -3,7 +3,7 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
 	/* 공통부분 시작 */
@@ -11,11 +11,8 @@
 	*{
 		font-family: 'Noto Sans KR', sans-serif;
 	}
-	body{
-		font-family: 'Noto Sans KR', sans-serif;
-	}
 	.container{
-		width:1480px;
+		width:1100px;
 		max-width:none !important;
 		display: flex;
 	}
@@ -202,6 +199,7 @@
 	}
 	#currentIdx{
 		margin-top:5px;
+		margin-bottom:10px;
 		font-size:13px;
 		color:#878787;
 	}
@@ -221,93 +219,99 @@
 		margin:5px;
 	}
 	/* 공통부분 끝 */
-	#stateInfo{
-		margin-top:10px;
-	}
-	#stateInfo span{
-		margin-right:30px;
-	}
-	#handlingState{
-		float:right;
-	}
-	#apply table{
-		margin-top:10px;
-		width:800px;
-	}
-	#apply table td{
-		border-top:1px solid grey;
-		border-bottom:1px solid grey;
-		height:30px;
-	}
-	#firstTable tr td:nth-child(1){
-		border-right:1px solid grey;
-		background-color:#F2F5F7;
-	}
-	#secondTable tr td:nth-child(1){
-		border-right:1px solid grey;
-	}
-	table tr td:nth-child(1) strong{
-		float:right;
-		margin-right:10px;
-	}
-	#secondTable tr td:nth-child(2){
+	#mailInfo{
+		width:400px;
 		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
+		margin-bottom:10px;
 	}
-	table tr td:nth-child(2) span{
-		margin-left:10px;
-		width:200px;
-	}
-	table tr td:nth-child(2) div:nth-child(2){
-		width:100px;
-		border-left:1px solid grey;
-		border-right:1px solid grey;
-	}
-	table tr td:nth-child(3){
-		width:100px;
-		border-left:1px solid grey;
-		border-right:1px solid grey;
-		background-color:lightgrey;
-		text-align:center;
-	}
-	table tr td:nth-child(4){
-		padding-left:10px;
-	}
-	table td div{
+	#mailForm select{
 		display:inline-block;
+		width:160px;
+		margin-right:20px;
 	}
-	#contentWrite{
-		position:relative;
-		top:2px;
+	#mailForm input{
+		margin-left:10px;	
+	}
+	#mailTitle{
+		width:400px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
+	}
+	#mailTitle input{
+		display:inline-block;
+		width:340px;
+	}
+	a{
+		color:#878787;
+	}
+	#write{
+		margin-top:20px;
+		margin-left:10px;
+	}
+	.form-control{
+		display:inline;
+	}
+	#writeT input[type="text"]{
+		margin-left:20px;
+		width:500px;
+	}
+	#writeC{
+		margin-top:20px;
+	}
+	#writeC ul{
+		display:block;
+		border-color:#878787;
+	}
+	#writeC ul .active{
+		border-color:color:#878787;
+	}
+	#writeArea{
+		border-top:0px;
+		border-color:#878787;
+		resize: none;
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		border-left:1px solid #878787;
+		border-top:1px solid #878787;
+		border-right:1px solid #878787;
+	}
+	.nav-tabs > li > a:hover{
+	  background-color: white !important;
+  	  border-radius: 5px 5px 0px 0px;
+  	  border-left:1px solid white;
+	  border-top:1px solid white;
+	  border-right:1px solid white;
+	  border-bottom:1px solid #878787;
+      color:#000;
+	} 
+	textarea:focus {
+	outline:none;
+	}
+	.tab-content{
+		width:100%;
+		height:400px;
+	}
+	.tab-content textarea{
+		border-top:0px;
+		border-left:1px solid #878787;
+	  	border-right:1px solid #878787;
+	 	border-bottom:1px solid #878787;
+	 	padding:10px;
+		width:100%;
 		height:100%;
+		resize: none;
 	}
-	#imgtd{
-		padding:9px;
-		line-height:23px;
-	}
-	#imgtd button{
-		float:right;
-		margin-right:30px;
-	}
-	button{
-		background-color:white;
-	}
-	#secondTable tr td:first-child{
-		width:220px;
-	}
-	#submitDiv{
-		margin-top:10px;
+	#buttonGroup{
+		margin:25px;
 		text-align:center;
 	}
-	#submitDiv button{
-		width:80px;
-	}
-	#delete{
-		float:right;
-		position:relative;
-		right:10px;
-	}
-	textarea{
-		resize:none;
+	#buttonGroup button{
+		margin:5px;
 	}
 </style>
 </head>
@@ -325,13 +329,15 @@
 			<span>
 				<i class="far fa-edit"></i>		
 			</span>
-			<span>주문 관리</span>
+			<span>회원 관리</span>
 			<hr>	
 		</div>
 		<div id = "submenu">
-			<a href = "#"><span>스타일 숍 주문</span></a>
-			<a href = "#"><span>주문 취소</span></a>
-			<a href = "#"><span class = "activeMenu">교환/환불 신청</span></a>		
+			<a href = "#"><span>회원 목록</span></a>
+			<a href = "#"><span>탈퇴 회원 목록</span></a>
+			<a href = "#" class = "activeMenu"><span>메일 관리</span></a>
+			<a href = "#"><span>SMS 관리</span></a>
+			<a href = "#"><span>대량 메일 발송</span></a>		
 		</div>
 	</div>
 	<div id = "content">
@@ -347,7 +353,7 @@
 			</div>			
 			<div class = "container">
 				<div id = "nav" class = "btn-group">
-					<div class = "btn-group is-current">
+					<div class = "btn-group">
 						<button type = "button" class = "btn btn-default">주문관리</button>
 					</div>
 					<div class = "btn-group drop">
@@ -359,7 +365,7 @@
 							<li><a href = "#">서브메뉴 표기</a></li>
 						</ul>
 					</div>
-					<div class = "btn-group">
+					<div class = "btn-group is-current">
 						<button type = "button" class = "btn btn-default">회원 관리</button>
 					</div>
 					<div class = "btn-group">
@@ -379,141 +385,54 @@
 					</div>
 					<div class="nav-underline"></div>
 				</div>	
-		</div>
+			</div>
 		<div id = "hr" >
 			<hr>
 		</div>
 	</div>
 		<div id = "AllContent">
 			<div id = "menuBar">
-				<p id = "menuName">Order Managament</p>
-				<p id = "currentIdx">&#124; 주문관리 > 교환/환불 > 상세보기</p>
+				<p id = "menuName">Member Managament</p>
+				<p id = "currentIdx">&#124; 회원 관리 > 메일 관리</p>
 			</div>
-		<form>
-			<div id = "apply">
-				<div id = "stateInfo">
-					<span>접수일: 2023-10-15:56:10</span>
-					<span>처리 완료일 : -</span>
-					<span id = "handlingState">
-						<span>처리 상태</span>
-						<select>
-							<option>처리 전</option>
-						</select>			
-					</span>
-				</div>
-				<div>
-					<table id = "firstTable">
-						<tr>
-							<td>						
-								<strong>접수번호</strong>
-							</td>
-							<td colspan = "3">
-								<span>{접수 번호}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>신청 ID</strong>
-							</td>
-							<td>
-								<div>
-									<span>{아이디}</span>
-								</div>															
-							</td>
-							<td>
-								<div>
-									<strong>신청자명</strong>
-								</div>															
-							</td>
-							<td>
-								<div>
-									<span>{이름}</span>
-								</div>															
-							</td>														
-						</tr>
-						<tr>
-							<td>						
-								<strong>휴대폰 번호</strong>
-							</td>
-							<td colspan = "3">
-								<span>{휴대폰 번호}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>상품</strong>
-							</td>
-							<td colspan = "3">
-								<span>{상품명}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>교환/환불 선택</strong>
-							</td>
-							<td colspan = "3">
-								<span>{선택 사항 표기}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>사유 선택</strong>
-							</td>
-							<td colspan = "3">
-								<span>{선택 사항 표기}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>내용 작성</strong>
-							</td>
-							<td colspan = "3" id = "tdcontentWrite">
-								<textarea id = "contentWrite" cols="90" rows="5">
-	
-	
-  {입력한 내용 표기}</textarea>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>이미지</strong>
-							</td>
-							<td id = "imgtd" colspan = "3">
-								<span> - 20230413_112309641.jpg</span><br>
-								<span> - 20230413_112309642.jpg</span><br>
-								<span> - 20230413_112309643.jpg</span>
-								<button>다운로드</button>
-							</td>
-						</tr>
-						<tr>
-							<td>						
-								<strong>배송비 결제 금액</strong>
-							</td>
-							<td colspan = "3">
-								<span>{결제된 금액 표기}원</span>
-							</td>
-						</tr>
-					</table>
-					<table id = "secondTable">
-						<tr>
-							<td>						
-								<strong>처리 사항 메모</strong>
-							</td>
-							<td>
-								<textarea cols="87" rows="5"placeholder= "처리 사항을 작성해주세요"></textarea>
-							</td>
-						</tr>
-					</table>
-					<div id = "submitDiv">
-						<button type = "submit">저장</button>
-						<button type = "button">취소</button>
-						<button type = "button" id = "delete">삭제하기</button>
+			<form>
+				<div id = "mailForm">
+					<div id = "mailInfo">
+						<select class = "form-control">
+							<option>회원 가입 완료 메일</option>
+						</select>
+						<strong>자동 발송 여부</strong>
+						<input type="radio" name="mailSend" id="auto" class="custom-control-input">
+						<label class="custom-control-label" for="auto">예</label>
+						<input type="radio" name="mailSend" id="hand" class="custom-control-input">
+						<label class="custom-control-label" for="hand">아니요</label>						
+					</div>
+					<div id = "mailTitle">
+						<strong>제목</strong>
+						<input class = "form-control" type = "text" name = "emailTitle" value = "스타일 숍 회원 가입을 축하드립니다.">
+					</div>
+					<div id = "mailContent">
+						<div id = "write">
+							<div id = "writeC">
+								<ul class = "nav nav-tabs">
+									<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
+									<li><a data-toggle="tab" href = "#">HTML</a></li>
+								</ul>
+								<div class="tab-content">
+									<textarea name = "document">								
+									</textarea>
+								</div>
+							</div>
+							<div id = "buttonGroup">
+								<button type = "submit" class = "btn btn-default">작성 완료</button>
+								<button class = "btn btn-default">작성 취소</button>
+							</div>
+						</div>					
 					</div>
 				</div>
-			</div> 
-		</form>
+			</form>
+		</div>
 	</div>
-</div>
 </div>
 
 </body>

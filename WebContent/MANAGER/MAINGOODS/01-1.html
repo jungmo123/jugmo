@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	#date .modal-dialog{
+		width:650px;
+	}
+	#date .modal-header{
+		border:0;
+	}
+	#date .modal-body{
+		padding:0px 15px 0px 15px;
+	}
+	.table-hover{
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	table tr th:nth-child(1),
+	table tr td:nth-child(1),
+	table tr th:nth-child(2),
+	table tr td:nth-child(2),
+	table tr th:nth-child(3),
+	table tr td:nth-child(4),
+	table tr th:nth-child(4),
+	table tr th:nth-child(5),
+	table tr td:nth-child(5),
+	table tr th:nth-child(6),
+	table tr td:nth-child(6),
+	table tr th:nth-child(7),
+	table tr td:nth-child(7){
+		text-align:center;
+	}
+	#table tr td:nth-child(6) div button{
+		width:50px;
+		height:20px;
+		padding:0;
+		position:relative;
+		left:22px;
+		top:10px;
+	}
+	#table tr:nth-child(1) th {
+    border-top: 1px solid #878787;
+    border-bottom:0;
+	}
+	table tr{
+		border:1px solid #F2F5F7;
+	}
+	table tr th{
+		background-color:#F2F5F7;
+	}
+	#table tr td:not(:nth-child(3)):not(:nth-child(4)) div span,
+	#table tr td:not(:nth-child(3)):not(:nth-child(4)) div input[type='checkbox']{
+		position:relative;
+		top:10px;
+	}
+	#table tr th:not(:nth-child(4)) div span{
+		position:relative;
+		bottom:10px;
+	}
+	tbody tr:last-child{
+		border-bottom:1px solid #878787;
+	}
+	#closeButton{
+		text-align:center;
+	}
+	#closeButton button{
+		width:100px;
+		margin-bottom:10px;
+	}
+	#searchBar{
+		text-align:center;
+		margin-top:10px;
+	}
+	input[type="text"]{
+		display:inline;
+		width:250px;
+	}
+	select{
+		display:inline !important;
+		width:140px !important;
+		position:relative;
+		top:1px;		
+	}
+	#searchBar .btn{
+		width:100px;
+		position:relative;
+		bottom:2px;
+	}
+	#buttonGroup{
+		margin:10px;
+		text-align:center;
+	}
+	#buttonGroup button{
+		margin:5px;
+	}
+	#pagination{
+		margin-top:10px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
+	}
+</style>
+</head>
+<body>
+
+	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#date">Modal</button>
+	
+	<div class = "modal fade" id ="date">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;메인화면 상품 등록 팝업</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<form>
+						<div id = "searchBar">
+							<select class = "form-control">
+								<option>카테고리 선택</option>
+							</select>
+							<input type = "text" class = "form-control" name = "title" />
+							<button type = "button" class = "btn btn-default">검색</button>				
+						</div>
+					</form>
+					<form>
+						<div>
+							<table id = "table" class = "table table-hover">
+								<thead>
+									<tr>
+										<th>
+											<div>
+												<span>선택</span>
+											</div>
+										</th>
+										<th>
+											<div>
+												<span>자리번호</span>
+											</div>
+										</th>
+										<th>
+											<div>
+												<span>카테고리와 상품명</span>
+											</div>
+										</th>
+										<th>
+											<div>
+												<span>판매금액<br>(적립금)</span>
+											</div>
+										</th>
+										<th>
+											<div>
+												<span>조회수</span>
+											</div>
+										</th>
+										<th>
+											<div>
+												<span>수정</span>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div>
+												<input type = "checkbox" />
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>[Top]<br>반팔티셔츠</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>25,000원<br>(500원)</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>126</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<button class = "form-control">수정</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<input type = "checkbox" />
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>2</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>[Top]<br>반팔티셔츠</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>25,000원<br>(500원)</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>126</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<button class = "form-control">수정</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<input type = "checkbox" />
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>[Top]<br>반팔티셔츠</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>25,000원<br>(500원)</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>126</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<button class = "form-control">수정</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<input type = "checkbox" />
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>4</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>[Top]<br>반팔티셔츠</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>25,000원<br>(500원)</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>126</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<button class = "form-control">수정</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<input type = "checkbox" />
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>[Top]<br>반팔티셔츠</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>25,000원<br>(500원)</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>126</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<button class = "form-control">수정</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>		
+						</div>
+						<div id = "pagination">
+							<div>
+								<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+								<a href = "#"  class = "currentPage">1</a>
+								<a href = "#">2</a>
+								<a href = "#">3</a>
+								<a href = "#">4</a>
+								<a href = "#">5</a>
+								<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+								<div id = "currentBar"></div>
+							</div>		
+						</div>
+						<div id = "buttonGroup">
+							<button type = "submit" class = "btn btn-default">상품 선택</button>
+							<button class = "btn btn-default" data-dismiss = "modal">취소</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

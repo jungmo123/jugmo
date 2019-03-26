@@ -6,12 +6,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <style>
-	/* 공통부분 시작 */
+	/*  공통부분 시작 */
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 	*{
-		font-family: 'Noto Sans KR', sans-serif;
-	}
-	body{
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 	.container{
@@ -245,18 +242,20 @@
 	#orderitem{
 		margin-bottom:10px;
 	}
-	#deliberyForm div{
+	#deliveryForm div{
 		margin-top:10px;
 		display:inline-block;
 	}
-	#deliberyForm div:nth-child(1) .form-control,#deliberyForm div:nth-child(2) .form-control{
+	#deliveryForm div:nth-child(1) .form-control,#deliveryForm div:nth-child(2) .form-control{
 		display:inline-block;
-		width:150px;
+		font-size:12px;
+		width:90px;
+		padding:2px;
 	}
-	#deliberyForm div:nth-child(2){
+	#deliveryForm div:nth-child(2){
 		float:right;
 	}
-	#deliberyForm b{
+	#deliveryForm b{
 		margin-right:10px;
 	}
 	#orderitem table{
@@ -364,7 +363,7 @@
 					<span>&#124;</span>
 					<a href = "#">사내 게시판</a>
 					<span>&#124;</span>
-					<a href = "#">로그아웃</a>			
+					<a href = "#">로그아웃</a>		
 				</span>		
 			</div>			
 			<div class = "container">
@@ -411,7 +410,7 @@
 				<p id = "menuName">Order Managament</p>
 				<p id = "currentIdx">&#124; 주문관리 > 스타일 숍 주문 > 상세보기</p>
 			</div>
-			<div id = "deliberyForm">
+			<div id = "deliveryForm">
 				<div>
 					<b>주문 처리 상태</b>
 					<select class = "form-control">

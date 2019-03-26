@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	#date .modal-dialog{
+		width:420px;
+	}
+	#date .modal-header{
+		border:0;
+	}
+	#date .modal-body{
+		padding:0px 15px 0px 15px;
+	}
+	#date .modal-body div{
+		margin-bottom:10px;
+	}
+	table tr th,
+	table tr td{
+		text-align:center;
+	}
+	#table{
+		width:100%;
+		height:200px;
+    	display: block;
+    	overflow: auto;
+	}
+	#closeButton{
+		text-align:center;
+	}
+	#closeButton button{
+		width:100px;
+	}
+</style>
+</head>
+<body>
+
+	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#date">Modal</button>
+	
+	<div class = "modal fade" id ="date">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;방문일 보기</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<div>
+						<strong>계정 : </strong>
+						<span>person</span>					
+					</div>
+					<div>
+						<table id = "table" class = "table table-hover">
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>주문일</th>
+									<th>주문 상품</th>
+									<th>결제 금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>6</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+								<tr>
+									<td>0</td>
+									<td>2023-12-12</td>
+									<td>실크 브라우스 외 1건</td>
+									<td>115,000원</td>
+								</tr>
+							</tbody>
+						</table>				
+					</div>
+					<div id = "closeButton">
+						<button class = "btn btn-default">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
