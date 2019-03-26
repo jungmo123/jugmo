@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>헤더/GNB/푸터</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+	div{
+		margin:0 auto;
+	}
+	.container{
+		border:1px solid black;
+		width:900px;
+		height:80px;
+		padding:50px;
+		margin:50px;
+
+	}
+	h3{color:black;}
+	.logo{
+	text-align:center;
+	}
+
+	.sub-menu{
+	text-align:right;
+	}
+	.sub-menu a{
+	color:black;	
+	}
+	
+	#footer {
+			  height:25px;
+			  padding:240px 0 5px 0;
+			  text-align:center;
+			 /*background:transparent repeat;*/			
+			  text-transform:uppercase;
+			  letter-spacing:0.1em;
+		}
+	#footer a{ color:black;
+				text-decoration:none;
+		}
+	aside{
+	width:150px;
+	float:left;
+	}
+	section p{letter-spacing:0.1em;
+			line-height:50%;
+			text-align:left;
+			}
+	aside,section{
+	float:left;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<div id="banner"><a href="#"></a></div>
+</div>
+
+<div class="logo">
+	<div id="lala"><a href="#"><h3>라라마켓</h3></a></div>
+	<div id="msg">안 입는 옷을 판매하고, 새 옷으로 구매하세요!</div>
+</div>
+<br><br><br>
+
+<div class="sub-menu">
+		<a href="#">회원가입  </a>|
+		<a href="#">로그인  </a>|
+		<a href="#">ID/비밀번호 찾기</a>   
+</div>
+<br><br>
+
+<div class="dropdown">
+	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+	전체 검색 <span class="caret"></span></button>
+	<ul class="dropdown-menu">
+		<li><a href="#">전체 검색</a></li>
+		<li><a href="#">스타일 숍 상품</a></li>
+		<li><a href="#">공지사항 게시판 제목</a></li>
+		<li><a href="#">공지사항 게시판 내용</a></li>
+		<li><a href="#">커뮤니티</a></li>
+		<li><a href="#">게시판 제목</a></li>
+		<li><a href="#">게시판 내용</a></li>
+		<li><a href="#">상품 문의 내용</a></li>
+	</ul>
+	<input type="text" placeholder="검색어를 입력하세요!">
+	<button>검색</button>
+</div>
+<br><br>
+<div class="btn-group btn-group-justified">
+  	<div class="btn-group">
+  		<button type="button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+  		스타일 숍 <span class="caret"></span></button>
+  		<ul class="dropdown-menu">
+		   <li><a href="#">Outer</a></li>
+           <li><a href="#">Top</a></li>
+           <li><a href="#">Bottom</a></li>
+           <li><a href="#">Skirt</a></li>
+           <li><a href="#">Dress</a></li>
+		</ul>
+  	</div>
+   	<div class="btn-group">
+  		<button type="button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+  		라라마켓 <span class="caret"></span></button>
+  		<ul class="dropdown-menu">
+			<li><a href="#">라라마켓 소개</a>
+			<li><a href="#">대표인사말</a>			
+			<li><a href="#">찾아오시는 길</a></li>
+		</ul>
+  	</div>
+  	<div class="btn-group">
+  		<button type="button" class="btn btn-default">상품평</button>
+  	</div>
+  	<div class="btn-group">
+  		<button type="button" class="btn btn-default">이벤트</button>
+  	</div>
+  	<div class="btn-group">
+  		<button type="button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+  		고객센터 <span class="caret"></span></button>
+  		<ul class="dropdown-menu">
+			<li><a href="#">공지사항</a>
+			<li><a href="#">커뮤니티</a>
+			<li><a href="#">자주 하는 질문</a>
+			<li><a href="#">상품문의</a>
+			<li><a href="#">아이디 찾기</a>
+			<li><a href="#">비밀번호 찾기</a>
+		</ul>
+  	</div>
+
+ </div>
+ <footer id="footer">
+ <hr>
+ 	<a href="#">회사소개</a> |
+ 	<a href="#">이용약관</a> |
+ 	<a href="#">개인정보처리방침</a> |
+ 	<a href="#">고객센터</a>	
+ <hr>
+ <aside>
+ <h3>라라마켓</h3>
+ <h5>LaLa Market</h5>
+ </aside>
+ <section>
+ 	<p>|상호명:라라마켓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|대표자:양승일<p>
+ 	<p>|상업자등록번호:000-00-0000&nbsp;&nbsp;&nbsp;|통신판매업 신고번호:0000-서울서초:0000</p>
+ 	<p>사업자번호 확인 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|개인정보관리책임자:최한석</p>
+ 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|호스팅 제공 사업자:OOOOO</p><br>
+ 	<p>|주소:(00000)서울시 서초구 OOOOO OO</p>
+ 	<p>|TEL:070-000-0000&nbsp;&nbsp;|FAX:(02)000-0000&nbsp;&nbsp;|Email:lala@lalamarket.co.kr</p><br>
+ 	<p>Copyright 2015 라라마켓 Corp.All Rights Reserved.	
+ </section>
+ 
+ </footer>
+</body>
+</html>
