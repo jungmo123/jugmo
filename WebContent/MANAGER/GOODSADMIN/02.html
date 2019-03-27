@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+<link rel ="stylesheet" href = "../CSS/Navigation.css" />
+<style>
+	#introduceTitle,#introduceContent{
+		margin-top:20px;
+	}
+	#secondTable{
+		width:800px;
+		color:#878787;
+	}
+	#secondTable tr td{
+		border-top:1px solid grey;
+		border-bottom:1px solid grey;
+		height:50px;
+	}
+	#secondTable tr td:first-child{
+		width:150px;
+		background-color:#F2F5F7;
+		border-right:1px solid grey;
+		text-align:center;
+	}
+	#secondTable tr td:first-child div{
+		float:right;
+	}
+	#secondTable tr td:first-child div strong{
+		position:relative;
+		right:10px;
+	}
+	#secondTable tr td:last-child{
+		width:500px;
+	}
+	#secondTable tr td:last-child input[type='text']{
+		width:400px;
+		margin-left:10px;
+		position:relative;
+		top:5px;
+	}
+	#secondTable tr td:last-child button{
+		position:relative;
+		top:5px;
+		height:26px;
+		background-color:#F2F5F7;
+		border:1px solid grey;
+	}
+	#secondTable tr:nth-child(2) td:last-child{
+		padding:10px 0 10px 0;
+	}
+	#productDetailInfo{
+		margin-top:20px;
+	}
+	a{
+		color:#878787;
+	}
+	#write{
+		margin-top:20px;
+		margin-left:10px;
+	}
+	#writeC{
+		margin-top:20px;
+		padding:10px;
+		background-color:#F2F5F7;
+		border-radius:20px;
+	}
+	#writeC ul{
+		display:block;
+		border-color:#878787;
+	}
+	#writeC ul .active{
+		border-color:color:#878787;
+	}
+	#writeArea{
+		border-top:0px;
+		border-color:#878787;
+		resize: none;
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		border-left:1px solid #878787;
+		border-top:1px solid #878787;
+		border-right:1px solid #878787;
+	}
+	.nav-tabs > li > a:hover{
+	  background-color: white !important;
+  	  border-radius: 5px 5px 0px 0px;
+  	  border-left:1px solid white;
+	  border-top:1px solid white;
+	  border-right:1px solid white;
+	  border-bottom:1px solid #878787;
+      color:#000;
+	} 
+	textarea:focus {
+		outline:none;
+	}
+	.tab-content{
+		width:100%;
+		height:200px;
+	}
+	.tab-content textarea{
+		border-top:0px;
+		border-left:1px solid #878787;
+	  	border-right:1px solid #878787;
+	 	border-bottom:1px solid #878787;
+	 	border-bottom-right-radius:10px;
+	 	border-bottom-left-radius:10px;
+	 	padding:10px;
+		width:100%;
+		height:100%;
+		resize: none;
+	}
+</style>
+</head>
+<body>
+
+<div class = "container">
+	<div id = "title">
+		<div id = "logo">
+			<a href = "#" ><span>LALA&nbsp;</span>MARKET</a>
+			<div id = "Admin">
+				<h5>Administrator</h5>
+			</div>
+		</div>
+		<div>
+			<span>
+				<i class="far fa-edit"></i>		
+			</span>
+			<span>상품 관리</span>
+			<hr>	
+		</div>
+		<div id = "submenu">
+			<a href = "#" class = "activeMenu"><span>상품 등록</span></a>
+			<a href = "#"><span>상품 목록</span></a>
+			<a href = "#"><span>카테고리 관리</span></a>
+		</div>
+	</div>
+	<div id = "content">
+		<div id = "AllContent">
+			<div id = "menuBar">
+				<p id = "menuName">Product Managament</p>
+				<p id = "currentIdx">&#124; 상품 관리 > 상품 등록</p>
+			</div>
+			<div id = "productIntroduce">
+				<strong>상품 소개글</strong>
+				<div id = "introduceTitle">
+					<input class = "form-control" type = "text" name = "itTitle" placeholder = "20자 이내로 소개글을 입력하세요 "/>
+				</div>
+				<div id = "introduceContent">
+					<table id = "secondTable">
+						<tr>
+							<td>
+								<div>
+									<strong>목록 이미지</strong>
+									<br>
+									<strong>000*000</strong>
+								</div>
+							</td>
+							<td>
+								<p>
+									<input type = "text" name = "IndeximgName" />
+									<button>찾아보기</button>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<strong>상품 대표 이미지</strong>
+									<br>
+									<strong>000*000</strong>
+								</div>
+							</td>
+							<td>
+								<p>
+									<input type = "text" name = "RepresentimgName1" />
+									<button>찾아보기</button>
+								</p>
+								<p>
+									<input type = "text" name = "RepresentimgName2" />
+									<button>찾아보기</button>
+								</p>
+								<p>
+									<input type = "text" name = "RepresentimgName3" />
+									<button>찾아보기</button>
+								</p>
+								<p>
+									<input type = "text" name = "RepresentimgName4" />
+									<button>찾아보기</button>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<strong>메인 노출 이미지</strong>
+									<br>
+									<strong>000*000</strong>
+								</div>
+							</td>
+							<td>
+								<p>
+									<input type = "text" name = "MainimgName" />
+									<button>찾아보기</button>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id = "productDetailInfo">
+				<strong>제품 상세 정보</strong>
+				<div id = "detailInfoContent">
+					<div id = "write">
+						<div id = "writeC">
+							<ul class = "nav nav-tabs">
+								<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
+								<li><a data-toggle="tab" href = "#">HTML</a></li>
+							</ul>
+							<div class="tab-content">
+								<textarea name = "document" placeholder="내용을 입력해주세요!"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
