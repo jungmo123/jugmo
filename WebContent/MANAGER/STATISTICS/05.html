@@ -12,7 +12,7 @@
 	}
 	
 	#viewBar {
-		width: 505px;
+		width: 370px;
 		background-color: #F2F5F7;
 		border-radius: 10px;
 		padding: 10px;
@@ -105,19 +105,19 @@
 					<h5>Administrator</h5>
 				</div>
 			</div>
-				<div>
-					<span>
-						<i class="far fa-edit"></i>		
-					</span>
-					<span>통계</span>
+			<div>
+				<span>
+					<i class="far fa-edit"></i>		
+				</span>
+				<span>통계</span>
 				<hr>
 			</div>
 			<div id="submenu">
 				<a href = "#"><span>방문자수/페이지뷰</span></a>
 				<a href = "#" ><span>회원수</span></a>
-				<a href = "#" class = "activeMenu"><span>상품 조회수</span></a>
-				<a href = "#"><span>카테고리 조회수</span></a>
-				<a href = "#"><span>상품 판매 순위</span></a>
+				<a href = "#"><span>상품 조회수</span></a>
+				<a href = "#" ><span>카테고리 조회수</span></a>
+				<a href = "#" class = "activeMenu"><span>상품 판매 순위</span></a>
 				<a href = "#"><span>포인트</span></a>
 				<a href = "#"><span>탈퇴 사유</span></a>
 			</div>
@@ -172,16 +172,13 @@
 			<div id="AllContent">
 				<div id="menuBar">
 					<p id="menuName">Statistics</p>
-					<p id="currentIdx">&#124; 통계 > 상품 조회수</p>
+					<p id="currentIdx">&#124; 통계 > 상품 판매 순위</p>
 				</div>
 				<div id="viewTitle">
 					<p>
-						<strong>기간별 상품 조회</strong>
+						<strong>기간별 상품 판매수</strong>
 					</p>
 					<div id="viewBar">
-						<select class="form-control">
-							<option>스타일 숍</option>
-						</select>
 						<div id="input1">
 							<input type="date" name="dateofbirth" class="dateInput">
 						</div>
@@ -197,7 +194,7 @@
 								<tr>
 									<th>순위</th>
 									<th>카테고리와 상품명</th>
-									<th>조회수</th>
+									<th>판매수</th>
 								</tr>
 							</thead>
 							<tbody>

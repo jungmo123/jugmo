@@ -7,15 +7,37 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <link rel="stylesheet" href="../CSS/Navigation.css" />
 <style>
-	#viewTitle {
+	#PointTitle {
 		margin-top: 20px;
+		text-align:center;
 	}
-	
-	#viewBar {
-		width: 505px;
+	#Point{
+		color:#878787;
+		font-weight:bold;
+	}
+	#Point strong{
+		font-size:30px;
+		color:#FF6F43;
+		margin:0 10px 0 10px;
+	}
+	#PointBar {
+		width:400px;
+		display:inline-block;
 		background-color: #F2F5F7;
 		border-radius: 10px;
 		padding: 10px;
+		text-align:center;
+	}
+	#PointBar button{
+		padding:0;
+		width:60px;
+		height:30px;
+		position:relative;
+		bottom:2px;
+		margin-left:10px;
+	}
+	#PointBar span{
+		margin:0 10px 0 10px;
 	}
 	
 	#input1, #input2 {
@@ -53,15 +75,6 @@
 		height: 30px;
 		margin-right: 10px;
 	}
-	
-	#viewTitle button {
-		position: relative;
-		bottom: 2px;
-		width: 80px;
-		height: 30px;
-		padding: 0;
-		margin-left: 10px;
-	}
 	#table{
 		margin-top:30px;
 		border-top:1px solid #878787;
@@ -70,10 +83,12 @@
 	#table thead tr:nth-child(1){
 		background-color:#F2F5F7;
 	}
-	#table tbody tr td:nth-child(1) span,
-	#table tbody tr td:nth-child(3) span{
+	#table tbody tr{
+		height:50px;
+	}
+	#table tbody tr td span{
 		position:relative;
-		top:10px;
+		top:5px;
 	}
 	#table tr td:nth-child(1),
 	#table tr td:nth-child(3),
@@ -105,20 +120,20 @@
 					<h5>Administrator</h5>
 				</div>
 			</div>
-				<div>
-					<span>
-						<i class="far fa-edit"></i>		
-					</span>
-					<span>통계</span>
+			<div>
+				<span>
+					<i class="far fa-edit"></i>		
+				</span>
+				<span>통계</span>
 				<hr>
 			</div>
 			<div id="submenu">
 				<a href = "#"><span>방문자수/페이지뷰</span></a>
 				<a href = "#" ><span>회원수</span></a>
-				<a href = "#" class = "activeMenu"><span>상품 조회수</span></a>
-				<a href = "#"><span>카테고리 조회수</span></a>
+				<a href = "#"><span>상품 조회수</span></a>
+				<a href = "#" ><span>카테고리 조회수</span></a>
 				<a href = "#"><span>상품 판매 순위</span></a>
-				<a href = "#"><span>포인트</span></a>
+				<a href = "#" class = "activeMenu"><span>포인트</span></a>
 				<a href = "#"><span>탈퇴 사유</span></a>
 			</div>
 		</div>
@@ -172,16 +187,16 @@
 			<div id="AllContent">
 				<div id="menuBar">
 					<p id="menuName">Statistics</p>
-					<p id="currentIdx">&#124; 통계 > 상품 조회수</p>
+					<p id="currentIdx">&#124; 통계 > 포인트</p>
 				</div>
-				<div id="viewTitle">
-					<p>
-						<strong>기간별 상품 조회</strong>
-					</p>
-					<div id="viewBar">
-						<select class="form-control">
-							<option>스타일 숍</option>
-						</select>
+				<p id = "PT">
+					<strong>포인트 적립 및 사용 내역</strong>
+				</p>
+				<div id="PointTitle">
+					<div id = "Point">
+						<span>총 누적 포인트<strong>12,124,500</strong>원</span>
+					</div>
+					<div id="PointBar">
 						<div id="input1">
 							<input type="date" name="dateofbirth" class="dateInput">
 						</div>
@@ -195,75 +210,33 @@
 						<table id="table" class="table table-hover">
 							<thead>
 								<tr>
-									<th>순위</th>
-									<th>카테고리와 상품명</th>
-									<th>조회수</th>
+									<th>번호</th>
+									<th>ID</th>
+									<th>날짜</th>
+									<th>적립/사용</th>
+									<th>내용</th>
+									<th>포인트 변동</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>
-										<span>1</span>
+										<span>7</span>
 									</td>
 									<td>
-										<span>[{카테고리명}]</span>
-										<br>
-										<span>{상품명}</span>
+										<span>like7</span>
 									</td>
 									<td>
-										<span>521</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>2</span>
+										<span>2023-01-01</span>
 									</td>
 									<td>
-										<span>[Outer]</span>
-										<br>
-										<span>아크릴 자켓</span>
+										<span>적립</span>
 									</td>
 									<td>
-										<span>500</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>3</span>
+										<span>제품 구매</span>
 									</td>
 									<td>
-										<span>[Top]</span>
-										<br>
-										<span>카라 브라우스</span>
-									</td>
-									<td>
-										<span>420</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>4</span>
-									</td>
-									<td>
-										<span>[Bottom]</span>
-										<br>
-										<span>허리 벤딩 청바지</span>
-									</td>
-									<td>
-										<span>339</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>5</span>
-									</td>
-									<td>
-										<span>[Skirt]</span>
-										<br>
-										<span>치마 바지 스커트</span>
-									</td>
-									<td>
-										<span>322</span>
+										<span>+5000</span>
 									</td>
 								</tr>
 								<tr>
@@ -271,64 +244,119 @@
 										<span>6</span>
 									</td>
 									<td>
-										<span>[Dress]</span>
-										<br>
-										<span>벨트 롱 원피스 핑크</span>
+										<span>like6</span>
 									</td>
 									<td>
-										<span>310</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>7</span>
+										<span>2023-01-01</span>
 									</td>
 									<td>
-										<span>[Outer]</span>
-										<br>
-										<span>아크릴 자켓 세블</span>
+										<span>사용</span>
 									</td>
 									<td>
-										<span>292</span>
+										<span>제품 구매 시 적립금 사용</span>
+									</td>
+									<td>
+										<span>-1000</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span>8</span>
+										<span>5</span>
 									</td>
 									<td>
-										<span>[Top]</span>
-										<br>
-										<span>핑크베리 브라우스</span>
+										<span>like5</span>
 									</td>
 									<td>
-										<span>282</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>9</span>
+										<span>2023-01-01</span>
 									</td>
 									<td>
-										<span>[Top]</span>
-										<br>
-										<span>웨딩 브라우스</span>
+										<span>적립 취소</span>
 									</td>
 									<td>
-										<span>125</span>
+										<span>제품 구매 취소</span>
+									</td>
+									<td>
+										<span>-5000</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span>10</span>
+										<span>4</span>
 									</td>
 									<td>
-										<span>[Bottom]</span>
-										<br>
-										<span>블랙진</span>
+										<span>like4</span>
 									</td>
 									<td>
-										<span>120</span>
+										<span>2023-01-01</span>
+									</td>
+									<td>
+										<span>적립</span>
+									</td>
+									<td>
+										<span>제품 구매</span>
+									</td>
+									<td>
+										<span>+5000</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>3</span>
+									</td>
+									<td>
+										<span>like3</span>
+									</td>
+									<td>
+										<span>2023-01-01</span>
+									</td>
+									<td>
+										<span>적립</span>
+									</td>
+									<td>
+										<span>제품 구매</span>
+									</td>
+									<td>
+										<span>+5000</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>2</span>
+									</td>
+									<td>
+										<span>like2</span>
+									</td>
+									<td>
+										<span>2023-01-01</span>
+									</td>
+									<td>
+										<span>적립</span>
+									</td>
+									<td>
+										<span>오픈 숍 상품판매</span>
+									</td>
+									<td>
+										<span>+5000</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>1</span>
+									</td>
+									<td>
+										<span>like1</span>
+									</td>
+									<td>
+										<span>2023-01-01</span>
+									</td>
+									<td>
+										<span>소멸</span>
+									</td>
+									<td>
+										<span>1년간 미사용 포인트</span>
+									</td>
+									<td>
+										<span>-500</span>
 									</td>
 								</tr>
 							</tbody>

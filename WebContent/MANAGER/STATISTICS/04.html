@@ -70,10 +70,12 @@
 	#table thead tr:nth-child(1){
 		background-color:#F2F5F7;
 	}
-	#table tbody tr td:nth-child(1) span,
-	#table tbody tr td:nth-child(3) span{
+	#table tbody tr{
+		height:50px;
+	}
+	#table tbody tr td span{
 		position:relative;
-		top:10px;
+		top:5px;
 	}
 	#table tr td:nth-child(1),
 	#table tr td:nth-child(3),
@@ -93,6 +95,7 @@
 		color:#878787;
 		margin-right:10px;
 	}
+	#table 
 </style>
 </head>
 <body>
@@ -105,18 +108,18 @@
 					<h5>Administrator</h5>
 				</div>
 			</div>
-				<div>
-					<span>
-						<i class="far fa-edit"></i>		
-					</span>
-					<span>통계</span>
+			<div>
+				<span>
+					<i class="far fa-edit"></i>		
+				</span>
+				<span>통계</span>
 				<hr>
 			</div>
 			<div id="submenu">
 				<a href = "#"><span>방문자수/페이지뷰</span></a>
 				<a href = "#" ><span>회원수</span></a>
-				<a href = "#" class = "activeMenu"><span>상품 조회수</span></a>
-				<a href = "#"><span>카테고리 조회수</span></a>
+				<a href = "#"><span>상품 조회수</span></a>
+				<a href = "#" class = "activeMenu"><span>카테고리 조회수</span></a>
 				<a href = "#"><span>상품 판매 순위</span></a>
 				<a href = "#"><span>포인트</span></a>
 				<a href = "#"><span>탈퇴 사유</span></a>
@@ -172,11 +175,11 @@
 			<div id="AllContent">
 				<div id="menuBar">
 					<p id="menuName">Statistics</p>
-					<p id="currentIdx">&#124; 통계 > 상품 조회수</p>
+					<p id="currentIdx">&#124; 통계 > 카테고리 조회수</p>
 				</div>
 				<div id="viewTitle">
 					<p>
-						<strong>기간별 상품 조회</strong>
+						<strong>기간별 카테고리 조회</strong>
 					</p>
 					<div id="viewBar">
 						<select class="form-control">
@@ -196,7 +199,7 @@
 							<thead>
 								<tr>
 									<th>순위</th>
-									<th>카테고리와 상품명</th>
+									<th>카테고리</th>
 									<th>조회수</th>
 								</tr>
 							</thead>
@@ -206,9 +209,7 @@
 										<span>1</span>
 									</td>
 									<td>
-										<span>[{카테고리명}]</span>
-										<br>
-										<span>{상품명}</span>
+										<span>{카테고리명}</span>
 									</td>
 									<td>
 										<span>521</span>
@@ -219,9 +220,7 @@
 										<span>2</span>
 									</td>
 									<td>
-										<span>[Outer]</span>
-										<br>
-										<span>아크릴 자켓</span>
+										<span>Outer</span>
 									</td>
 									<td>
 										<span>500</span>
@@ -232,9 +231,7 @@
 										<span>3</span>
 									</td>
 									<td>
-										<span>[Top]</span>
-										<br>
-										<span>카라 브라우스</span>
+										<span>Top</span>
 									</td>
 									<td>
 										<span>420</span>
@@ -245,9 +242,7 @@
 										<span>4</span>
 									</td>
 									<td>
-										<span>[Bottom]</span>
-										<br>
-										<span>허리 벤딩 청바지</span>
+										<span>Bottom</span>
 									</td>
 									<td>
 										<span>339</span>
@@ -258,9 +253,7 @@
 										<span>5</span>
 									</td>
 									<td>
-										<span>[Skirt]</span>
-										<br>
-										<span>치마 바지 스커트</span>
+										<span>Skirt</span>
 									</td>
 									<td>
 										<span>322</span>
@@ -271,64 +264,10 @@
 										<span>6</span>
 									</td>
 									<td>
-										<span>[Dress]</span>
-										<br>
-										<span>벨트 롱 원피스 핑크</span>
+										<span>Dress</span>
 									</td>
 									<td>
 										<span>310</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>7</span>
-									</td>
-									<td>
-										<span>[Outer]</span>
-										<br>
-										<span>아크릴 자켓 세블</span>
-									</td>
-									<td>
-										<span>292</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>8</span>
-									</td>
-									<td>
-										<span>[Top]</span>
-										<br>
-										<span>핑크베리 브라우스</span>
-									</td>
-									<td>
-										<span>282</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>9</span>
-									</td>
-									<td>
-										<span>[Top]</span>
-										<br>
-										<span>웨딩 브라우스</span>
-									</td>
-									<td>
-										<span>125</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>10</span>
-									</td>
-									<td>
-										<span>[Bottom]</span>
-										<br>
-										<span>블랙진</span>
-									</td>
-									<td>
-										<span>120</span>
 									</td>
 								</tr>
 							</tbody>

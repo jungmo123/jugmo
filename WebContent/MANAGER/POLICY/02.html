@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+<link rel ="stylesheet" href = "../CSS/Navigation.css" />
+<style>
+	body{
+		color:#878787;
+	}
+	#deliveryPolicy{
+		margin-top:20px;
+	}
+	#deliveryCharge{
+		padding:10px;
+	}
+	#deliveryCharge input{
+		width:80px;
+	}
+	#deliveryCharge p:nth-child(2) span:first-child{
+		margin-right:13px;
+	}
+	#AddressDiv{
+		width:400px;
+		height:100px;
+		overflow:auto;
+	}
+	#AddressForm{
+		padding:10px;
+	}
+	#AddressForm p:nth-child(2){
+		width:400px;
+	}
+	#AddressDiv{
+		border:1px solid #727272;
+	}
+	#add{
+		position:relative;
+		bottom:2px;
+		float:right;
+		padding:0;
+		width:60px;
+		height:28px;
+	}
+	#delete{
+		margin-top:10px;
+	}
+	#pointPolicy{
+		margin-top:20px;
+	}
+	#pointPolicy div:nth-child(2){
+		padding:10px;
+	}
+	#pointPolicy div:nth-child(2) p:nth-child(1) input{
+		width:80px;
+	}
+	#pointPolicy div:nth-child(2) p:nth-child(2) input{
+		width:40px;
+		margin-left:3px;
+	}
+	p span:first-child{
+		font-weight:bold;
+	}
+</style>
+<body>
+
+	<div class = "container">
+		<div id = "title">
+			<div id = "logo">
+				<a href = "#" ><span>LALA&nbsp;</span>MARKET</a>
+				<div id = "Admin">
+					<h5>Administrator</h5>
+				</div>
+			</div>
+			<div>
+				<span>
+					<i class="far fa-edit"></i>		
+				</span>
+				<span>기본 정책 관리</span>
+				<hr>	
+			</div>
+			<div id = "submenu">
+				<a href = "#" ><span>약관</span></a>
+				<a href = "#" class = "activeMenu"><span>정책</span></a>
+			</div>
+		</div>
+		<div id = "content">
+			<div>
+				<div id = "topmenu">
+					<span>
+						<a href = "#">이용자 화면 보기</a>
+						<span>&#124;</span>
+						<a href = "#">사내 게시판</a>
+						<span>&#124;</span>
+						<a href = "#">로그아웃</a>		
+					</span>		
+				</div>			
+				<div class = "container">
+					<div id = "nav" class = "btn-group">
+						<div class = "btn-group">
+							<button type = "button" class = "btn btn-default">주문관리</button>
+						</div>
+						<div class = "btn-group drop">
+							<button type = "button" class = "btn btn-default dropdown-toggle" type = "button" data-toggle="dropdown">게시판 관리</button>
+							<ul class= "dropdown-menu">
+								<li><a href = "#">서브메뉴 표기</a></li>
+								<li><a href = "#">서브메뉴 표기</a></li>
+								<li><a href = "#">서브메뉴 표기</a></li>
+								<li><a href = "#">서브메뉴 표기</a></li>
+							</ul>
+						</div>
+						<div class = "btn-group">
+							<button type = "button" class = "btn btn-default">회원 관리</button>
+						</div>
+						<div class = "btn-group">
+							<button type = "button" class = "btn btn-default">메인 관리</button>
+						</div>
+						<div class = "btn-group">
+							<button type = "button" class = "btn btn-default">배너 관리</button>
+						</div>
+						<div class = "btn-group">
+							<button type = "button" class = "btn btn-default">상품 관리</button>
+						</div>
+						<div class = "btn-group ">
+							<button type = "button" class = "btn btn-default">통계</button>
+						</div>
+						<div class = "btn-group is-current">
+							<button type = "button" class = "btn btn-default">정책 관리</button>
+						</div>
+						<div class="nav-underline"></div>
+					</div>	
+				</div>
+			<div id = "hr" >
+				<hr>
+			</div>
+		</div>
+			<div id = "AllContent">
+				<div id = "menuBar">
+					<p id = "menuName">Policy Managament</p>
+					<p id = "currentIdx">&#124; 기본 정책 관리> 정책 관리</p>
+				</div>
+				<div id = "deliveryPolicy">
+					<strong>배송 정책</strong>
+					<div id = "deliveryCharge">
+						<p>
+							<span>기본 배송료 : </span>
+							<input type = "number" name = "shippingCharge " /><span>원</span>
+						</p>
+						<p>
+							<span>무료 배송 : </span>
+							<input type = "number" name = "noCharge " /><span>원 이상 구매시 무료 배송</span>
+						</p>
+					</div>
+					<div id = "AddressForm">
+						<p>
+							<span>배송 불가지역</span>
+						</p>
+						<p>
+							<input type = "text" name = "address" />
+							<button>우편번호 검색</button>
+							<button id = "add" class = " btn btn-default">추가</button>
+						</p>
+						<div id = "AddressDiv">
+								<p>
+										<input type = "checkbox" />
+										<span>[082025] 서울시 영등포구 새말로 20길</span>
+								</p>
+								<p>
+										<input type = "checkbox" />
+										<span>[082025] 서울시 영등포구 새말로 20길</span>
+								</p>
+								<p>
+										<input type = "checkbox" />
+										<span>[082025] 서울시 영등포구 새말로 20길</span>
+								</p>
+								<p>
+										<input type = "checkbox" />
+										<span>[082025] 서울시 영등포구 새말로 20길</span>
+								</p>
+								<p>
+										<input type = "checkbox" />
+										<span>[082025] 서울시 영등포구 새말로 20길</span>
+								</p>
+						</div>
+						<button id = "delete" class = "btn btn-default">선택삭제</button>				
+					</div>
+				</div>
+				<div id = "pointPolicy">
+					<strong>포인트 정책</strong>
+					<div>
+						<p>
+							<span>가입 포인트 :</span>
+							<span>회원 가입 시 <input type = "number" name = "joinP" />원 적립</span>
+						</p>
+						<p>
+							<span>구매 포인트 :</span>
+							<span>구매 금액의 <input type = "number" name = "joinP" />% 적립</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
