@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<style>
+	#sArContent{
+		padding:10px;
+	}
+	#firstTable{
+		margin-top:10px;
+		width:800px;
+	}
+	#firstTable td{
+		border-top:1px solid grey;
+		border-bottom:1px solid grey;
+		height:50px;
+	}
+	#firstTable tr td:nth-child(1){
+		width:140px;
+		text-align:right;
+		border-right:1px solid grey;
+	}
+	#firstTable tr td:nth-child(1) strong{
+		margin-right:10px;
+	}
+	#firstTable tr td:nth-child(2){
+		padding:10px;
+	}
+	#firstTable tr td:nth-child(2) span label{
+		margin-right:10px;
+	}
+	textarea{
+		width:640px;
+		height:130px;
+		resize:none;
+	}
+	input[type='text']{
+		width:500px;
+		margin-left:10px;
+	}
+	#buttonGroup button{
+		float:right;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>마이 페이지</span>
+			</div>
+			<div id="navContent">
+				<p>쇼핑 이용 정보</p>
+				<hr>
+				<div>
+					<a href = "#" class= "activeMenu"><span>> 주문 내역</span></a>
+					<a href = "#"><span>> 장바구니</span></a>
+					<a href = "#"><span>> 포인트 이용 내역</span></a>
+				</div>
+				<p>게시판 이용 내역</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 1:1 문의</span></a>
+					<a href = "#"><span>> 나의 상품평</span></a>
+					<a href = "#"><span>> 나의 상품 문의</span></a>
+				</div>
+				<p>개인정보 수정</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 개인정보 수정</span></a>
+					<a href = "#"><span>> 비밀번호 변경</span></a>
+				</div>
+				<p>회원 탈퇴</p>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;교환 환불 신청</strong>
+			<div id="sAr">
+				<hr>
+				<div id = "sArContent">
+					<table id = "firstTable">
+						<tr>
+							<td>						
+								<strong>교환 환불 상품</strong>
+							</td>
+							<td>
+								<span>{상품명 표기}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>교환/환불 선택</strong>
+							</td>
+							<td>
+								<div>
+									<span>
+										<input type="radio" name="sArSelect" id="swap" class="custom-control-input">
+										<label class="custom-control-label" for="swap">교환</label>
+										<input type="radio" name="sArSelect" id="rebate" class="custom-control-input">
+										<label class="custom-control-label" for="rebate">환불</label>								
+									</span>
+								</div>															
+							</td>												
+						</tr>
+						<tr>
+							<td>						
+								<strong>사유 선택</strong>
+							</td>
+							<td>
+								<span>
+									<input type="radio" name="reason" id="change" class="custom-control-input">
+									<label class="custom-control-label" for="change">색상/사이즈 변경</label>
+									<input type="radio" name="reason" id=ungrounded class="custom-control-input">
+									<label class="custom-control-label" for="ungrounded">단숨 변심</label>	
+									<input type="radio" name="reason" id="break" class="custom-control-input">
+									<label class="custom-control-label" for="break">제품 파손</label>
+									<input type="radio" name="reason" id="wrongDelivery" class="custom-control-input">
+									<label class="custom-control-label" for="wrongDelivery">오배송</label>	
+									<input type="radio" name="reason" id="theRest" class="custom-control-input">
+									<label class="custom-control-label" for="theRest">기타</label>	
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>내용작성</strong>
+							</td>
+							<td>
+								<textarea></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>이미지 업로드</strong>
+							</td>
+							<td>
+								<p>
+									1.<input type = "text" name = "image1" />
+									<button>찾아보기</button>
+								</p>
+								<p>
+									2.<input type = "text" name = "image2" />
+									<button>찾아보기</button>
+								</p>
+								<p>
+									3.<input type = "text" name = "image3" />
+									<button>찾아보기</button>
+								</p>
+								<span>※ 000MB 이하, JPG , PNG 만 가능</span>
+							</td>
+						</tr>
+						<tr>
+							<td>						
+								<strong>배송비 결제</strong>
+							</td>
+							<td>
+								<span>{배송비}원</span><br>
+								<span>※ 교환/환불 사유가 '사이즈 색상 변경','단숨 변심'의 경우 배송비를 고객님께서
+								부담하셔야 하므로,<br>&nbsp;&nbsp;&nbsp;<strong>[교환/환불 신청하기]</strong>클릭 시 배송비 결제가 진행됩니다.</span>
+							</td>
+						</tr>
+					</table>				
+				</div>
+				<div id = "buttonGroup">
+					<button class = "btn btn-default">신청하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

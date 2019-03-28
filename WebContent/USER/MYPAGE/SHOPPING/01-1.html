@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	.modal-content{
+		width:500px;
+	}
+	#inquiry,#state{
+		margin-top:10px;
+	}
+	#inquiry > div,
+	#state > div{
+		padding:10px;
+	}
+	table{
+		width:440px;
+	}
+	table tr th,
+	table tr td{
+		text-align:center;
+		height:22px;
+	}
+	table thead tr{
+		background-color:#F2F5F7;
+	}
+	table tr td,
+	table tr th{
+		border:1px solid grey;
+	}
+	.modal-footer{
+		text-align:center;
+	}
+</style>
+</head>
+<body>
+
+	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#mySmallModal">Open Small Modal</button>
+
+	<div class = "modal fade" id  ="mySmallModal">
+		<div class = "modal-dialog">
+			<div class ="modal-content">
+				<div class = "modal-body">
+					<div id = "inquiry">
+						<strong>&#124;&nbsp; 배송 조회</strong>
+						<button type = "button" class = "close" data-dismiss = "modal">X</button>
+						<div>
+							<table id = "firstTable">
+								<thead>
+									<tr>
+										<th>택배사</th>
+										<th>송장번호</th>
+										<th>대표번호</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>{택배사명 표기}</td>
+										<td>{송장번호 표기}</td>
+										<td>{대표번호 표기}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id = "state">
+						<strong>&#124;&nbsp; 배송 상황</strong>
+						<div>
+							<table id = "secondTable">
+								<thead>
+									<tr>
+										<th>날짜</th>
+										<th>송장위치</th>
+										<th>배송상태</th>
+										<th>연락처</th>
+										<th>기타정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2023-07-15 13:54</td>
+										<td>이천터미널</td>
+										<td>집하</td>
+										<td>1588-0123</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

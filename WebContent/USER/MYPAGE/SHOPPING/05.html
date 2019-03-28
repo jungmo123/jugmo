@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<style>
+#pointTitle {
+	display: inline-block;
+	width: 780px;
+	height: 120px;
+	text-align: center;
+}
+
+#pointTitle>p span strong {
+	margin-left: 40px;
+	font-size: 30px;
+}
+
+#pointTitle>p {
+	margin-bottom: 20px;
+}
+
+#pointTitle>div>span {
+	margin: 0 10px 0 10px;
+}
+
+#input1, #input2 {
+	display: inline-block;
+}
+
+#input1 input, #input2 input {
+	border: 1px solid #c4c4c4;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: 3px 5px;
+	box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+	width: 120px;
+}
+
+[type="date"] {
+	background: #fff
+		url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+		97% 50% no-repeat;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+
+#pointTitle button {
+	padding: 0;
+	width: 70px;
+	height: 28px;
+	position: relative;
+	bottom: 2px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+#pointTable {
+	display: inline-block;
+	width: 780px;
+	padding: 10px;
+}
+
+#table {
+	margin: 10px 0 0 0;
+	border-top: 1px solid #878787;
+	border-bottom: 1px solid #878787;
+	border-top: 1px solid #878787;
+}
+
+#table thead tr:nth-child(1) {
+	background-color: #F2F5F7;
+}
+
+#table thead tr {
+	height: 50px;
+}
+
+#table thead tr th {
+	padding-top: 0;
+	padding-bottom: 15px;
+}
+
+#table tbody tr {
+	height: 50px;
+}
+
+#table tbody tr td span {
+	position: relative;
+	top: 5px;
+}
+
+#table tr th, #table tr td {
+	text-align: center;
+}
+
+#pointPolicy {
+	display: inline-block;
+	padding: 10px;
+	width: 780px;
+	height: 100px;
+	border: 1px solid grey;
+}
+
+#pagination {
+	margin-top: 80px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+#pagination .currentPage {
+	color: #727272 !important;
+	font-weight: bold;
+}
+
+#pagination a {
+	color: #878787;
+	margin-right: 10px;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>마이 페이지</span>
+			</div>
+			<div id="navContent">
+				<p>쇼핑 이용 정보</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 주문 내역</span></a>
+					<a href = "#"><span>> 장바구니</span></a>
+					<a href = "#" class= "activeMenu"><span>> 포인트 이용 내역</span></a>
+				</div>
+				<p>게시판 이용 내역</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 1:1 문의</span></a>
+					<a href = "#"><span>> 나의 상품평</span></a>
+					<a href = "#"><span>> 나의 상품 문의</span></a>
+				</div>
+				<p>개인정보 수정</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 개인정보 수정</span></a>
+					<a href = "#"><span>> 비밀번호 변경</span></a>
+				</div>
+				<p>회원 탈퇴</p>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;포인트 이용 내역</strong>
+			<hr>
+			<div id="pointTitle">
+				<p>
+					<span>보유 포인트<strong>24,500</strong>원
+					</span>
+				</p>
+				<div>
+					<div id="input1">
+						<input type="date" name="dateofbirth" class="dateInput">
+					</div>
+					<span>~</span>
+					<div id="input2">
+						<input type="date" name="dateofbirth" class="dateInput">
+					</div>
+					<button class="btn btn-default">조회</button>
+				</div>
+			</div>
+			<div id="pointTable">
+				<table id="table" class="table table-hover">
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>ID</th>
+							<th>날짜</th>
+							<th>적립/사용</th>
+							<th>내용</th>
+							<th>포인트 변동</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span>7</span></td>
+							<td><span>like7</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>적립</span></td>
+							<td><span>제품 구매</span></td>
+							<td><span>+5000</span></td>
+						</tr>
+						<tr>
+							<td><span>6</span></td>
+							<td><span>like6</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>사용</span></td>
+							<td><span>제품 구매 시 적립금 사용</span></td>
+							<td><span>-1000</span></td>
+						</tr>
+						<tr>
+							<td><span>5</span></td>
+							<td><span>like5</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>적립 취소</span></td>
+							<td><span>제품 구매 취소</span></td>
+							<td><span>-5000</span></td>
+						</tr>
+						<tr>
+							<td><span>4</span></td>
+							<td><span>like4</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>적립</span></td>
+							<td><span>제품 구매</span></td>
+							<td><span>+5000</span></td>
+						</tr>
+						<tr>
+							<td><span>3</span></td>
+							<td><span>like3</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>적립</span></td>
+							<td><span>제품 구매</span></td>
+							<td><span>+5000</span></td>
+						</tr>
+						<tr>
+							<td><span>2</span></td>
+							<td><span>like2</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>적립</span></td>
+							<td><span>오픈 숍 상품판매</span></td>
+							<td><span>+5000</span></td>
+						</tr>
+						<tr>
+							<td><span>1</span></td>
+							<td><span>like1</span></td>
+							<td><span>2023-01-01</span></td>
+							<td><span>소멸</span></td>
+							<td><span>1년간 미사용 포인트</span></td>
+							<td><span>-500</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="pointPolicy">
+				<p>
+					<strong>포인트 사용 정책</strong>
+				</p>
+				<p>
+					<span>1. 포인트는 100원부터 사용할 수 있으며 최근 2년까지만 조회할 수 있습니다.</span>
+				<p>
+					<span>2. 1년간 사용하지 않은 포인트는 자동 소멸됩니다.</span>
+			</div>
+			<div id="pagination">
+				<div>
+					<a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<a href="#" class="currentPage">1</a> <a href="#">2</a> <a href="#">3</a>
+					<a href="#">4</a> <a href="#">5</a> <a href="#"><span
+						class="glyphicon glyphicon-chevron-right"></span></a>
+					<div id="currentBar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<style>
+#searchBar {
+	display: inline-block;
+	width: 780px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#searchBar span {
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+input[type="text"] {
+	display: inline;
+	width: 250px;
+}
+
+select {
+	display: inline !important;
+	width: 130px !important;
+	position: relative;
+	top: 1px;
+}
+
+#searchBar .btn {
+	width: 100px;
+	position: relative;
+	bottom: 2px;
+}
+
+table tr td p {
+	margin-bottom: 0;
+}
+
+table tr td:nth-child(1) {
+	width: 50px;
+}
+
+table tr td:nth-child(1) div:first-child {
+	text-align: center;
+}
+
+table tr td:nth-child(2) {
+	width: 120px;
+}
+
+table tr td:nth-child(2) div {
+	display: inline-block;
+	width: 120px;
+	height: 140px;
+	border: 1px solid lightgrey;
+}
+
+table td:nth-child(3) {
+	line-height: 25px !important;
+}
+
+table td:nth-child(3) div:first-child {
+	padding-top: 5px;
+}
+
+table td:nth-child(3) div:nth-child(1) button {
+	margin-left: 10px;
+	padding: 0;
+	width: 60px;
+	height: 22px;
+	background-color: grey;
+	color: white;
+}
+
+table td:nth-child(3) div:nth-child(3) {
+	height: 50px;
+}
+
+table td:nth-child(4) button {
+	position: relative;
+	top: 50px;
+	border: 0;
+}
+
+table tr:nth-child(3) td {
+	border-top: 1px dotted lightgrey;
+}
+
+table tr:nth-child(3) div:first-child {
+	text-align: left !important;
+	padding: 10px 10px 0px 10px;
+	height: 70px;
+	line-height: 30px;
+}
+
+table tr:nth-child(3) div:last-child {
+	padding: 0px 10px 10px 10px;
+}
+
+table tr:nth-child(3) div:last-child button {
+	padding: 0;
+	width: 40px;
+	height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#commentWrite  button {
+	width: 42px;
+	height: 22px;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#commentWrite hr {
+	margin: 10px;
+}
+
+#commentWrite strong {
+	margin-right: 20px;
+}
+
+#commentWrite textarea {
+	resize: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#commentWrite form div button {
+	width: 130px;
+	height: 70px;
+	float: right;
+	margin-right: 10px;
+}
+
+.commentInfo {
+	margin: 10px;
+}
+
+.commentInfo span {
+	position: relative;
+	bottom: 4px;
+	margin-left: 5px;
+}
+
+.commentInfo span:nth-child(2) {
+	font-weight: bold;
+}
+.fa-comment-dots {
+	font-size: 25px;
+}
+
+.commentContent {
+	margin: 10px 0px 50px 10px;
+	line-height: 25px;
+}
+
+#pagination {
+	margin-top: 30px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+#pagination .currentPage {
+	color: #727272 !important;
+	font-weight: bold;
+}
+
+#pagination a {
+	color: #878787;
+	margin-right: 10px;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>마이 페이지</span>
+			</div>
+			<div id="navContent">
+				<p>쇼핑 이용 정보</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 주문 내역</span></a> <a href="#"><span>>
+							장바구니</span></a> <a href="#"><span>> 포인트 이용 내역</span></a>
+				</div>
+				<p>게시판 이용 내역</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 1:1 문의</span></a> <a href="#"
+						class="activeMenu"><span>> 나의 상품평</span></a> <a href="#"><span>>
+							나의 상품 문의</span></a>
+				</div>
+				<p>개인정보 수정</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 개인정보 수정</span></a> <a href="#"><span>>
+							비밀번호 변경</span></a>
+				</div>
+				<p>회원 탈퇴</p>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;나의 상품평</strong>
+			<div id="searchBar">
+				<hr>
+				<span>상품평 검색</span> <select class="form-control">
+					<option>카테고리 전체</option>
+				</select> <input type="text" class="form-control" name="title"
+					placeholder="상품명을 입력해 주세요." />
+				<button type="button" class="btn btn-default">검색</button>
+				<hr>
+			</div>
+			<div id="itemTable">
+				<table class="table table-hover">
+					<tr>
+						<td>
+							<div>
+								<span>15.</span>
+							</div>
+						</td>
+						<td>
+							<div></div>
+						</td>
+						<td>
+							<div>
+								<strong>{카테고리명&nbsp;&#60;&nbsp;상품평 표기}</strong>
+								<button class="btn btn-default">상품보기</button>
+							</div>
+							<div>
+								<span>{평점 표기}</span>
+							</div>
+							<div>
+								<span>본문 내용 000자 (2줄 표기)</span>
+							</div>
+							<div>
+								<span>{아이디}</span> <span>&nbsp;&#124;&nbsp;</span> <span>{작성일}</span>
+								<span>&nbsp;&#124;&nbsp;</span> <span>댓글{댓글수}개</span>
+							</div>
+						</td>
+						<td>
+							<div>
+								<button class="btn btn-default">
+									보기<span class="glyphicon glyphicon-triangle-bottom"></span>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<span>14.</span>
+							</div>
+						</td>
+						<td>
+							<div></div>
+						</td>
+						<td>
+							<div>
+								<strong>Top&nbsp;&#60;&nbsp;티셔츠</strong>
+								<button class="btn btn-default">상품보기</button>
+							</div>
+							<div>
+								<span>매우만족 ★ ★ ★ ★ ★</span>
+							</div>
+							<div>
+								<span>사진과 다르게 색감이 좋으며,입었을 때 스판 원단으로 불편함이<br> 없어요!
+									친절한 상담과 빠른 배송 감사합니다.
+								</span>
+							</div>
+							<div>
+								<span>webplan</span> <span>&nbsp;&#124;&nbsp;</span> <span>2023-01-01
+									12:48:26</span> <span>&nbsp;&#124;&nbsp;</span> <span>댓글1개</span>
+							</div>
+						</td>
+						<td>
+							<div>
+								<button class="btn btn-default">
+									닫기<span class="glyphicon glyphicon-triangle-top"></span>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<div>
+								<span>사진과 다르게 색감이 좋으며,입었을 때 스판 원단으로 불편함이없어요!<br> 친절한
+									상담과 빠른 배송 감사합니다.
+								</span>
+							</div>
+							<div>
+								<button class="btn btn-default">수정</button>
+								<button class="btn btn-default">삭제</button>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="commentWrite">
+				<hr>
+				<strong>작성된 댓글 (1개)</strong>
+				<button class="btn btn-default">작성</button>
+				<button class="btn btn-default">취소</button>
+				<hr>
+				<form>
+					<div>
+						<textarea cols="85" rows="3"
+							placeholder="- 최대 000자까지 작성할 수 있습니다(띄어쓰기 포함).
+※욕설, 영업에 방해되는 글은 관리자에 의해 삭제됩니다."></textarea>
+						<button class="btn btn-default">등록</button>
+					</div>
+				</form>
+				<hr>
+				<div class="commentInfo">
+					<i class="far fa-comment-dots"></i> <span>Admin</span> <span>&#124;</span>
+					<span>2023-01-01 16:10</span>
+				</div>
+				<div class="commentContent">
+					<span>안녕하세요! 고객님 저희 쇼핑몰을 이용해주셔서 감사합니다. 더욱 노력하겠습니다.</span>
+				</div>
+				<hr>
+			</div>
+			<div id="pagination">
+				<div>
+					<a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<a href="#" class="currentPage">1</a> <a href="#">2</a> <a href="#">3</a>
+					<a href="#">4</a> <a href="#">5</a> <a href="#"><span
+						class="glyphicon glyphicon-chevron-right"></span></a>
+					<div id="currentBar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

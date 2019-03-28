@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<style>
+	div > strong{
+		font-size:20px;
+	}
+	#obTitle>div {
+		margin-top: 10px;
+		background-color: #F2F5F7;
+		border-radius: 10px;
+		padding: 5px 5px 5px 10px;
+	}
+	
+	#obTitle>div p {
+		margin: 0;
+	}
+	
+	#obTitle>div p span {
+		margin-right: 10px;
+	}
+	
+	#obTitle>div p span:nth-child(1), #obTitle>div p span:nth-child(3) {
+		font-weight: bold;
+	}
+	
+	#obTitle>div strong {
+		float: right;
+		margin-right: 10px;
+	}
+	#obList,
+	#orderInfo,
+	#deliveryInfo,
+	#priceInfo{
+		margin-top:20px;
+	}
+	#obList table{
+		width:100%;
+		text-align:center;
+	}
+	#obList table tr{
+		border:1px solid lightgrey;
+		height:30px;
+	}
+	#obList table th{
+		text-align:center;
+		margin-left:10px;
+		background-color:#F2F5F7;
+	}
+	.br{
+		margin-top:10px;
+	}
+	select{
+		width:80px;
+	}
+	#item{
+		width:300px;
+		line-height:28px;
+	}
+	#item > div p{
+		height:20px;
+	}
+	#item > div p span:first-child{
+		float:left;
+	}
+	#item > div p span:last-child{
+		float:right;
+	}
+	#item div{
+		display:inline-block;
+		width:280px;
+		margin:5px 15px 5px 5px;
+	}
+	#item strong{
+		float:right;
+		margin-right:20px;
+	}
+	.itemName{
+		float:left;
+		margin-right:5px;
+	}
+	#image{
+		width:80px;
+		height:100px;
+		border:1px solid black;
+		margin:10px;
+		display:inline-block;
+	}
+	#orderInfo div,
+	#deliveryInfo div,
+	#priceInfo div{
+		padding:10px 10px 10px 20px;
+		border:1px solid lightgrey;
+		margin-top:10px;
+	}
+	#orderInfo table tr td:first-child,
+	#deliveryInfo table tr td:first-child,
+	#priceInfo table tr td:first-child{
+		width:100px;
+	}
+	#orderInfo table,
+	#deliveryInfo table,
+	#priceInfo table{
+		line-height:25px;
+	}
+	#orderInfo button{
+		float:right;
+		padding:0;
+		width:60px;
+		height:25px;
+		font-weight:bold;
+	}
+	#priceInfo button{
+		padding:0;
+		width:70px;
+		height:23px;
+		font-size:12px;
+		font-weight:bold;
+	}
+	#buttonGroup{
+		text-align:center;
+	}
+	#buttonGroup button{
+		margin-top:10px;
+		padding:0;
+		width:80px;
+		height:25px;
+		font-weight:bold;
+	}
+	#buttonGroup button:nth-child(1){
+		float:left;
+	}
+	#buttonGroup button:nth-child(3){
+		float:right;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>마이 페이지</span>
+			</div>
+			<div id="navContent">
+				<p>쇼핑 이용 정보</p>
+				<hr>
+				<div>
+					<a href = "#" class= "activeMenu"><span>> 주문 내역</span></a>
+					<a href = "#"><span>> 장바구니</span></a>
+					<a href = "#"><span>> 포인트 이용 내역</span></a>
+				</div>
+				<p>게시판 이용 내역</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 1:1 문의</span></a>
+					<a href = "#"><span>> 나의 상품평</span></a>
+					<a href = "#"><span>> 나의 상품 문의</span></a>
+				</div>
+				<p>개인정보 수정</p>
+				<hr>
+				<div>
+					<a href = "#"><span>> 개인정보 수정</span></a>
+					<a href = "#"><span>> 비밀번호 변경</span></a>
+				</div>
+				<p>회원 탈퇴</p>
+			</div>
+		</div>
+
+		<div id="content">
+			<div id="orderBreakdown">
+				<div id="obTitle">
+					<strong>&#124;&nbsp;주문 내역</strong>
+					<div>
+						<p>
+							<span>주문번호</span> <span>{주문번호표기}</span> <span>주문일</span> <span>{년-월-일
+								시:분:초}</span> <strong>{주문/배송 상태 값 표기}</strong>
+						</p>
+					</div>
+				</div>
+				<div id="obList">
+					<strong>&#124;&nbsp;구매 리스트</strong>
+					<table class="br">
+						<tr>
+							<th>번호</th>
+							<th></th>
+							<th>상품 정보</th>
+							<th>수량</th>
+							<th>판매 가격</th>
+							<th>배송비</th>
+						</tr>
+						<tr>
+							<td><span class="number">2</span></td>
+							<td>
+								<div id="image">목록이미지</div>
+							</td>
+							<td id="item">
+								<div>
+									<p>
+										<span>자수 실크 린넨 브라우스</span>
+										<span>20,000원</span>
+									</p>
+									<p>
+										<span>색상 : 블랙</span>
+										<strong>-</strong>
+									</p>
+									<p>
+										<span>디자인 : C형</span>
+										<span>2,000원</span>
+									</p>
+								</div>
+							</td>
+							<td> <span>1개</span></td>
+							<td><span>22,000원</span></td>
+							<td><span>2,500원</span></td>
+						</tr>
+					</table>
+				</div>
+				<div id= "orderInfo">
+					<strong>&#124;&nbsp;주문자 정보</strong>
+					<button class = "btn btn-default">수정</button>
+					<div>
+						<table>
+							<tr>
+								<td>
+									<strong>이름 : </strong>
+								</td>
+								<td>
+									<span>최한석</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>연락처 : </strong>
+								</td>
+								<td>
+									<span>010-0000-00000</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id= "deliveryInfo">
+					<strong>&#124;&nbsp;배송 정보</strong>
+					<div>
+						<table>
+							<tr>
+								<td>
+									<strong>이름 : </strong>
+								</td>
+								<td>
+									<span>한아름</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>주소 : </strong>
+								</td>
+								<td>
+									<span>서울시 강서구 방화동 11-00번지 5층</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>연락처 : </strong>
+								</td>
+								<td>
+									<span>010-0000-00000</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>배송요청사항 : </strong>
+								</td>
+								<td>
+									<span>부재시 경비실에 맡겨 주세요!</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id= "priceInfo">
+					<strong>&#124;&nbsp;결제 방법 및 결제 금액</strong>
+					<div>
+						<table>
+							<tr>
+								<td>
+									<strong>상품가격 : </strong>
+								</td>
+								<td>
+									<span>28,500원</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>배송료 : </strong>
+								</td>
+								<td>
+									<span>2,500원</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>사용 포인트 : </strong>
+								</td>
+								<td>
+									<span>1,000원</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>결제방법 :</strong>
+								</td>
+								<td>
+									<span>신용카드(결제완료)</span>
+									<button class = "btn btn-default">영수증 발행</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id = "buttonGroup">
+					<button class = "btn btn-default">목록</button>
+					<button class = "btn btn-default">확인</button>
+					<button class = "btn btn-default">주문취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
