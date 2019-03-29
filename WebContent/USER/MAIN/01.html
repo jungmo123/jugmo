@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.container{
+		width:850px;
+	}
+	#header{
+		width:800px;
+		margin-top:50px;
+		text-align:center;
+		position:relative;
+		left:10px;
+	}
+	#header #banner{
+		height:100px;
+		border:1px solid black;
+	}
+	#header #title{
+		margin-top:30px;
+	}
+	#header #title > strong{
+		font-size:30px;
+	}
+	#searchBar{
+		text-align:center;
+		margin-top:10px;
+	}
+	input[type="text"]{
+		display:inline;
+		width:280px;
+		height:25px;
+	}
+	#searchBar select{
+		display:inline;
+		width:100px;
+		height:26px;
+		padding:0;
+		font-size:12px;	
+		position:relative;
+		bottom:1px;	
+	}
+	#searchBar .btn{
+		width:60px;
+		height:25px;
+		padding:0;
+		font-size:12px;
+		font-weight:bold;
+		position:relative;
+		bottom:2px;	
+	}
+	#nav{
+		margin-top:50px;
+	}
+	#nav #loginBar{
+		float:right;
+		margin:0 10px 2px 0;
+	}
+	#nav #loginBar a{
+		color:#878787;
+		margin:0 5px 0px 5px;
+		font-size:12px;
+	}
+	#content{
+		margin-top:10px;
+	}
+	#content #banner2{
+		height:250px;
+		border:1px solid black;
+		position:relative;
+	}
+	#content #banner2 div{
+		position:absolute;
+		bottom:2px;
+		right:4px;
+	}
+	#content #banner2 div span{
+		font-size:12px;
+	}
+	#board{
+		margin-top:30px;
+	}
+	#board #notice{
+		width:250px;
+		float:left;
+		margin-left:20px;
+	}
+	#board div a{
+		float:right;
+		color:black;
+	}
+	#board #notice div,
+	#board #community div,
+	#board #productReview div{
+		margin-top:10px;
+		line-height:23px;
+	}
+	#board div ul{
+		padding-left:20px;
+	}
+	#board div ul li{
+		float:left;
+	}
+	#board #community{
+		width:260px;
+		float:left;
+		margin-left:20px;
+	}
+	#board #productReview{
+		width:250px;
+		float:left;
+		margin-left:20px;	
+	}
+</style>
+</head>
+<body>
+
+	<div class = "container">
+		<div id = "header">
+			<div id = "banner">
+				배너1
+			</div>
+			<div id = "title">
+				<strong>라라마켓</strong>
+				<br>
+				<span>안 입는 옷을 판매하고, 새 옷으로 구매하세요!</span>
+				<div id = "searchBar">
+					<select class = "form-control">
+						<option>전체 검색</option>
+					</select>
+					<input type = "text" class = "form-control" name = "title" placeholder = "검색어를 입력하세요!"/>
+					<button type = "button" class = "btn btn-default">검색</button>
+				</div>
+				<div id = "nav">
+					<div id = "loginBar">
+						<a href = "#"><span>회원가입</span></a>
+						<span>&#124;</span>
+						<a href = "#"><span>로그인</span></a>
+						<span>&#124;</span>
+						<a href = "#"><span>ID/비밀번호 
+						찾기</span></a>
+					</div>
+					<div class = "btn-group btn-group-justified">
+						<a href = "#" class = "btn btn-default">스타일 숍</a>
+						<a href = "#" class = "btn btn-default">라라마켓</a>
+						<a href = "#" class = "btn btn-default">상품평</a>
+						<a href = "#" class = "btn btn-default">이벤트</a>
+						<a href = "#" class = "btn btn-default">고객센터</a>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div id= "content">
+			<div id = "banner2">
+				{Banner Image}
+				<div>
+					<span>●</span>
+					<span>○</span>
+					<span>○</span>
+					<span>○</span>
+					<span>○</span>
+				</div>
+			</div>
+			<div id = "board">
+				<div id = "notice">
+					<strong>공지사항</strong>
+					<a href = "#">더보기 > </a>
+					<div>
+						<ul>
+							<li><a href = "#">상품을 주문하는 방법 안내해 드립니다.</a></li>
+							<li><a href = "#">결제가 잘 되지 않을 떄 이렇게 해보세요!</a></li>
+							<li><a href = "#">장바구니를 이렇게 이용하면 좋습니다.</a></li>
+							<li><a href = "#">배송은 주문 후 2일이내 완료 됩니다.</a></li>
+							<li><a href = "#">상품 등록 시 주의 사항 알려드립니다.</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id = "community">
+					<strong>커뮤니티</strong>
+					<a href = "#">더보기 > </a>
+					<div>
+						<ul>
+							<li><a href = "#">상품 판매는 어떻게 하나요?. 2023.07.07</a></li>
+							<li><a href = "#">상품 판매 후 금액은 어떻..... 2023.07.07</a></li>
+							<li><a href = "#">포인트는 어떻게 사용하면... 2023.07.07</a></li>
+							<li><a href = "#">배송완료된 상품은 삭제해... 2023.07.07</a></li>
+							<li><a href = "#">상품은 언제까지 배송가능... 2023.07.07</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id = "productReview">
+					<strong>상품평</strong>
+					<a href = "#">더보기 > </a>
+					<div>
+						<ul>
+							<li><a href = "#">옷 정말 잘 산 거 같아요! 다음에도 또...</a></li>
+							<li><a href = "#">고급 소재라서 그런지 너무 부드럽고...</a></li>
+							<li><a href = "#">너무 좋아서 맨날 입고 다니고 있어요...</a></li>
+							<li><a href = "#">세탁을 해도 옷 색이 전혀 변하지 않아...</a></li>
+							<li><a href = "#">지금 입기에 딱 좋은 옷이네요?다른 색...</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

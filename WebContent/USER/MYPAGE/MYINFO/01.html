@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<style>
+	#confirm{
+		margin-top:100px;
+		display:inline-block;
+		width:800px;
+		text-align:center;
+	}
+	#confirm p{
+		margin-bottom:20px;
+	}
+	#confirm input{
+		display:inline-block;
+		width:120px;
+		height:30px;
+		position:relative;
+		top:2px;
+	}
+	#confirm button{
+		padding:0;
+		width:60px;
+		height:30px;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>마이 페이지</span>
+			</div>
+			<div id="navContent">
+				<p>쇼핑 이용 정보</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 주문 내역</span></a> <a href="#"><span>>
+							장바구니</span></a> <a href="#"><span>> 포인트 이용 내역</span></a>
+				</div>
+				<p>게시판 이용 내역</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 1:1 문의</span></a> <a href="#"><span>>
+							나의 상품평</span></a> <a href="#" ><span>> 나의 상품 문의</span></a>
+				</div>
+				<p>개인정보 수정</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 개인정보 수정</span></a> <a href="#"><span>>
+							비밀번호 변경</span></a>
+				</div>
+				<a href = "#"><span>회원탈퇴</span></a>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;비밀번호 확인</strong>
+			<div id = "confirm">
+				<p>
+					사용자 확인을 위해 비밀번호를 다시 한번 입력해주세요!
+				</p>
+				<p>
+					<strong>비밀번호 입력 : </strong>
+					<input type = "password" class = "form-control" />
+					<button class  = "btn btn-default">확인</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

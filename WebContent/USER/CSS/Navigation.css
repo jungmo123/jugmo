@@ -40,6 +40,10 @@
 	#nav #navContent > p{
 		font-weight:bold;
 	}
+	#navContent > a{
+		color:black;
+		font-weight:bold;
+	}
 	.activeMenu{
 		color:red !important;
 	}

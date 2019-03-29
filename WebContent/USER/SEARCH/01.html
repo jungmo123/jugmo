@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.container{
+		width:1200px;
+		margin-top:30px;
+	}
+	#nav{
+		display:inline-block;
+		width:160px;
+		height:180px;
+		border:1px solid grey;
+		float:left;
+	}
+	#nav hr{
+		margin:5px;
+	}
+	#nav #navTitle{
+		width:100%;
+		height:40px;
+		text-align:center;
+		font-weight:bold;
+		padding:10px 5px 5px 5px;
+		border-bottom:1px solid grey;
+		background-color:#F2F5F7;
+	}
+	#nav #navContent{
+		padding:5px;
+	}
+	#nav #navContent div{
+		margin-bottom:20px;
+		line-height:25px;
+	}
+	#nav #navContent div > a{
+		display:block;
+		padding-left:10px;
+		color:black;
+	}
+	#nav #navContent > p{
+		font-weight:bold;
+	}
+	#navContent > a{
+		color:black;
+		font-weight:bold;
+	}
+	#content{
+		display:inline-block;
+		width:800px;
+		float:left;
+		margin-left:20px;
+	}
+	#content > strong{
+		font-size:20px;
+	}
+	#content > div:first-child{
+		width:100px;
+		height:25px;
+		background-color:lightgrey;
+		text-align:center;
+	}
+	#styleShop,
+	#productReview,
+	#board{
+		width:600px;
+	}
+	#styleShop a,
+	#productReview a,
+	#board a{
+		float:right;
+		color:black;
+	}
+	#styleShop table,
+	#productReview table,
+	#board > div{
+		margin-top:10px;
+	}
+	#styleShop table tr td > div{
+		margin-bottom:10px;
+	}
+	#styleShop table tr td:nth-child(1) > div{
+		width:100px;
+		height:100px;
+		border:1px solid lightgrey;
+	}
+	#styleShop table tr td:nth-child(2){
+		width:400px;
+	}
+	#styleShop table tr td:nth-child(2) > div{
+		height:100px;
+		padding:10px;
+		line-height:25px;
+	}
+	#styleShop table tr td:nth-child(2) > div > div:last-child{
+		height:50px;
+	}
+	#productReview table tr td:nth-child(1){
+		width:180px;
+		height:120px;
+	}
+	#productReview table tr td:nth-child(1) > div{
+		width:180px;
+		height:100px;
+		border:1px solid lightgrey;
+	}
+	#productReview table tr td:nth-child(2) > div > div:first-child span{
+		margin-left:50px;
+	}
+	#productReview table tr td:nth-child(2) > div{
+		line-height:25px;
+	}
+	#productReview table tr td:nth-child(2) > div > div:nth-child(2){
+		height:50px;
+	}
+	#productReview table tr td:nth-child(2) > div > div:last-child span{
+		margin-right:5px;
+	}
+	#board div{
+		line-height:25px;
+		margin-bottom:10px;
+	}
+	#board > div span{
+		margin-right:5px;
+	}
+	#board > div > div:first-child span:last-child{
+		float:right;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>스타일 숍</span>
+			</div>
+			<div id="navContent">
+				<div>
+					<a href = "#"><span>> Outer</span></a>
+					<a href = "#"><span>> Top</span></a>
+					<a href = "#"><span>> Bottom</span></a>
+					<a href = "#"><span>> Skirt</span></a>
+					<a href = "#"><span>> Dress</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<div>통합 검색</div>
+			<strong>&#124;&nbsp;통합 검색</strong>
+			<hr>
+			<div id = "styleShop">
+				<strong>스타일 숍</strong>
+				<a href = "#">검색 결과 더 보기 ></a>
+				<table class = "table table-hover">
+					<tr>
+						<td>
+							<div>
+							</div>
+						</td>
+						<td>
+							<div>
+								<div>
+									<strong>{상품명}</strong>
+								</div>
+								<div>
+									<span>{상품 특징 표기 (2줄)}</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div>
+								<strong>42,000원</strong>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+							</div>
+						</td>
+						<td>
+							<div>
+								<div>
+									<strong>기모 티셔츠</strong>
+								</div>
+								<div>
+									<span>깃털처럼 가벼운 것에 비해<br>최고의 보온 효과!</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div>
+								<strong>42,000원</strong>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<hr>
+			<div id = "productReview">
+				<strong>상품평</strong>
+				<a href = "#">검색 결과 더 보기 ></a>
+				<table class = "table table-hover">
+					<tr>
+						<td>
+							<div>
+							</div>
+						</td>
+						<td>
+							<div>
+								<div>
+									<strong>{상품명}</strong>
+									<span>조회수 : 100</span>
+								</div>
+								<div>
+									<span>{상품평}</span>
+								</div>
+								<div>
+									<span>{아이디}</span>
+									<span>&#124;</span>
+									<span>{등록일시}</span>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>			
+			</div>
+			<hr>
+			<div id = "board">
+				<strong>게시판</strong>
+				<a href = "#">검색 결과 더 보기 ></a>
+				<div>
+					<div>
+						<span>{[게시판 경로 표기]}</span>
+						<span>{글 제목 표기}</span>
+						<span>{작성일}</span>
+					</div>
+					<div>
+						<span>고객님 안녕하세요! 라라마켓 관리자입니다.추석 명절로 인해 택배 회사에서 더 이상 배송 접수를 하지<br> 않고
+						있습니다.이점 너그러운 양해를 부탁드리며,자세한 내용은 아래의 안내 사항을 참고 바랍니다....</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

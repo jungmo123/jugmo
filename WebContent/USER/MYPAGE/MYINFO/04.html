@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<style>
+	#mWGuide{
+		width:600px;
+		padding:10px;
+		border:2px dotted red;
+	}
+	#mWGuide div{
+		margin:10px 0 10px 0;
+		padding:10px;
+		line-height:25px;
+	}
+	#mWGuide div .glyphicon-ok{
+		margin-right:5px;
+	}
+	#mWReason,
+	#mWOpinion,
+	#passwordInput{
+		margin-top:20px;
+	}
+	#mWReason div,
+	#mWOpinion div,
+	#passwordInput div{
+		margin-top:10px;
+	}
+	#mWReason div label{
+		margin-right:16px;
+	}
+	#mWOpinion span{
+		margin-left:200px;
+	}
+	#mWOpinion div textarea{
+		width:600px;
+		height:150px;
+		resize:none;
+	}
+	#passwordInput input{
+		width:130px;
+	}
+	#buttonGroup{
+		width:600px;
+		margin-top:20px;
+		display:inline-block;
+		text-align:center;
+	}
+	#buttonGroup button{
+		width:60px;
+		height:25px;
+		padding:0;
+		font-weight:bold;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>마이 페이지</span>
+			</div>
+			<div id="navContent">
+				<p>쇼핑 이용 정보</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 주문 내역</span></a> <a href="#"><span>>
+							장바구니</span></a> <a href="#"><span>> 포인트 이용 내역</span></a>
+				</div>
+				<p>게시판 이용 내역</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 1:1 문의</span></a> <a href="#"><span>>
+							나의 상품평</span></a> <a href="#" ><span>> 나의 상품 문의</span></a>
+				</div>
+				<p>개인정보 수정</p>
+				<hr>
+				<div>
+					<a href="#"><span>> 개인정보 수정</span></a> <a href="#"><span>>
+							비밀번호 변경</span></a>
+				</div>
+				<a href = "#" class="activeMenu"><span>회원탈퇴</span></a>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;회원 탈퇴</strong>
+			<hr>
+			<div id = "mWGuide">
+				<strong>회원 탈퇴 안내</strong>
+				<div>
+					<span>
+						{고객명} 고객님! 지금까지 저희 쇼핑몰을 이용해 주셔서 감사합니다.<br>
+						저희 쇼핑몰에 부족한 점이 있었다면 너그러운 양해 바라며, 아래의 사항을 확인하시고,<br>
+						개선해야 할 점이 있다면 남겨 주세요!<br>
+						더욱 고객님의 의견을 적극 반영하여 이용에 불편이 없도록 개선하겠습니다.
+					</span>
+				</div>
+				<strong>회원 탈퇴 시 꼭 확인해 주세요!</strong>
+				<div>
+					<span class = "glyphicon glyphicon-ok"></span><span>사용하고 계신 아이디{이용자ID}는 탈퇴할 경우 3개월 간 재사용이 불가능 합니다.</span>
+					<br>
+					<span class = "glyphicon glyphicon-ok"></span><span>탈퇴 이후 등록한 게시물,보유 포인트 등 이용기록이 모두 삭제 됩니다.</span>
+				</div>
+			</div>
+			<div id = "mWReason">
+				<strong>탈퇴 사유를 선택해 주세요!</strong>
+				<div>
+					<input type = "checkbox" name = "reason1" id = "reason1" />
+					<label for = "reason1">이용률 감소</label>
+					<input type = "checkbox" name = "reason2" id = "reason2" />
+					<label for = "reason2">상품 저 품질</label>
+					<input type = "checkbox" name = "reason3" id = "reason3" />
+					<label for = "reason3">상품 가격 불만</label>
+					<br>
+					<input type = "checkbox" name = "reason4" id = "reason4" />
+					<label for = "reason4">오픈 숍 구매 가능 상품 수 저조</label>
+					<input type = "checkbox" name = "reason5" id = "reason5" />
+					<label for = "reason5">오픈 숍 사기성 상품 과다</label>
+				</div>
+			</div>
+			<div id = "mWOpinion">
+				<strong>쇼핑몰 이용에 개선 사항이 있다면 의견을 남겨주세요!</strong>
+				<span>0자 / 1,000자</span>
+				<div>
+					<textarea></textarea>
+				</div>
+			</div>
+			<div id = "passwordInput">
+				<strong>비밀번호 입력</strong>
+				<div>
+					<input type = "password" name = "password">
+				</div>
+			</div>
+			<div id = "buttonGroup">
+				<button class = "btn btn-default">확인</button>
+				<button class = "btn btn-default">취소</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

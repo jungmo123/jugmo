@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.container{
+		width:800px;
+	}
+	#bestProduct{
+		display:inline-block;
+		margin-top:10px;
+		width:800px;
+	}
+	#bestProduct strong{
+		float:left;
+	}
+	#bestProduct div{
+		margin-top:10px;
+		height:60px;
+		float:left;
+	}
+	#bestProduct > div > div:first-child{
+		background-color:lightgrey;
+	}
+	#bestProduct > div > div{
+		display:inline-block;
+		border:1px solid grey;
+		float:left;
+	}
+	#bestProduct > div > div > div{
+		position:relative;
+		display:inline-block;
+		width:79px;
+		float:left;
+	}
+	#bestProduct > div > div > div:nth-child(2){
+		text-align:center;
+	}
+	#bestProduct > div > div > div:nth-child(1) span{
+		position:relative;
+		left:5px;
+		top:25px;
+	}
+	#bestProduct > div > div > div:nth-child(2) > div{
+		margin-top:2px;
+		width:65px;
+		height:35px;
+		border:1px dotted grey;
+	}
+	#bestProduct > div > div > div:nth-child(2) > div span{
+		position:relative;
+		top:5px;
+	}
+	#productList{
+		width:800px;
+		text-align:center;
+	}
+	#productList div{
+		display:inline-block;
+		margin-top:10px;
+		width:744px;
+		text-align:left;
+	}
+	#productList > div div{
+		display:inline-block;
+		width:180px;
+		margin-right:6px;
+		font-size:12px;
+		float:left;
+	}
+	#productList > div > div > div:first-child{
+		height:200px;
+		border:1px solid grey;
+		margin-bottom:10px;
+	}
+	#productList > div > div > div:last-child div:nth-child(3){
+		height:40px;
+	}
+	#footerBox{
+		margin-top:30px;
+		width:760px;
+		text-align:left;
+		position:relative;
+		left:30px;
+	}
+	#footerBox > div{
+		display:inline-block;
+		width:237px;
+		height:120px;
+		margin-right:10px;
+		border:1px solid grey;
+		padding:5px;
+		float:left;
+	}
+	#footerBox > div:first-child > div:nth-child(2){
+		text-align:center;
+		font-size:25px;
+		margin:10px 0 10px 0;
+	}
+	#footerBox > div:first-child > div:nth-child(3){
+		text-align:center;
+	}
+	#footerBox > div:nth-child(2) > div:nth-child(2),
+	#footerBox > div:nth-child(3) > div:nth-child(2){
+		margin-top:10px;
+	}
+	#footerBox > div:nth-child(2) > div:nth-child(2) > div:first-child,
+	#footerBox > div:nth-child(3) > div:nth-child(2) > div:first-child{
+		display:inline-block;
+		width:80px;
+		height:70px;
+		border:1px solid grey;
+		float:left;
+	}
+	#footerBox > div:nth-child(2) > div:nth-child(2) > div:last-child,
+	#footerBox > div:nth-child(3) > div:nth-child(2) > div:last-child{
+		display:inline-block;
+		float:left;
+		position:relative;
+		top:15px;
+		left:5px;
+	}
+</style>
+</head>
+<body>
+
+	<div class = "container">
+		<div id = "bestProduct">
+			<strong>스타일 숍 카테고리 별 BEST 상품</strong>
+			<div>
+				<div>
+					<div>
+						<span>Outer</span>
+					</div>
+					<div>
+						<div>
+							<span>Icon</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<span>Top</span>
+					</div>
+					<div>
+						<div>
+							<span>Icon</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<span>Bottom</span>
+					</div>
+					<div>
+						<div>
+							<span>Icon</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<span>Skirt</span>
+					</div>
+					<div>
+						<div>
+							<span>Icon</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<span>Dress</span>
+					</div>
+					<div>
+						<div>
+							<span>Icon</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "productList">
+			<div>
+				<div>
+					<div>
+					
+					</div>
+					<div>
+						<div>
+							<span>{상품 가격표기}</span>
+						</div>
+						<div>
+							<span>{상품명 표기}</span>
+						</div>
+						<div>
+							<span>{상품 특징 100자 (2줄)}</span><br>
+							<span>{상품 특징 100자 (2줄)}</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+					</div>
+					<div>
+						<div>
+							<span>15,000원</span>
+						</div>
+						<div>
+							<span>기모 티셔츠</span>
+						</div>
+						<div>
+							<span>깃털처럼 가벼운 것에 비해 따뜻한<br>
+							보온으로 다운 패딩과 찰떡 궁합</span>
+						</div>
+						<div>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+					</div>
+					<div>
+						<div>
+							<span>15,000원</span>
+						</div>
+						<div>
+							<span>기모 티셔츠</span>
+						</div>
+						<div>
+							<span>깃털처럼 가벼운 것에 비해 따뜻한<br>
+							보온으로 다운 패딩과 찰떡 궁합</span>
+						</div>
+						<div>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+					</div>
+					<div>
+						<div>
+							<span><del>15,000원</del>&nbsp;→&nbsp;10,000원</span>
+						</div>
+						<div>
+							<span>기모 티셔츠</span>
+						</div>
+						<div>
+							<span>깃털처럼 가벼운 것에 비해 따뜻한<br>
+							보온으로 다운 패딩과 찰떡 궁합</span>
+						</div>
+						<div>
+							<span></span>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+		<div id = "footerBox">
+			<div>
+				<div>
+					<strong>고객센터</strong>
+				</div>
+				<div>
+					<strong>070-0000-0000</strong>
+				</div>
+				<div>
+					<span>평일 10-18시 공휴일,주말 휴무</span>
+				</div>
+			</div>
+			<div>
+				<div>
+					<strong>이벤트</strong>
+				</div>
+				<div>
+					<div>
+					</div>
+					<div>
+						<span>지금 상품평을 등록하면<br>포인트가 2배!</span>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<strong>자주 하는 질문</strong>
+				</div>
+				<div>
+					<div>
+					</div>
+					<div>
+						<span>나의 궁금증을 가장 빨리<br>해결할 수 있는 방법!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
