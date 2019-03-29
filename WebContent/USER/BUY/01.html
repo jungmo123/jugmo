@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/leftNav.css" />
+<style>
+	#styleShop{
+		margin-bottom:10px;
+	}
+	#styleShop table{
+		width:100%;
+		text-align:center;
+	}
+	#styleShop table tr{
+		border:1px solid lightgrey;
+		height:30px;
+	}
+	#styleShop table th{
+		text-align:center;
+		margin-left:10px;
+	}
+	#styleShop table tr td:nth-child(2){
+		width:150px;
+	}
+	#styleShop table tr td:nth-child(4){
+		width:100px;
+	}
+	.br{
+		margin-top:10px;
+	}
+	select{
+		width:80px;
+	}
+	.item{
+		width:300px;
+		line-height:28px;
+	}
+	.item > div > div{
+		width:300px;
+		text-align:left;	
+	}
+	.item > div div:nth-child(1){
+		width:300px;
+		text-align:left;
+	}
+	.item > div div:nth-child(2){
+		float:left;
+		height:56px;
+	}
+	.item > div > div span:nth-child(2){
+		float:right;
+	}
+	.item strong{
+		margin-right:5px;
+	}
+	.itemName{
+		float:left;
+		margin-right:5px;
+	}
+	.image{
+		width:90px;
+		height:120px;
+		border:1px solid black;
+		margin:10px;
+		display:inline-block;
+	}
+	.left1{
+		position:relative;
+		right:1px;
+	}
+	.left2{
+		position:relative;
+		right:8px;		
+	}
+	#itemOption strong{
+		float:left;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>스타일 숍</span>
+			</div>
+			<div id="navContent">
+				<div>
+					<a href="#"><span>> Outer</span></a> <a href="#"><span>>
+							Top</span></a> <a href="#"><span>> Bottom</span></a> <a href="#"><span>>
+							Skirt</span></a> <a href="#"><span>> Dress</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<div>통합 검색</div>
+			<strong>&#124;&nbsp;통합 검색</strong>
+			<hr>
+			<div id="styleShop">
+				<table class="br">
+					<tr>
+						<th>번호</th>
+						<th></th>
+						<th>상품 정보</th>
+						<th>수량</th>
+						<th>합계 금액</th>
+						<th>적립금액</th>
+					</tr>
+					<tr>
+						<td><span class="number">2</span></td>
+						<td>
+							<div class="image">목록이미지</div>
+						</td>
+						<td class="item">
+							<div>
+								<div>
+									<strong>[{구매 Shop > 카테고리명}]</strong>
+								</div>
+								<div>
+									<span>{상품명}</span>
+									<span>{상품가격}원</span>
+								</div>
+								<div>
+									<span>{옵션명} : {선택한 옵션}</span>
+									<span>{옵션가격}원</span>
+								</div>
+								<div>
+									<span>{옵션명} : {선택한 옵션}</span>
+									<span>{옵션가격}원</span>
+								</div>
+							</div>
+						</td>
+						<td><strong>{수량}</strong> <span>개</span></td>
+						<td><span>상품가격+<br>옵션가격}<br>*(수량)원
+						</span></td>
+						<td><strong>{적립금}</strong><span>원</span></td>
+					</tr>
+					<tr>
+						<td><span class="number">1</span></td>
+						<td>
+							<div class="image">목록이미지</div>
+						</td>
+						<td class="item">
+								<div>
+									<strong>[스타일 숍 > TOP]</strong>
+								</div>
+								<div>
+									<span>자수 실크 린넨 브라웃,</span>
+									<span>20,000원</span>
+								</div>
+								<div>
+									<span>색상 : 블랙</span>
+									<span>-</span>
+								</div>
+								<div>
+									<span>디자인 : C형</span>
+									<span>2,000원</span>
+								</div>
+						</td>
+						<td><strong>1개</strong></td>
+						<td><span>22,000원</span></td>
+						<td><strong>220원</strong></td>
+					</tr>
+					<tr>
+						<td><span class="number">1</span></td>
+						<td>
+							<div class="image">목록이미지</div>
+						</td>
+						<td class="item">
+								<div>
+									<strong>[스타일 숍 > TOP]</strong>
+								</div>
+								<div>
+									<span>자수 실크 린넨 브라웃,</span>
+									<span>20,000원</span>
+								</div>
+								<div>
+									<span>색상 : 블랙</span>
+									<span>-</span>
+								</div>
+								<div>
+									<span>디자인 : C형</span>
+									<span>2,000원</span>
+								</div>
+						</td>
+						<td><strong>1개</strong></td>
+						<td><span>22,000원</span></td>
+						<td><strong>220원</strong></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
