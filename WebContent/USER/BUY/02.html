@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/leftNav.css" />
+<style>
+	#requesterInfo,
+	#deliveryInfo table{
+		margin-top:10px;
+	}
+	table{
+		width:800px;
+		margin-bottom:40px;
+	}
+	table tr td{
+		border:1px solid grey;
+		height:40px;
+	}
+	table tr td:first-child{
+		width:100px;
+		text-align:right;
+	}
+	table tr td:first-child span{
+		margin-right:10px;
+		font-weight:bold;
+	}
+	table tr td:last-child span{
+		margin-left:10px;
+	}
+	#requesterInfo table tr td:last-child input{
+		margin-left:10px;
+		width:80px;
+	}
+	#addressBook{
+		float:right;
+	}
+	#deliveryInfo table{
+		margin-top:10px;
+	}
+	#deliveryInfo table tr td input{
+		margin-left:10px;
+	}
+	#deliveryInfo table tr:nth-child(2)  td{
+		height:70px;
+	}
+	#deliveryInfo table tr:nth-child(2)  td button{
+		padding:0;
+		width:100px;
+		height:27px;
+		position:relative;
+		bottom:2px;
+		margin-left:5px;
+	}
+	#deliveryInfo table tr:nth-child(2) div:nth-child(1) >  input[type='text']:nth-child(1){
+		width:150px;
+	}
+	#deliveryInfo table tr:nth-child(2) div:nth-child(2) >  input[type='text']:nth-child(1){
+		width:300px;
+	}
+	#deliveryInfo table tr:nth-child(3) input{
+		width:80px;
+	}
+	#deliveryInfo table tr:nth-child(4) td:last-child{
+		padding:10px;
+	}
+	#deliveryInfo table tr:nth-child(4) textarea{
+		width:680px;
+		height:100px;
+		resize:none;
+	}
+	#deliveryInfo table tr:nth-child(4) div:last-child{
+		float:right;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>스타일 숍</span>
+			</div>
+			<div id="navContent">
+				<div>
+					<a href="#"><span>> Outer</span></a> <a href="#"><span>>
+							Top</span></a> <a href="#"><span>> Bottom</span></a> <a href="#"><span>>
+							Skirt</span></a> <a href="#"><span>> Dress</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;주문자 정보</strong>
+			<div id = "requesterInfo">
+				<table>
+					<tr>
+						<td>
+							<span>이름</span>
+						</td>
+						<td>
+							<span>{회원 이름}</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>연락처</span>
+						</td>
+						<td>
+							<input type = "number" name = "number1" />
+							<span>-</span>
+							<input type = "number" name = "number2" />
+							<span>-</span>
+							<input type = "number" name = "number3" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<strong>&#124;&nbsp;배송 정보</strong>
+			<button id = 'addressBook' class = "btn btn-default">주소록</button>
+			<div id = "deliveryInfo">
+				<table>
+					<tr>
+						<td>
+							<span>이름(회사)</span>
+						</td>
+						<td>
+							<input type = "text" name = "name" />
+							<span>0/25자</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>주소</span>
+						</td>
+						<td>
+							<div>
+								<input type = "text" name = "address1" />
+								<button class = "btn btn-default">우편번호 검색</button>
+							</div>
+							<div>
+								<input type = "text" name = "address2" />
+								<input type = "text" name = "address3" />
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>휴대폰</span>
+						</td>
+						<td>
+							<input type = "number" name = "phone1" />
+							<span>-</span>
+							<input type = "number" name = "phone2" />
+							<span>-</span>
+							<input type = "number" name = "phone3" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>요청사항</span>
+						</td>
+						<td>
+							<div>
+								<textarea></textarea>
+							</div>
+							<div>
+								<span>0/100자</span>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

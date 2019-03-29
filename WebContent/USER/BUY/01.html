@@ -37,6 +37,7 @@
 	.item{
 		width:300px;
 		line-height:28px;
+		text-align:left;
 	}
 	.item > div > div{
 		width:300px;
@@ -78,6 +79,16 @@
 	#itemOption strong{
 		float:left;
 	}
+	#price{
+		margin-top:20px;
+	}
+	#price strong:nth-child(1){
+		font-size:20px;
+	}
+	#price strong:nth-child(2){
+		font-size:25px;
+		float:right;
+	}
 </style>
 </head>
 <body>
@@ -97,8 +108,7 @@
 		</div>
 
 		<div id="content">
-			<div>통합 검색</div>
-			<strong>&#124;&nbsp;통합 검색</strong>
+			<strong>&#124;&nbsp;구매 리스트</strong>
 			<hr>
 			<div id="styleShop">
 				<table class="br">
@@ -111,7 +121,7 @@
 						<th>적립금액</th>
 					</tr>
 					<tr>
-						<td><span class="number">2</span></td>
+						<td><span class="number">3</span></td>
 						<td>
 							<div class="image">목록이미지</div>
 						</td>
@@ -140,11 +150,12 @@
 						<td><strong>{적립금}</strong><span>원</span></td>
 					</tr>
 					<tr>
-						<td><span class="number">1</span></td>
+						<td><span class="number">2</span></td>
 						<td>
 							<div class="image">목록이미지</div>
 						</td>
 						<td class="item">
+							<div>
 								<div>
 									<strong>[스타일 숍 > TOP]</strong>
 								</div>
@@ -160,6 +171,7 @@
 									<span>디자인 : C형</span>
 									<span>2,000원</span>
 								</div>
+							</div>
 						</td>
 						<td><strong>1개</strong></td>
 						<td><span>22,000원</span></td>
@@ -171,6 +183,7 @@
 							<div class="image">목록이미지</div>
 						</td>
 						<td class="item">
+							<div>
 								<div>
 									<strong>[스타일 숍 > TOP]</strong>
 								</div>
@@ -186,12 +199,17 @@
 									<span>디자인 : C형</span>
 									<span>2,000원</span>
 								</div>
+							</div>
 						</td>
 						<td><strong>1개</strong></td>
 						<td><span>22,000원</span></td>
 						<td><strong>220원</strong></td>
 					</tr>
 				</table>
+			</div>
+			<div id = "price">
+				<strong>총 상품 금액</strong>
+				<strong>22,000원</strong>
 			</div>
 		</div>
 	</div>
