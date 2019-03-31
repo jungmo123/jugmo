@@ -390,6 +390,54 @@ table tr:nth-child(3) td:nth-child(1) > div:nth-child(2){
 		display:inline-block;
 		width:60%;
 	}
+	#inquiryRegistration div{
+		margin-top:5px;
+	}
+	#inquiryRegistration div select{
+		display:inline-block;
+		width:120px;
+		font-size:12px;
+	}
+	#inquiryRegistration div input:nth-child(2){
+		display:inline-block;
+		width:250px;
+		margin-left:2px;
+		font-size:12px;
+	}
+	#inquiryRegistration div input:nth-child(3){
+		display:inline-block;
+		width:100px;
+		margin-left:5px;
+		font-size:12px;
+	}
+	#inquiryRegistration > div:nth-child(3){
+		width:800px;
+		height:65px;
+	}
+	#inquiryRegistration > div:nth-child(3) > div:first-child{
+		display:inline-block;
+		width:490px;
+		float:left;
+	}
+	#inquiryRegistration > div:nth-child(3) > div:last-child{
+		display:inline-block;
+		width:100px;
+		float:left;
+	}
+	#inquiryRegistration > div:nth-child(3) > div:last-child button{
+		width:100px;
+		height:61px;
+	}
+	#inquiryRegistration div textarea{
+		width:483px;
+		height:60px;
+		resize:none;
+	}
+	#inquiryRegistration div:last-child span{
+		position:relative;
+		left:400px;
+		color:grey;
+	}
 </style>
 </head>
 <body>
@@ -607,9 +655,31 @@ table tr:nth-child(3) td:nth-child(1) > div:nth-child(2){
 					</tr>
 				</table>
 			</div>
+			<hr>
+			<div 	id = "inquiryRegistration">
+				<strong>상품 문의 등록</strong>
+				<div>
+					<select class = "form-control">
+						<option>카테고리 선택</option>
+					</select>
+					<input  class = "form-control" type = "text" name = "productName" placeholder = "상품 선택" />
+					<input  class = "form-control" type = "text" name = "userId" placeholder = "작성자 ID 입력">
+				</div>
+				<div>
+					<div>
+						<textarea></textarea>				
+					</div>
+					<div>
+						<button class = "btn btn-default">등록</button>
+					</div>
+				</div>
+				<div>
+					<span>1000자 / 0자</span>
+				</div>
+			</div>
 	  	</div>		
 		</div>
   	</div>
-
+ 
 </body>
 </html>

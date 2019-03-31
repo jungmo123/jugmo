@@ -7,7 +7,7 @@
 	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../CSS/Navigation.css" />
+<link rel="stylesheet" href="../CSS/leftNav.css" />
 <style>
 #searchBar {
 	display: inline-block;
@@ -163,10 +163,7 @@ table tr:nth-child(3) div:last-child button {
 	margin: 10px 0px 50px 10px;
 	line-height: 25px;
 }
-#write{
-		float:right;
-		width:110px;
-	}
+
 #pagination {
 	margin-top: 30px;
 	margin-bottom: 100px;
@@ -182,6 +179,11 @@ table tr:nth-child(3) div:last-child button {
 	color: #878787;
 	margin-right: 10px;
 }
+#pagination button{
+	float:right;
+	position:relative;
+	bottom:25px;
+}
 </style>
 </head>
 <body>
@@ -189,43 +191,28 @@ table tr:nth-child(3) div:last-child button {
 	<div class="container">
 		<div id="nav">
 			<div id="navTitle">
-				<span>마이 페이지</span>
+				<span>스타일 숍</span>
 			</div>
 			<div id="navContent">
-				<p>쇼핑 이용 정보</p>
-				<hr>
 				<div>
-					<a href="#"><span>> 주문 내역</span></a> <a href="#"><span>>
-							장바구니</span></a> <a href="#"><span>> 포인트 이용 내역</span></a>
+					<a href="#"><span>> {카테고리 호출}</span></a> <a href="#"><span>>
+							Top</span></a> <a href="#"><span>> Bottom</span></a> <a href="#"><span>>
+							Skirt</span></a> <a href="#"><span>> Dress</span></a>
 				</div>
-				<p>게시판 이용 내역</p>
-				<hr>
-				<div>
-					<a href="#"><span>> 1:1 문의</span></a> <a href="#"
-						class="activeMenu"><span>> 나의 상품평</span></a> <a href="#"><span>>
-							나의 상품 문의</span></a>
-				</div>
-				<p>개인정보 수정</p>
-				<hr>
-				<div>
-					<a href="#"><span>> 개인정보 수정</span></a> <a href="#"><span>>
-							비밀번호 변경</span></a>
-				</div>
-				<a href = "#"><span>회원탈퇴</span></a>
 			</div>
 		</div>
 
 		<div id="content">
 			<strong>&#124;&nbsp;나의 상품평</strong>
+			<hr>
 			<div id="searchBar">
-				<hr>
-				<span>상품평 검색</span> <select class="form-control">
+				<select class="form-control">
 					<option>카테고리 전체</option>
 				</select> <input type="text" class="form-control" name="title"
 					placeholder="상품명을 입력해 주세요." />
 				<button type="button" class="btn btn-default">검색</button>
-				<hr>
 			</div>
+			<hr>
 			<div id="itemTable">
 				<table class="table table-hover">
 					<tr>
@@ -299,8 +286,8 @@ table tr:nth-child(3) div:last-child button {
 					<tr>
 						<td colspan="4">
 							<div>
-								<span>사진과 다르게 색감이 좋으며,입었을 때 스판 원단으로 불편함이 없어요! 친절한<br>
-									상담과 빠른 배송 감사합니다. 앞으로도 많은 이용하겠습니다.
+								<span>사진과 다르게 색감이 좋으며,입었을 때 스판 원단으로 불편함이없어요!<br> 친절한
+									상담과 빠른 배송 감사합니다.
 								</span>
 							</div>
 							<div>
@@ -320,7 +307,7 @@ table tr:nth-child(3) div:last-child button {
 				<form>
 					<div>
 						<textarea cols="85" rows="3"
-							placeholder="- 띄어쓰기를 포함하여 최대 000자까지 작성할 수 있습니다.
+							placeholder="- 최대 000자까지 작성할 수 있습니다(띄어쓰기 포함).
 ※욕설, 영업에 방해되는 글은 관리자에 의해 삭제됩니다."></textarea>
 						<button class="btn btn-default">등록</button>
 					</div>
@@ -335,9 +322,6 @@ table tr:nth-child(3) div:last-child button {
 				</div>
 				<hr>
 			</div>
-			<div>
-				<button id="write" class="btn btn-default">상품평 작성</button>
-			</div>
 			<div id="pagination">
 				<div>
 					<a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -345,6 +329,9 @@ table tr:nth-child(3) div:last-child button {
 					<a href="#">4</a> <a href="#">5</a> <a href="#"><span
 						class="glyphicon glyphicon-chevron-right"></span></a>
 					<div id="currentBar"></div>
+				</div>
+				<div>
+					<button class = "btn btn-default">상품평 작성하기</button>
 				</div>
 			</div>
 		</div>

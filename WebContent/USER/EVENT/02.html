@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/leftNav.css" />
+<style>
+	#eventContent{
+		margin-top:30px;
+	}
+	#eventContent p{
+		font-size:20px;
+		font-weight:bold;
+	}
+	#contentInfo,#eventbody{
+		margin:10px 0px 10px 0px;
+	}
+	#contentInfo span:nth-child(2){
+		float:right;
+	}
+	#eventbody{
+		width:100%;
+		height:500px;
+		border:1px solid black;
+	}
+	#buttonBox button{
+		display:inline-block;
+		width:100px;
+		margin-right:10px;
+		float:right;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>이벤트</span>
+			</div>
+			<div id="navContent">
+				<div>
+					<a href="#" class = "activeMenu"><span>> 진행중인 이벤트</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<strong>&#124;&nbsp;이벤트</strong>
+			<div id = "eventContent">
+				<p>가입 고객님께 포인트를 드립니다.</p>
+				<hr>
+				<div id = "contentInfo">
+					<span>기간&nbsp;:&nbsp;2023.01.01&nbsp;&nbsp;~&nbsp;&nbsp;2023.01.31</span>
+					<span>조회수 : 000회</span>
+				</div>
+				<hr>
+				<div id = "eventbody">
+								
+				</div>
+				<hr>
+				<div id = "buttonBox">
+					<button class = "form-control">이전글&nbsp;<span class = "glyphicon glyphicon-triangle-top"></span></button>
+					<button class = "form-control">다음글&nbsp;<span class = "glyphicon glyphicon-triangle-bottom"></span></button>
+					<button class = "form-control">목록</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

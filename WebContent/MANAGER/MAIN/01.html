@@ -143,9 +143,6 @@
 		color:grey;
 		margin-bottom:4px;
 	}
-	#expired{
-		text-align:center;
-	}
 	.expire{
 		margin:1px;
 		display:inline-block;
@@ -153,6 +150,24 @@
 		border-radius:10px;
 		width:150px;
 		font-size:13px;;
+	}
+	.expire > div:nth-child(1){
+		display:inline-block;
+		width:130px;
+		text-align:center;
+		position:relative;
+		left:10px;
+	}
+	.expire > div:nth-child(2){
+		display:inline-block;
+		width:1px;
+		position:relative;
+		top:10px;
+		right:10px;
+	}
+	.expire a{
+		font-size:20px;
+		color:#878787;
 	}
 	#menu1,#menu3{
 		width:400px;
@@ -191,8 +206,8 @@
 	.web1,.web2{
 		margin-top:30px;
 		display:inline-block;
-		border:1px solid #828282;
-		border-radius:10px;
+		border-top:1px solid #F2F5F7;
+		border-bottom:1px solid #F2F5F7;
 		padding:10px;
 		width:600px;
 	}
@@ -274,6 +289,64 @@
 		width:100%;
 		text-align:center;
 		margin-bottom:50px;
+	}
+	#footer{
+		width:1180px;
+		height:170px;
+		margin-top:50px;
+		text-align:center;
+	}
+	#footerLogo{
+		display:inline-block;
+		width:300px;
+		height:170px;
+		float:left;
+		position:relative;
+		left:110px;
+	}
+	#footerLogo span{
+		position:relative;
+		top:55px;
+		font-size:35px;
+	}
+	#footerLogo span:first-child{
+		color:#FF6F43;
+	}
+	#footerLogo span:last-child{
+		color:#5D646E;
+	}
+	#footerContent{
+		display:inline-block;
+		width:600px;
+		height:170px;
+		text-align:left;
+	}
+	#footerTop{
+		height:90px;
+	}
+	#footerTop div{
+		display:inline-block;
+		width:300px;
+		height:90px;
+		float:left;
+	}
+	#footerTop div p,
+	#footerBottom div p{
+		border-left:1px solid grey;
+	}
+	#footerTop div p strong,
+	#footerTop div p span,
+	#footerBottom div p strong,
+	#footerBottom div p span{
+		margin-left:5px;
+	}
+	#footerDiv{
+		text-align:center;
+	}
+	#footerBottom div:nth-child(2){
+		margin-top:30px;
+		text-align:center;
+		color:lightgrey;
 	}
 </style>
 <script>
@@ -364,14 +437,25 @@
 			<input id = "logout" type = "button" class="form-control" value = "로그아웃">
 			<div id = "expired">
 				<div class = "expire">
-					<p>호스팅 만료일</p>
-					<p>- 2023-09-01</p>
-					<p>- 000일 남음</p>
+					<div>
+						<p>호스팅 만료일</p>
+						<p>- 2023-09-01</p>
+						<p>- 000일 남음</p>					
+					</div>
+					<div>
+						<a href = "#"><span class = "glyphicon glyphicon-cog"></span></a>						
+					</div>
 				</div>
+				
 				<div class = "expire">
-					<p>도메인 만료일</p>
-					<p>- 2023-09-01</p>
-					<p>- 000일 남음</p>
+					<div>
+						<p>도메인 만료일</p>
+						<p>- 2023-09-01</p>
+						<p>- 000일 남음</p>					
+					</div>
+					<div>
+						<a href = "#"><span class = "glyphicon glyphicon-cog"></span></a>						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -499,5 +583,36 @@
 			</div>			
 		</div>
 	</div>
+	
+	<div class = "container" id = "footerDiv">
+		<div id = "footer">
+			<div id = "footerLogo">
+				<span>LALA&nbsp;</span><span>MARKET</span>
+			</div>
+			<div id = "footerContent">
+				<div id = "footerTop">
+					<div>
+						<p><strong>상호명 :</strong><span>(주)라라마켓</span></p>
+						<p><strong>사업자 등록번호 :</strong><span>000-00-0000</span></p>
+					</div>
+					<div>
+						<p><strong>대표자 :</strong><span>최한석</span></p>
+						<p><strong>통신판매업 신고번호 :</strong><span>0000-서울서초-0000</span></p>	
+						<p><strong>개인정보관리책임자 :</strong><span>한아름</span></p>				
+					</div>
+				</div>
+				<div id = "footerBottom">
+					<div>
+						<p><strong>주소 :</strong><span>(00000) 서울시 서초구 OOOOO OO</span></p>
+						<p><strong>고객센터 :</strong><span>TEL 070-0000-0000 FAX (02)000-00000 Email : help@style.co.kr</span></p>	
+					</div>
+					<div>
+						<strong>Copyright 2023 라라마켓 Corp.All Rights Reserved</strong>
+					</div>		
+				</div>
+			</div>
+		</div>	
+	</div>
+	
 </body>
 </html>
