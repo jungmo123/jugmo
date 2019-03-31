@@ -44,7 +44,7 @@
 		color:black;
 		font-weight:bold;
 	}
-	#nav #navContent div.activeMenu{
+	#nav #navContent div > .activeMenu{
 		color:red !important;
 	}
 	#content{

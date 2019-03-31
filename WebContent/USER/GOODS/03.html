@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/leftNav.css" />
+<style>	
+	.container{
+		width:1010px;
+	}
+	#productInquiry{
+		margin-top:10px;
+		width:980px;
+		height:600px;
+	}
+	#productInquiry > strong{
+		margin-right:10px;
+	}
+	#productInquiry > a{
+		float:right;
+		color:black;
+		margin-right:22px;
+	}
+	#productInquiry > hr{
+		margin:5px 0 5px 0;
+	}
+	#orderitem{
+		margin:10px 0 10px 0;
+	}
+	#orderitem table{
+		width:100%;
+		text-align:center;
+	}
+	#orderitem table tr:not(.commentBox){
+		border-top:1px solid #BABABA;
+		height:45px;
+	}
+	#orderitem table th{
+		text-align:center;
+		background-color:#F2F5F7;
+	}
+	#orderitem table tr:nth-child(2n + 3){
+		border-top:1px dotted #BABABA;
+	}
+	#DocumentOpen{
+		border-top:1px solid black !important;
+		border-bottom:1px solid grey;
+	}
+	#DocumentOpen td:nth-child(2){
+		height:200px;
+	}
+	#DocumentOpen td:nth-child(2) div{
+		height:100px;
+		padding:10px;
+		text-align:left;
+	}
+	#DocumentOpen td:nth-child(2) > div:first-child{
+		border-bottom:1px dotted grey;
+	}
+	#DocumentOpen td:nth-child(2) span{
+		margin-right:10px;
+	}
+	#DocumentOpen td:nth-child(2) button{
+		padding:0;
+		width:35px;
+		height:20px;
+		text-align:center;
+	}
+	#pagination{
+		margin-top:20px;
+		margin-bottom:100px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
+	}
+	#inputBar > div{
+		background-color:#F2F5F7;
+		height:100px;
+	}
+	#inputBar > div > div{
+		margin-top:10px;
+		width:980px;
+		height:80px;
+		padding:10px 10px 0px 10px;
+	}
+	#inputBar > div textarea{
+		width:800px;
+		height:70px;
+		resize:none;
+		float:left;
+		margin-left:10px;
+		padding:10px;
+	}
+	#inputBar > div button{
+		width:120px;
+		height:70px;
+		text-align:center;
+		float:right;
+		margin-right:10px;
+	}
+	#inputBar > div > span{
+		float:right;
+		position:relative;
+		right:160px;
+	}
+</style>
+</head>
+<body>
+	<div class = "container">
+		<div class = "btn-group btn-group-justified">
+			<a href = "#" class = "btn btn-default">상품 상세 정보</a>
+			<a href = "#" class = "btn btn-default">상품평</a>
+			<a href = "#" class = "btn btn-default active">상품문의</a>
+			<a href = "#" class = "btn btn-default">배송안내</a>
+			<a href = "#" class = "btn btn-default">교환 및 반품</a>
+		</div>	
+		<div id = "productInquiry">
+			<strong>&#124;&nbsp;상품 문의</strong>
+			<span>상품에 대한 최신 Q&A를 보실 수 있습니다.</span>
+			<a href = "#"><span>더 보기</span><span class = "glyphicon glyphicon-plus"></span></a>
+			<div id = "orderitem">
+				<table class = "br">				
+					<tr>
+						<th>
+							<span>번호</span>
+						</th>
+						<th>
+							<span>문의 내용</span>
+						</th>
+						<th>
+							<span>작성자</span>
+						</th>
+						<th>
+							<span>작성일</span>
+						</th>
+						<th>
+							<span>보기/닫기</span>
+						</th>
+					</tr>
+					<tr>
+						<td rowspan = "2">
+							<span class = "number">15</span>
+						</td>
+						<td>
+							<div>
+									<span class = "questContent">이용자 문의글 상단 00자씩 1줄 표기</span>
+							</div>
+						</td>
+						<td>
+							<div>
+								<span>{작성자ID}</span>
+							</div>
+						</td>
+						<td>
+							<div>
+							<span>{년,월,일,시}</span>
+							</div>
+						</td>
+						<td rowspan = "2">
+							<div>
+								<button><span>보기&nbsp;<span class = "glyphicon glyphicon-triangle-bottom"></span></span></button>
+							</div>
+						</td>
+						<tr>									
+							<td>
+								<div>
+									<span class = "questContent">답변 여부 : 답변 준비중입니다.신속하게 답변 드리겠습니다.</span>
+								</div>
+							</td>
+							<td>
+								<div>
+									<span>{작성자ID}</span>
+								</div>
+							</td>
+							<td>
+								<div>
+									<span>{년,월,일,시}</span>
+								</div>
+							</td>																
+						</tr>
+						<tr>
+							<td rowspan = "2">
+								<span class = "number">14</span>
+								</td>
+							<td>
+								<div>
+									<span class = "questContent">색상이 2가지 뿐인데요. 다른 색은 없는 것인가요?...</span>
+								</div>
+							</td>
+							<td>
+								<div>
+									<span>love01</span>
+								</div>
+							</td>
+							<td>
+								<div>
+									<span>2023-03-05<br>11:20:16</span>
+								</div>
+							</td>
+							<td rowspan = "2">
+								<div>
+									<button><span>닫기&nbsp;<span class = "glyphicon glyphicon-triangle-top"></span></span></button>
+								</div>
+							</td>
+						</tr>
+						<tr>							
+							<td>
+								<div>
+									<span class = "questContent">월 말에 입고 예정입니다.상품 공금에 지연을 드려...</span>
+								</div>
+							</td>
+							<td>
+								<div>
+									<span>admin</span>
+								</div>
+							</td>
+							<td>
+								<div>
+									<span>2023-03-05<br>12:10:55</span>
+								</div>
+							</td>																
+						</tr>
+						<tr id = "DocumentOpen">
+							<td>
+							</td>
+							<td  colspan ="4">
+								<div>
+									<span>Q{이용자 상품 문의 글}</span>
+									<button class = "btn btn-default">수정</button>
+									<button class = "btn btn-default">삭제</button>
+								</div>
+								<div>
+									<span>A{관리자에서 등록한 답변}</span>
+								</div>
+							</td>
+						</tr>
+				</table>
+				<div id = "pagination">
+					<div>
+						<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+						<a href = "#"  class = "currentPage">1</a>
+						<a href = "#">2</a>
+						<a href = "#">3</a>
+						<a href = "#">4</a>
+						<a href = "#">5</a>
+						<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+						<div id = "currentBar"></div>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<div id = "inputBar">
+			<strong>상품 문의하기</strong>
+			<span>(문의하신 내용 및 답변은 [마이 페이지 > 나의 상품 문의] 에서도 확인 가능합니다.)</span>
+			<div>
+				<div>
+					<textarea placeholder = "- 띄어쓰기를 포함하여 최대 1000자까지 작성할 수 있습니다.&#13;&#10;※ 욕설, 영업에 방해되는 글은 관리자에 의해 삭제됩니다."></textarea>
+					<button class = "btn btn-default">등록</button>
+				</div>
+				<span>0자 / 1,000자</span>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>
