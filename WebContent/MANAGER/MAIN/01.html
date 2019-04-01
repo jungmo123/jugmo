@@ -18,6 +18,13 @@
 		max-width:none !important;
 		display:flex;
 	}
+	#nav{
+		margin-top:10px;
+	}
+	body .container:nth-child(3) hr{
+		position:relative;
+		bottom:10px;
+	}
 	body{
 		min-width:640px; 
 	}
@@ -88,8 +95,8 @@
 		text-decoration:none;
 	}
 	.dropdown-menu {
-	    position: absolute;
-	    top: 50px;
+		position:absolute;
+		top:50px;
 	}
 	#topmenu a:nth-child(5){
 		color:#FF6F43;
@@ -239,10 +246,13 @@
 		font-size:15px;
 		line-height:30px;
 	}
+	#nav > .btn-group{
+		padding-bottom:20px;
+	}
 	.nav-underline {
 	  position: absolute;
 	  left: 10px;
-	  bottom: -2px;
+	  bottom: 10px;
 	  width: 10%;
 	  height: 2px;
 	  background:#FF6F43;
@@ -388,6 +398,7 @@
 			<div class = "btn-group drop">
 				<button type = "button" class = "btn btn-default dropdown-toggle" type = "button" data-toggle="dropdown">게시판 관리</button>
 				<ul class= "dropdown-menu">
+					<li></li>
 					<li><a href = "../BOARDADMIN/01.html">스타일 숍 공지</a></li>
 					<li><a href = "../BOARDADMIN/02.html">고객센터 공지</a></li>
 					<li><a href = "../BOARDADMIN/05.html">커뮤니티</a></li>
@@ -454,7 +465,7 @@
 			<span>
 					<a href = "../../USER/MAIN/01.html">이용자 화면 보기</a>
 					<span>&#124;</span>
-					<a href = "#">사내 게시판</a>
+					<a href = "../INTRABOARD/01.html">사내 게시판</a>
 					<span>&#124;</span>
 					<a href = "../LOGING/01.html">로그아웃</a>			
 			</span>		

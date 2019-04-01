@@ -3,11 +3,11 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="../CSS/leftNav.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>	
 	.container{
 		width:1010px;
@@ -15,7 +15,6 @@
 	#productInquiry{
 		margin-top:10px;
 		width:980px;
-		height:600px;
 	}
 	#productInquiry > strong{
 		margin-right:10px;
@@ -45,6 +44,15 @@
 	}
 	#orderitem table tr:nth-child(2n + 3){
 		border-top:1px dotted #BABABA;
+	}
+	#orderitem table tr th:first-child{
+		width:60px;
+	}
+	#orderitem table tr:nth-child(2) td:nth-child(2),
+	#orderitem table tr:nth-child(4) td:nth-child(2),
+	#orderitem table tr:nth-child(3) td:nth-child(1),
+	#orderitem table tr:nth-child(5) td:nth-child(1){
+		text-align:left;
 	}
 	#DocumentOpen{
 		border-top:1px solid black !important;
@@ -112,6 +120,12 @@
 		float:right;
 		position:relative;
 		right:160px;
+	}
+	.block{
+		display:inline-block;
+	}
+	.none{
+		display:none;
 	}
 </style>
 </head>
@@ -209,7 +223,7 @@
 							</td>
 							<td rowspan = "2">
 								<div>
-									<button><span>닫기&nbsp;<span class = "glyphicon glyphicon-triangle-top"></span></span></button>
+									<button><span>보기&nbsp;<span class = "glyphicon glyphicon-triangle-bottom"></span></span></button>
 								</div>
 							</td>
 						</tr>
@@ -230,7 +244,7 @@
 								</div>
 							</td>																
 						</tr>
-						<tr id = "DocumentOpen">
+						<tr id = "DocumentOpen" class = "none">
 							<td>
 							</td>
 							<td  colspan ="4">
@@ -271,5 +285,33 @@
 			</div>
 		</div>		
 	</div>
+	
+	<script type ="text/javascript">
+		$(function(){
+				$("#orderitem table tr:nth-child(4) td:nth-child(5) button").click(function(){
+					if($(this).hasClass("op") === true){
+						$(this).removeClass("op");
+						$(this).addClass("cl");
+						var first = $(this).find(":first-child");
+						first.text("보기 ");
+						var span = $("<span></span>");
+						span.addClass("glyphicon glyphicon-triangle-bottom")
+						first.append(span);
+						
+						$("#DocumentOpen").addClass("none");
+					}else{
+						$(this).removeClass("cl");
+						$(this).addClass("op");
+						var first = $(this).find(":first-child");
+						first.text("닫기 ");
+						var span = $("<span></span>");
+						span.addClass("glyphicon glyphicon-triangle-top")
+						first.append(span);
+
+						$("#DocumentOpen").removeClass("none");
+					}
+				})
+		})
+	</script>
 </body>
 </html>

@@ -14,9 +14,14 @@
 	}
    .container{
       width:1000px;
-      margin-top:60px;
+      margin-top:30px;
       }
-#nav{
+      #section > strong{
+      	font-size: 20px;
+      	position:relative;
+      	right:5px;
+      }
+	#nav{
       display:inline-block;
       width:160px;
       height:180px;
@@ -69,18 +74,23 @@
    margin-left:230px;
    margin-top:20px;
    width:800px;
-   height:470px;
+   height:520px;
    border:1px solid black;
    padding:10px;
+   position:relative;
+   right:30px;
    }
    #goods-list >a{
    	color:black;
    }
    #item-list{
-   	margin-top:5px;
+   	margin-top:10px;
    	margin-bottom:50px;
    	width:780px;
    	height:400px;
+   }
+   #item-list > div{
+   	cursor:pointer;
    }
    #item1,#item2,#item3,#item4{
    margin-left:10px;
@@ -96,38 +106,40 @@
     border:1px solid black;
    }
    .text1{text-decoration:line-thorough;}
-   #page{
-   text-align:center;
-   }
-   #page{
-   margin-bottom:60px;
-   }
-	#page>a{
-	color:black;
-	}
 	#section{
 	width:900px;
-
+	}
+	#pagination{
+		margin-top:30px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
 	}
 </style>
 <body>
 <div class="container">
-    <div id = "nav">
-         <div id="navTitle">
-            <span>스타일 숍</span>
-         </div>
-         <div id="navContent">
-            <div>
-               <a href = "#"><span>> {카테고리 호출}</span></a>
-               <a href = "#"><span>> Outer</span></a>
-               <a href = "#"><span>> Top</span></a>
-               <a href = "#"><span>> Bottom</span></a>
-               <a href = "#"><span>> Skirt</span></a>
-            </div>
-         </div>         
-     </div>
+	<div id="nav">
+		<div id="navTitle">
+			<span>스타일 숍</span>
+		</div>
+			<div id="navContent">
+				<div>
+					<a href="#"><span>> {카테고리 호출}</span></a> 
+					<a href="#" class ="activeMenu"><span>> Out</span></a>
+					<a href="#"><span>> Top</span></a> 
+					<a href="#"><span>> Bottom</span></a>
+					<a href="#"><span>> Skirt</span></a>
+				</div>
+			</div>
+		</div>
      <div id="section">
-     <h4>|스타일 숍>{카테고리 명}</h4>
+     <strong>&#124;&nbsp;스타일 숍 > {카테고리 명}</strong>
    <hr>
      <div id="banner">
      <a href="#">배너 영역</a>
@@ -141,7 +153,7 @@
      <a href="#">낮은 가격순</a> |
      <a href="#">높은 가격순</a>
      <div id="item-list">
-		<div id="item1">
+		<div id="item1" onclick="location.href='02.html';">
 			<div id="img1">
 			</div>
 			<div id="info1">
@@ -151,7 +163,7 @@
 			<p>&nbsp; </p>
 			</div>
 		</div>
-		<div id="item2">
+		<div id="item2" onclick="location.href='02.html';">
 		<div id="img2">
 			</div>
 			<div id="info2">
@@ -161,7 +173,7 @@
 			<p>최고의 보온 효과!</p>
 			</div>
 		</div>
-		<div id="item3">
+		<div id="item3" onclick="location.href='02.html';">
 			<div id="img3">
 			</div>
 			<div id="info3">
@@ -171,7 +183,7 @@
 			<p>최고의 보온 효과!</p>
 			</div>
 		</div>
-		<div id="item4">
+		<div id="item4"  onclick="location.href='02.html';">
 			<div id="img4">
 			</div>
 			<div id="info4">
@@ -181,16 +193,19 @@
 			<p>최고의 보온 효과!</p>
 			</div>
 		</div>
-     <div id="page">
-     		<a href="#">&lt;이전</a>&nbsp;|
-     		<a href="#">[1]</a>
-     		<a href="#">[2]</a>
-     		<a href="#">[3]</a>
-     		<a href="#">[4]</a>
-     		<a href="#">[5]</a>&nbsp;|
-     		<a href="#">다음></a>
-     </div>
-   </div>
+			<div id = "pagination">
+				<div>
+					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+					<a href = "#"  class = "currentPage">1</a>
+					<a href = "#">2</a>
+					<a href = "#">3</a>
+					<a href = "#">4</a>
+					<a href = "#">5</a>
+					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+					<div id = "currentBar"></div>
+				</div>		
+			</div>
+ 	  </div>
    </div>
 </div>     
 </body>

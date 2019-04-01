@@ -1,236 +1,383 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
+<title>Bootstrap</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
-
-* {
-	font-family: 'Noto Sans KR', sans-serif;
+<link rel="stylesheet" href="../CSS/leftNav.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>	
+	.container{
+		width:1010px;
+	}
+	#evaluation{
+		margin-top:10px;
+		width:980px;
+		height:600px;
+	}
+	#evaluation > strong{
+		margin-right:10px;
+	}
+	#evaluation > a{
+		float:right;
+		color:black;
+		margin-right:22px;
+	}
+	#evaluation > hr{
+		margin:5px 0 5px 0;
+	}
+	#evaluationTable{
+		margin:10px 0 10px 0;
+	}
+	#evaluationTable table{
+		width:100%;
+		text-align:center;
+	}
+	#evaluationTable table tr:not(#commentTr){
+		border-top:1px solid #BABABA;
+		height:90px;
+	}
+	#evaluationTable table #commentTr td:last-child > div{
+		width:930px;
+		height:150px;
+		padding:10px;
+		background-color:#F2F5F7;
+	}
+	#evaluationTable table #commentTr td:last-child > div > div{
+		display:inline-block;
+		height:120px;
+	}
+	#evaluationTable table #commentTr td:last-child{
+		border-top:2px dotted #BABABA;
+	}
+	#commentTr{
+		height:120px;
+	}
+	.Bigimage{
+		width:180px;
+		height:110px;
+		border:1px solid black;
+		float:left;
+		margin-left:10px;
+	}
+	#commentTr td:last-child div:nth-child(2){
+		padding:10px;
+		line-height:25px;
+	}
+	#commentTr td:last-child div:nth-child(3){
+		float:right;
+	}
+	#commentTr td:last-child div:nth-child(3) button{
+		padding:0;
+		width:50px;
+		height:25px;
+	}
+	#evaluationTable table{
+		border-top:1px solid grey;
+		border-bottom:1px solid grey;
+	}
+	#evaluationTable table tr td:first-child{
+		width:50px;
+		height:100px;
+	}
+	#evaluationTable table tr td:nth-child(2){
+		width:600px;
+	}
+	#evaluationTable table tr td:nth-child(2) > div{
+		display:inline-block;
+		float:left;
+	}
+	#evaluationTable table tr td:nth-child(2) > .image{
+		width:140px;
+		height:80px;
+		margin-right:10px;
+		border:1px solid black;
+	}
+	#evaluationTable table tr td:nth-child(2) > div:last-child{
+		width:400px;
+		height:80px;
+		line-height:20px;
+		padding:5px;
+		text-align:left;
+	}
+	#evaluationTable table tr td:nth-child(2) > div:last-child > span{
+		font-size:12px;
+		color:#878787;
+	}
+	#evaluationTable table tr:nth-child(3) .visible{
+		
+	}
+	#pagination{
+		margin-top:20px;
+		margin-bottom:100px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
+	}
+	.block{
+		display:inline-block;
+	}
+	.none{
+		display:none;
+	}
+#commentWrite{
+	margin-top:50px;
+}
+#commentWrite  button {
+	width: 42px;
+	height: 22px;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
 }
 
-#menubar {
-	width: 1000px;
+#commentWrite hr {
 	margin: 10px;
-	background: lightgray;
-	border: 1px solid black;
 }
 
-#menubar>ul>li {
-	display: inline-block;
-	list-style: none;
+#commentWrite strong {
+	margin-right: 20px;
 }
 
-#menubar>ul>li>a {
-	color: black;
-	text-decoration: none;
-	margin: 0 20px 0 20px;
+#commentWrite textarea {
+	resize: none;
+	padding: 5px;
+	border-radius: 5px;
 }
 
-#menubar>ul>li:hover {
-	background: white;
+#commentWrite form div button {
+	width: 130px;
+	height: 70px;
+	float: right;
+	margin-right: 10px;
 }
 
-.br {
-	margin-top: 10px;
-}
-
-select {
-	width: 80px;
-}
-
-#item {
-	width: 500px;
-	line-height: 28px;
-}
-
-#item div {
-	display: inline-block;
-	margin: 5px;
-}
-
-#item strong {
-	margin-right: 5px;
-}
-
-.itemName {
-	float: left;
-	color: grey;
-	margin-right: 5px;
-}
-
-#image {
-	width: 150px;
-	height: 80px;
-	border: 1px solid black;
+.commentInfo {
 	margin: 10px;
-	display: inline-block;
 }
 
-#image-n {
-	visibility: hidden;
-	width: 150px;
-	height: 80px;
-	border: 1px solid black;
-	margin: 10px;
-	display: inline-block;
+.commentInfo span {
+	position: relative;
+	bottom: 4px;
+	margin-left: 5px;
 }
 
-#orderitem table tr {
-	border: 1px solid lightgrey;
-	height: 30px;
-	border-right: none;
-	border-left: none;
+.commentInfo span:nth-child(2) {
+	font-weight: bold;
+}
+.fa-comment-dots {
+	font-size: 25px;
 }
 
-.close {
-	background: lightgrey;
-	width: 1110px;
-	height: 135px;
-	float: left;
-	display: block;
-}
-
-#img {
-	width: 220px;
-	height: 100px;
-	border: 1px solid black;
-	margin: 10px;
-	margin-left: 30px;
-	float: left;
-	background: white;
-}
-
-#content {
-	width: 420px;
-	height: 100px;
-	float: left;
-	margin-left: 270px;
-	margin-top: 20px;
-}
-
-#content>span {
-	color: black;
-	font-size: 16px;
-}
-
-.repl {
-	width: 900px;
-	display: block;
-}
-
-#page {
-	margin-top: 30px;
-	text-align: center;
-}
-
-#page>a {
-	color: black;
-}
-
-.container {
-	margin: 20px;
+.commentContent {
+	margin: 10px 0px 50px 10px;
+	line-height: 25px;
 }
 </style>
 </head>
 <body>
-	<div class="container">
-		<div id="menubar">
-			<ul id="menu">
-				<li class="selected"><a href="#">상품 상세 정보</a></li>
-				<li><a href="#">상품평</a></li>
-				<li><a href="#">상품 문의</a></li>
-				<li><a href="#">배송 안내</a></li>
-				<li><a href="#">교환 및 반품</a></li>
-			</ul>
-		</div>
-
-		<div id="orderitem">
-			<table class="br">
-				<tr>
-					<td><span class="number">15</span></td>
-					<td>
-						<div id="image">이미지</div>
-					</td>
-					<td id="item">
+	<div class = "container">
+		<div class = "btn-group btn-group-justified">
+			<a href = "#" class = "btn btn-default">상품 상세 정보</a>
+			<a href = "#" class = "btn btn-default active">상품평</a>
+			<a href = "#" class = "btn btn-default">상품문의</a>
+			<a href = "#" class = "btn btn-default">배송안내</a>
+			<a href = "#" class = "btn btn-default">교환 및 반품</a>
+		</div>	
+		<div id = "evaluation">
+			<strong>&#124;&nbsp;상품평</strong>
+			<span>해당 상품에 대한 상품평을 보실 수 있습니다.</span>
+			<a href = "#"><span>더 보기</span><span class = "glyphicon glyphicon-plus"></span></a>
+			<div id = "evaluationTable">
+				<table class = "br">				
+					<tr>
+						<td>
+							<span class = "number">15</span>
+						</td>
+						<td>
+							<div class = "image">
+									
+							</div>
+							<div>
+								<span>{작성 년,월,일,시 표시}</span>
+								<span>&nbsp;&#124;&nbsp;</span>
+								<span>{작성자 ID 표기}</span>
+								<br>
+								<p>
+									<span>작성글 상단 40자씩 2줄 표기 (총 80자)</span>
+								</p>
+							</div>
+						</td>
+						<td>
+							<div>
+							<span>{만족도}</span>
+							</div>
+						</td>
+						<td>
+							<div>
+								<button><span>보기&nbsp;<span class = "glyphicon glyphicon-triangle-bottom"></span></span></button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class = "number">14</span>
+						</td>
+						<td>
+							<div>
+									
+							</div>
+							<div>
+								<span>2023-01-01 12:48:26</span>
+								<span>&nbsp;&#124;&nbsp;</span>
+								<span>publishing</span>
+								<br>
+								<p>
+									<span>사진과 다르게 색감이 좋으며,입었을 때 스판  원단으로</span>
+									<br>
+									<span>불편함이 없어요! 친절한 상담 빠른 배송 감사합니다.</span>
+								</p>
+							</div>
+						</td>
+						<td>
+							<div>
+							<span>★ ★ ★ ★</span>
+							</div>
+						</td>
+						<td>
+							<div>
+								<button><span>보기&nbsp;<span class = "glyphicon glyphicon-triangle-bottom"></span></span></button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class = "number">13</span>
+						</td>
+						<td>
+							<div class = "image">
+									
+							</div>
+							<div>
+								<span>2023-01-01 12:48:26</span>
+								<span>&nbsp;&#124;&nbsp;</span>
+								<span>publishing</span>
+								<br>
+								<p>
+									<span>사진과 다르게 색감이 좋으며,입었을 때 스판  원단으로</span>
+									<br>
+									<span>불편함이 없어요! 친절한 상담 빠른 배송 감사합니다.</span>
+								</p>
+							</div>
+						</td>
+						<td>
+							<div>
+							<span>★ ★ ★</span>
+							</div>
+						</td>
+						<td>
+							<div>
+								<button><span>보기&nbsp;<span class = "glyphicon glyphicon-triangle-bottom"></span></span></button>
+							</div>
+						</td>
+					</tr>
+					<tr id = "commentTr" class = "none">
+						<td>
+						</td>
+						<td colspan = "3">
+							<div>
+								<div class = "Bigimage">
+								
+								</div>
+								<div>
+										<span>사진과 다르게 색감이 좋으며,입었을 때 스판 원단으로</span>
+										<br>
+										<span>불편함이 없어요! 친절한 상담 빠른 배송 감사합니다.</span>
+										<br>
+										<span>앞으로도 많은 이용하겠습니다.</span>
+								</div>
+								<div>
+									<button class = "btn btn-default">수정</button>
+									<button class = "btn btn-default">삭제</button>
+								</div>						
+							</div>				
+						</td>
+					</tr>
+				</table>
+				<div id="commentWrite">
+					<hr>
+					<strong>작성된 댓글 (1개)</strong>
+					<button class="btn btn-default">작성</button>
+					<button class="btn btn-default">취소</button>
+					<hr>
+					<form>
 						<div>
-							<span class="itemName">{작성 년, 월, 일 시, 표기}|{작성자 ID표기}</span><br>
-							<span>작성글 상단 40자씩 2줄 표기</span>
+							<textarea cols="115" rows="3"
+								placeholder="- 띄어쓰기를 포함하여 최대 000자까지 작성할 수 있습니다.
+	※욕설, 영업에 방해되는 글은 관리자에 의해 삭제됩니다."></textarea>
+							<button class="btn btn-default">등록</button>
 						</div>
-					</td>
-					<td><span>{만족도}</span></td>
-					<td><span>보기<span class="caret"></span></span></td>
-
-				</tr>
-				<tr>
-					<td><span class="number">14</span></td>
-					<td id="item">
-						<div>
-							<span class="itemName">2023-01-01 12:26:52|publishing</span><br>
-							<span>사진과 다르게 색감이 좋으며, 입었을 때 스판 원단으로</span><br> <span>불편함이
-								없어요! 친절한 상담 빠른 계속 감사합니다.</span>
-						</div>
-					</td>
-					<td>
-						<div id="image-n">이미지</div>
-					</td>
-					<td><span>★★★★</span></td>
-					<td><span>보기<span class="caret"></span></span></td>
-				</tr>
-				<tr>
-					<td><span class="number">13</span></td>
-					<td>
-						<div id="image">이미지</div>
-					</td>
-					<td id="item">
-						<div id="itemOption">
-							<span class="itemName">2023-01-01 12:48:37 |webpalin</span> <br>
-							<span>사진과 다르게 색감이 좋으며, 입었을 때 스판 원단으로</span><br> <span>불편함이
-								없어요! 친절한 상담 빠른 계속 감사합니다.</span>
-						</div>
-					</td>
-					<td><span>★★★</span></td>
-					<td><span>닫기<span class="dropup"><span
-								class="caret"></span></span></span></td>
-				</tr>
-			</table>
-		</div>
-		<div class="close">
-			<div id="img">이미지</div>
-			<div id="content">
-				<span>사진과 다르게 색감이 좋으며, 입었을 때 스판 원단으로</span><br> <span>불편함이
-					없어요! 친절한 상담 빠른 계속 감사합니다.</span><br> <span>앞으로도 많은 이용하겠습니다. </span>
-			</div>
-		</div>
-
-		<div class="repl">
-			<div id="top">
-				<span><strong>작성된 댓글(1개)</strong></span>
-				<button type="button">작성</button>
-				<button type="button">취소</button>
-				<hr>
-			</div>
-			<div id="middle">
-				<div id="box">
-					<textarea rows="3" cols="70"
-						placeholder="띄어쓰기를 포함하여 최대 100자까지 작성할 수 있습니다. 
-※욕설, 영업에 방해가 되는 글은 관리자에 의해 삭제됩니다. "></textarea>
-					<button type="button">등록</button>
+					</form>
+					<hr>
+					<div class="commentInfo">
+						<i class="far fa-comment-dots"></i> <span>Admin</span> <span>&#124;</span>
+						<span>2023-01-01 16:10</span>
+					</div>
+					<div class="commentContent">
+						<span>안녕하세요! 고객님 저희 쇼핑몰을 이용해주셔서 감사합니다. 더욱 노력하겠습니다.</span>
+					</div>
+					<hr>
+				</div>
+				<div id = "pagination">
+					<div>
+						<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+						<a href = "#"  class = "currentPage">1</a>
+						<a href = "#">2</a>
+						<a href = "#">3</a>
+						<a href = "#">4</a>
+						<a href = "#">5</a>
+						<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+						<div id = "currentBar"></div>
+					</div>		
 				</div>
 			</div>
-			<div id="floor">
-				<span class="itemName">admin 2023-01-01 16:00</span><br> <span>└안녕하세요
-					고객님 저희 쇼핑몰을 이용해주셔서 감사합니다. 앞으로 더욱 노력하겠습니다. </span>
-			</div>
-		</div>
-		<div id="page">
-			<a href="#">[1]</a> <a href="#">[2]</a> <a href="#">[3]</a> <a
-				href="#">[4]</a> <a href="#">[5]</a>
-		</div>
+		</div>	
 	</div>
+	
+	<script type ="text/javascript">
+		$(function(){
+				$("#evaluationTable table tr:nth-child(3) button").click(function(){
+					if($(this).hasClass("op") === true){
+						$(this).removeClass("op");
+						$(this).addClass("cl");
+						var first = $(this).find(":first-child");
+						first.text("보기 ");
+						var span = $("<span></span>");
+						span.addClass("glyphicon glyphicon-triangle-bottom")
+						first.append(span);
+						
+						$("#commentTr").addClass("none");
+					}else{
+						$(this).removeClass("cl");
+						$(this).addClass("op");
+						var first = $(this).find(":first-child");
+						first.text("닫기 ");
+						var span = $("<span></span>");
+						span.addClass("glyphicon glyphicon-triangle-top")
+						first.append(span);
+
+						$("#commentTr").removeClass("none");
+					}
+				})
+		})
+	</script>
 </body>
 </html>
