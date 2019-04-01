@@ -1,245 +1,197 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>Bootstrap</title>
+<title>GOODS</title>
 <meta charset="utf-8">
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="../CSS/leftNav.css" />
-<style>	
-	.container{
-		width:1010px;
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
 	}
-	#productIntroduce{
-		height:500px;
+   .container{
+      width:1000px;
+      margin-top:60px;
+      }
+#nav{
+      display:inline-block;
+      width:160px;
+      height:180px;
+      border:1px solid grey;
+      float:left;
+      margin-right:25px;
+   }
+   #nav hr{
+      margin:5px;
+   }
+   #nav #navTitle{
+      width:100%;
+      height:40px;
+      text-align:center;
+      font-weight:bold;
+      padding:10px 5px 5px 5px;
+      border-bottom:1px solid grey;
+      background-color:#F2F5F7;
+   }
+   #nav #navContent{
+      padding:5px;
+   }
+   #nav #navContent div{
+      margin-bottom:20px;
+      line-height:25px;
+   }
+   #nav #navContent div > a{
+      display:block;
+      padding-left:10px;
+      color:black;
+   }
+   #nav #navContent > p{
+      font-weight:bold;
+   }
+   <!-- -->
+   #banner{
+   margin-left:200px;
+   width:800px;
+   height:200px;
+      border:1px solid black;
+   }
+   #register{
+   margin-left:200px;
+   margin-top:20px;
+   width:800px;
+   height:150px;
+   border:1px solid black;
+   }
+   #goods-list{
+   margin-left:230px;
+   margin-top:20px;
+   width:800px;
+   height:470px;
+   border:1px solid black;
+   padding:10px;
+   }
+   #goods-list >a{
+   	color:black;
+   }
+   #item-list{
+   	margin-top:5px;
+   	margin-bottom:50px;
+   	width:780px;
+   	height:400px;
+   }
+   #item1,#item2,#item3,#item4{
+   margin-left:10px;
+   margin-top:5px;
+   display:inline-block;
+   width:180px;
+   height:380px;
+   }
+   #img1,#img2,#img3,#img4{
+   width:178px;
+   height:250px;
+   margin-bottom:20px;
+    border:1px solid black;
+   }
+   .text1{text-decoration:line-thorough;}
+   #page{
+   text-align:center;
+   }
+   #page{
+   margin-bottom:60px;
+   }
+	#page>a{
+	color:black;
 	}
-	#productImg{
-		display:inline-block;
-		width:390px;
-		height:390px;
-		float:left;
-	}
-	#productInfo{
-		display:inline-block;
-		width:360px;
-		height:390px;
-		float:left;
-	}
-	#img{
-		width:380px;
-		height:380px;
-		border:1px solid grey;
-		margin:5px;
-	}
-	#thumbnail{
-		text-align:center;
-	}
-	#thumbnail div{
-		display:inline-block;
-		width:100px;
-		height:70px;
-		border:1px solid grey;
-		margin:10px;
-	}
-	#productInfo{
-		padding:10px;
-		line-height:38px;
-	}
-	table{
-		width:360px;
-	}
-	table tr td:first-child{
-		width:80px;
-		text-align:right;
-	}
-	table tr td:last-child{
-		width:280px;
-	}
-	table tr td:last-child span,
-	table tr td:last-child input,
-	table tr td:last-child select{
-		margin-left:10px;
-	}
-	table tr:nth-child(1),
-	table tr:nth-child(2){
-		background-color:#F2F5F7;
-	}
-	table tr:nth-child(5){
-		border-top:1px solid lightgrey;
-	}
-	table tr:nth-child(6),
-	table tr:nth-child(7),
-	table tr:nth-child(8),
-	table tr:nth-child(9)	{
-		border-bottom:1px solid lightgrey;
-	}
-	table tr:nth-child(7) td input[type='number']{
-		width:40px;
-		height:24px;
-	}
-	#buttonGroup{
-		margin-top:10px;
-		width:330px;
-		text-align:center;
-	}
-	#buttonGroup button{
-		width:120px;
-		margin:5px;
-	}
-	#detailInfo{
-		margin-top:10px;
-		width:980px;
-		height:500px;
-		border:1px solid grey;
+	#section{
+	width:900px;
+
 	}
 </style>
-</head>
 <body>
-
-	<div class="container">
-		<div id="nav">
-			<div id="navTitle">
-				<span>스타일 숍</span>
+<div class="container">
+    <div id = "nav">
+         <div id="navTitle">
+            <span>스타일 숍</span>
+         </div>
+         <div id="navContent">
+            <div>
+               <a href = "#"><span>> {카테고리 호출}</span></a>
+               <a href = "#"><span>> Outer</span></a>
+               <a href = "#"><span>> Top</span></a>
+               <a href = "#"><span>> Bottom</span></a>
+               <a href = "#"><span>> Skirt</span></a>
+            </div>
+         </div>         
+     </div>
+     <div id="section">
+     <h4>|스타일 숍>{카테고리 명}</h4>
+   <hr>
+     <div id="banner">
+     <a href="#">배너 영역</a>
+     </div>
+     <div id="register">
+       <p>관리자 등록 문구</p>
+     </div>
+   </div>
+   <div id="goods-list">
+     <a href="#">최신순</a> | 
+     <a href="#">낮은 가격순</a> |
+     <a href="#">높은 가격순</a>
+     <div id="item-list">
+		<div id="item1">
+			<div id="img1">
 			</div>
-			<div id="navContent">
-				<div>
-					<a href="#"><span>> {카테고리 호출}</span></a> 
-					<a href="#" class ="activeMenu"><span>> Out</span></a>
-					<a href="#"><span>> Top</span></a> 
-					<a href="#"><span>> Bottom</span></a>
-					<a href="#"><span>> Skirt</span></a>
-				</div>
-			</div>
-		</div>
-
-			<div id="content">
-				<strong>&#124;&nbsp;상품 소개</strong>
-				<hr>
-				<div id = "productIntroduce">
-					<div id = "productImg">
-						<div id = "img">
-						
-						</div>
-						<div id = "thumbnail">
-							<div>
-								<span>{썸네일1}</span>
-							</div>
-							<div>
-								<span>{썸네일1}</span>
-							</div>
-							<div>
-								<span>{썸네일1}</span>
-							</div>
-						</div>
-					</div>
-					<div id = "productInfo">
-						<div>
-							<strong>{상품명}</strong>
-						</div>
-						<div>
-							<form>
-							<table>
-								<tr>
-									<td>
-										<span>판매 가격 : </span>
-									</td>
-									<td>
-										<span>{가격}원</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>포인트 : </span>
-									</td>
-									<td>
-										<span>{적립 포인트} 포인트</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>{항목명 1} : </span>
-									</td>
-									<td>
-										<span>{내용}</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>{항목명 2} : </span>
-									</td>
-									<td>
-										<span>{내용}</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>{옵션 1} : </span>
-									</td>
-									<td>
-										<select>
-											<option>{옵션1}을 선택해 주세요.</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>{옵션 2} : </span>
-									</td>
-									<td>
-										<select>
-											<option>{옵션2}을 선택해 주세요.</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>수량 : </span>
-									</td>
-									<td>
-										<input type = "number" name = "amount" />
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>배송비 : </span>
-									</td>
-									<td>
-										<span>{배송비}원</span>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<strong>총 결제 금액 : </strong>
-									</td>
-									<td>
-										<strong>{합계 금액}원</strong>
-									</td>
-								</tr>
-							</table>
-						</form>
-						<div id = "buttonGroup">
-							<button class = "btn btn-default">장바구니</button>
-							<button class = "btn btn-default">구매하기</button>
-						</div>
-					</div>
-				</div>
+			<div id="info1">
+			<p>{상품 가격 표기}</p>
+			<p>{상품명 표기}</p>
+			<p>{상품 특징 100자 (2줄)}</p>
+			<p>&nbsp; </p>
 			</div>
 		</div>
-	</div>
-	
-	<div class = "container">
-		<div class = "btn-group btn-group-justified">
-			<a href = "#" class = "btn btn-default active">상품 상세 정보</a>
-			<a href = "#" class = "btn btn-default">상품평</a>
-			<a href = "#" class = "btn btn-default">상품문의</a>
-			<a href = "#" class = "btn btn-default">배송안내</a>
-			<a href = "#" class = "btn btn-default">교환 및 반품</a>
-		</div>	
-		<div id = "detailInfo">
-			
-		</div>		
-	</div>
+		<div id="item2">
+		<div id="img2">
+			</div>
+			<div id="info2">
+			<p>15,000원</p>
+			<p>기모 티셔츠</p>
+			<p>깃털처럼 가벼운 것에 비해</p>
+			<p>최고의 보온 효과!</p>
+			</div>
+		</div>
+		<div id="item3">
+			<div id="img3">
+			</div>
+			<div id="info3">
+			<p>15,000원</p>
+			<p>기모 티셔츠</p>
+			<p>깃털처럼 가벼운 것에 비해</p>
+			<p>최고의 보온 효과!</p>
+			</div>
+		</div>
+		<div id="item4">
+			<div id="img4">
+			</div>
+			<div id="info4">
+			<p class="text1">15,000원</p>
+			<p>기모 티셔츠</p>
+			<p>깃털처럼 가벼운 것에 비해</p>
+			<p>최고의 보온 효과!</p>
+			</div>
+		</div>
+     <div id="page">
+     		<a href="#">&lt;이전</a>&nbsp;|
+     		<a href="#">[1]</a>
+     		<a href="#">[2]</a>
+     		<a href="#">[3]</a>
+     		<a href="#">[4]</a>
+     		<a href="#">[5]</a>&nbsp;|
+     		<a href="#">다음></a>
+     </div>
+   </div>
+   </div>
+</div>     
 </body>
 </html>

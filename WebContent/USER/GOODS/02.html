@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/leftNav.css" />
+<style>	
+	.container{
+		width:1010px;
+	}
+	#productIntroduce{
+		height:500px;
+	}
+	#productImg{
+		display:inline-block;
+		width:390px;
+		height:390px;
+		float:left;
+	}
+	#productInfo{
+		display:inline-block;
+		width:360px;
+		height:390px;
+		float:left;
+	}
+	#img{
+		width:380px;
+		height:380px;
+		border:1px solid grey;
+		margin:5px;
+	}
+	#thumbnail{
+		text-align:center;
+	}
+	#thumbnail div{
+		display:inline-block;
+		width:100px;
+		height:70px;
+		border:1px solid grey;
+		margin:10px;
+	}
+	#productInfo{
+		padding:10px;
+		line-height:38px;
+	}
+	table{
+		width:360px;
+	}
+	table tr td:first-child{
+		width:80px;
+		text-align:right;
+	}
+	table tr td:last-child{
+		width:280px;
+	}
+	table tr td:last-child span,
+	table tr td:last-child input,
+	table tr td:last-child select{
+		margin-left:10px;
+	}
+	table tr:nth-child(1),
+	table tr:nth-child(2){
+		background-color:#F2F5F7;
+	}
+	table tr:nth-child(5){
+		border-top:1px solid lightgrey;
+	}
+	table tr:nth-child(6),
+	table tr:nth-child(7),
+	table tr:nth-child(8),
+	table tr:nth-child(9)	{
+		border-bottom:1px solid lightgrey;
+	}
+	table tr:nth-child(7) td input[type='number']{
+		width:40px;
+		height:24px;
+	}
+	#buttonGroup{
+		margin-top:10px;
+		width:330px;
+		text-align:center;
+	}
+	#buttonGroup button{
+		width:120px;
+		margin:5px;
+	}
+	#detailInfo{
+		margin-top:10px;
+		width:980px;
+		height:500px;
+		border:1px solid grey;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="nav">
+			<div id="navTitle">
+				<span>스타일 숍</span>
+			</div>
+			<div id="navContent">
+				<div>
+					<a href="#"><span>> {카테고리 호출}</span></a> 
+					<a href="#" class ="activeMenu"><span>> Out</span></a>
+					<a href="#"><span>> Top</span></a> 
+					<a href="#"><span>> Bottom</span></a>
+					<a href="#"><span>> Skirt</span></a>
+				</div>
+			</div>
+		</div>
+
+			<div id="content">
+				<strong>&#124;&nbsp;상품 소개</strong>
+				<hr>
+				<div id = "productIntroduce">
+					<div id = "productImg">
+						<div id = "img">
+						
+						</div>
+						<div id = "thumbnail">
+							<div>
+								<span>{썸네일1}</span>
+							</div>
+							<div>
+								<span>{썸네일1}</span>
+							</div>
+							<div>
+								<span>{썸네일1}</span>
+							</div>
+						</div>
+					</div>
+					<div id = "productInfo">
+						<div>
+							<strong>{상품명}</strong>
+						</div>
+						<div>
+							<form>
+							<table>
+								<tr>
+									<td>
+										<span>판매 가격 : </span>
+									</td>
+									<td>
+										<span>{가격}원</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>포인트 : </span>
+									</td>
+									<td>
+										<span>{적립 포인트} 포인트</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>{항목명 1} : </span>
+									</td>
+									<td>
+										<span>{내용}</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>{항목명 2} : </span>
+									</td>
+									<td>
+										<span>{내용}</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>{옵션 1} : </span>
+									</td>
+									<td>
+										<select>
+											<option>{옵션1}을 선택해 주세요.</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>{옵션 2} : </span>
+									</td>
+									<td>
+										<select>
+											<option>{옵션2}을 선택해 주세요.</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>수량 : </span>
+									</td>
+									<td>
+										<input type = "number" name = "amount" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>배송비 : </span>
+									</td>
+									<td>
+										<span>{배송비}원</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<strong>총 결제 금액 : </strong>
+									</td>
+									<td>
+										<strong>{합계 금액}원</strong>
+									</td>
+								</tr>
+							</table>
+						</form>
+						<div id = "buttonGroup">
+							<button class = "btn btn-default">장바구니</button>
+							<button class = "btn btn-default">구매하기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "container">
+		<div class = "btn-group btn-group-justified">
+			<a href = "#" class = "btn btn-default active">상품 상세 정보</a>
+			<a href = "#" class = "btn btn-default">상품평</a>
+			<a href = "#" class = "btn btn-default">상품문의</a>
+			<a href = "#" class = "btn btn-default">배송안내</a>
+			<a href = "#" class = "btn btn-default">교환 및 반품</a>
+		</div>	
+		<div id = "detailInfo">
+			
+		</div>		
+	</div>
+</body>
+</html>

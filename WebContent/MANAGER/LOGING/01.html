@@ -10,6 +10,9 @@
 	* {
 		font-family: 'Noto Sans KR', sans-serif;
 	}
+	body .container:nth-child(1) span{
+		
+	}
 	h3,h4{
 		display:inline-block;
 		margin-right:10px;
@@ -73,16 +76,21 @@
 	.container span:nth-child(2){
 		color:#FF6F43;
 	}
-	.container span:nth-child(3){
+	.container span:nth-child(1){
 		color:#5D646E;
+	}
+	.container a{
+		text-decoration:none;
 	}
 </style>
 </head>
 <body>
 	<div class = "container">
 		<h3 id = "vl">&#124;</h3>
-		<span>LALA</span>
-		<span>MARKET</span>
+		<a href = "../MAIN/01.html">
+			<span>LALA</span>
+			<span>MARKET</span>		
+		</a>
 		<h3>Admin Login</h3>
 		<hr>
 	</div>
@@ -90,7 +98,7 @@
 	<div class = "container" id = "loginC">
 		<h4>&#124;</h4><h4>Admin Login</h4>
 		<div>
-			<form>
+			<form action = "../MAIN/01.html">
 				<div class = "form-group">
 					<div>
 						<input type = "text"  name = "id"  id = "id" placeholder = "아이디를 입력하세요!" />
@@ -98,7 +106,7 @@
 					<div>
 						<input type = "password" name = "pwd" id = "pwd" placeholder = "비밀번호를 입력해 주세요!" />
 					</div>
-					<button type = "submit" id = "submit"><p>보안</p><p>로그인</p></button>
+					<button type = "submit" id = submit><p>보안</p><p>로그인</p></button>
 				</div>
 			</form>
 		</div>
