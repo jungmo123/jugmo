@@ -242,7 +242,6 @@
 				<p id = "menuName">Board Managament</p>
 				<p id = "currentIdx">&#124; 게시판 관리 > 게시판 카테고리 관리</p>
 			</div>
-		<form>
 			<div id = "searchBar">
 				<span>게시판 선택</span>
 				<select class = "form-control">
@@ -270,7 +269,7 @@
 							<td>자주 하는 질문 베스트</td>
 							<td>001</td>
 							<td>admin</td>
-							<td><button class = "form-control">수정</button>
+							<td><button class = "form-control" data-toggle = "modal" data-target = "#ctc">수정</button>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" /></td>
@@ -279,7 +278,7 @@
 							<td>배송 관련</td>
 							<td>002</td>
 							<td>admin</td>
-							<td><button class = "form-control">수정</button>
+							<td><button class = "form-control" data-toggle = "modal" data-target = "#ctc">수정</button>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" /></td>
@@ -288,7 +287,7 @@
 							<td>상품 구매/주문 절차 및 취소</td>
 							<td>003</td>
 							<td>admin</td>
-							<td><button class = "form-control">수정</button>
+							<td><button class = "form-control" data-toggle = "modal" data-target = "#ctc">수정</button>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" /></td>
@@ -297,7 +296,7 @@
 							<td>상품 판매 방법</td>
 							<td>004</td>
 							<td>admin</td>
-							<td><button class = "form-control">수정</button>
+							<td><button class = "form-control" data-toggle = "modal" data-target = "#ctc">수정</button>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" /></td>
@@ -306,7 +305,7 @@
 							<td>회원 가입 절차</td>
 							<td>005</td>
 							<td>admin</td>
-							<td><button class = "form-control">수정</button>
+							<td><button class = "form-control" data-toggle = "modal" data-target = "#ctc">수정</button>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" /></td>
@@ -315,14 +314,13 @@
 							<td>상품 환불 절차</td>
 							<td>006</td>
 							<td>admin</td>
-							<td><button class = "form-control">수정</button>
+							<td><button class = "form-control" data-toggle = "modal" data-target = "#ctc">수정</button>
 						</tr>
 					</tbody>
 				</table>
 				<button type = "button" id = "Cadd" class = "btn btn-default" data-toggle = "modal" data-target = "#ctc" >카테고리 생성</button>
 				<button id = "Cdelete" class = "btn btn-default">선택삭제</button>
 			</div>
-		</form>
 			<div id = "pagination">
 				<div>
 					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>

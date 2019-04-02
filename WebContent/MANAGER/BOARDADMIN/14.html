@@ -27,6 +27,9 @@
 	.searchList{
 		margin-top:10px;
 	}
+	.searchList input{
+		margin-right:5px;
+	}
 	.searchList div input:nth-child(2){
 		display:inline-block;
 		width:150px;
@@ -40,7 +43,7 @@
 		height:50px;
 		text-align:center;
 		border-radius:20px;
-		margin-bottom:100px;
+		margin:50px 0 10px 0;
 	}
 	#searchBar *{
 		position:relative;
@@ -58,7 +61,7 @@
 	}
 	#resultBox #resultBoxIndex{
 		text-align:center;
-		margin-bottom:30px;
+		margin-bottom:100px;
 	}
 	#resultBox #resultBoxIndex span{
 		margin-left:10px;
@@ -105,7 +108,6 @@
 		margin-bottom:10px;
 		background-color:#F2F5F7;
 		border-top:1px solid #BABABA;
-		border-bottom:1px solid #BABABA;
 	}
 	#openTable span:nth-child(1){
 		margin-left:19px;
@@ -135,6 +137,153 @@
 	#pagination a{
 		color:#878787;
 		margin-right:10px;
+	}
+	#Alert .modal-content{
+		width:350px !important;
+	}
+	#Alert #iconInfo{
+		display:inline-block;
+		width:80px;
+		height:60px;
+		float:left;
+		margin:10px;
+	}
+	#Alert #iconInfo i{
+		font-size:50px;
+	}
+	#Alert .modal-body{
+		height:110px;
+	}
+	#Alert .modal-body div:nth-child(2){
+		display:inline-block;
+		width:200px;
+		height:60px;
+		font-size:15px;
+		float:left;
+		position:relative;
+		top:25px;
+	}
+	#Alert .modal-footer{
+		text-align:center;
+	}
+	#Alert.modal-footer button{
+		width:100px;
+	}
+	.none{
+		display:none;
+	}
+	#quest .modal-header{
+		border:0;
+		padding-bottom:0;
+	}
+	#quest .modal-header h4{
+		width:90%;
+		position:relative;
+		left:15px;
+	}
+	#quest .modal-header button{
+		position:relative;
+		bottom:10px;
+		font-size:50px;
+	}
+	#quest .modal-body{
+		padding:0px 15px 0px 15px;
+		position:relative;
+		bottom:20px;
+	}
+	#quest .modal-body textarea{
+		resize: none;
+	}
+	#quest .modal-title{
+		font-weight:bold;
+	}
+	#quest #write{
+		margin-top:20px;
+	}
+	#quest .form-control{
+		display:inline;
+	}
+	#quest #writeT input[type="text"]{
+		margin-left:20px;
+		width:500px;
+	}
+	#quest #writeArea{
+		border-top:0px;
+		border-color:#878787;
+		resize: none;
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		border-left:1px solid #878787;
+		border-top:1px solid #878787;
+		border-right:1px solid #878787;
+	}
+	#quest .nav-tabs > li > a:hover{
+	  background-color: white !important;
+  	  border-radius: 5px 5px 0px 0px;
+  	  border-left:1px solid white;
+	  border-top:1px solid white;
+	  border-right:1px solid white;
+	  border-bottom:1px solid #878787;
+      color:#000;
+	} 
+	#quest textarea:focus {
+		outline:none;
+	}
+	#quest .tab-content{
+		width:100%;
+		height:400px;
+	}
+	#quest .tab-content textarea{
+		border-top:0px;
+		border-left:1px solid #878787;
+	  	border-right:1px solid #878787;
+	 	border-bottom:1px solid #878787;
+	 	padding:10px;
+		width:100%;
+		height:100%;
+		resize: none;
+	}
+	#quest #buttonGroup{
+		margin:25px;
+		text-align:center;
+	}
+	#quest #buttonGroup button{
+		margin:5px;
+	}
+	#quest a{
+		color:#878787;
+	}
+	#quest #writeT .form-control:nth-child(1){
+		display:inline-block;
+		width:140px;
+	}
+	#quest #writeT .form-control:nth-child(2){
+		position:relative;
+		bottom:1px;
+		display:inline-block;
+		width:140px;
+		margin-left:0;
+	}
+	#quest #writeT .form-control:nth-child(3){
+		display:inline-block;
+		width:100%;
+		margin:10px 0px 10px 0px;
+	}
+	#quest #write div:nth-child(2){
+		width:100%;
+		height:30px;
+		border-top:1px solid lightgrey;
+		border-left:1px solid lightgrey;
+		border-right:1px solid lightgrey;
+		text-align:center;
+		line-height:30px;
+	}
+	#quest #write div:nth-child(3) textarea{
+		width:100%;
+		height:120px;
+		border:1px solid lightgrey;
 	}
 </style>
 </head>
@@ -271,29 +420,8 @@
 						<button class = "form-control">선택 삭제</button>
 						<button class = "form-control">저장</button>
 					</div>
-					<div class = "searchList">
-						<div>
-							<input type = "checkbox" />
-							<input type = "text" class = "form-control" placeholder = "검색어 입력" />
-							<input type = "text" class = "form-control" placeholder = "URL 입력" />
-						</div>
-					</div>
-					<div class = "searchList">
-						<div>
-							<input type = "checkbox" />
-							<input type = "text" class = "form-control" placeholder = "검색어 입력" />
-							<input type = "text" class = "form-control" placeholder = "URL 입력" />
-						</div>
-					</div>
-					<div class = "searchList">
-						<div>
-							<input type = "checkbox" />
-							<input type = "text" class = "form-control" placeholder = "검색어 입력" />
-							<input type = "text" class = "form-control" placeholder = "URL 입력" />
-						</div>
-					</div>
-					<hr>
 				</div>
+				<hr>
 				<div id = "searchBar">
 					<input type = "text" class = "form-control" />
 					<button type = "submit" class = "form-control">검색</button>
@@ -316,17 +444,18 @@
 								<span>1.</span>
 								<span class = "quest">Q</span>
 								<span>{관리자에서 등록한 자주 하는 질문 제목 표기}</span>
-								<button id = "open" class = "form-control"><span>닫기</span><span class = "glyphicon glyphicon-triangle-top"></span></button>
+								<button id = "open" class = "form-control"><span>열기</span><span class = "glyphicon glyphicon-triangle-bottom"></span></button>
 							</div>
-							<div id = "openTable">
+							<div id = "openTable" class = "none">
 								<span></span>
 								<span>A</span>
 								<span>{관리자에서 등록한 자주 하는 질문 제목 표기}</span>
 								<div>
-									<button class = "form-control">수정</button>
+									<button class = "form-control" data-toggle = "modal" data-target = "#quest">수정</button>
 									<button class = "form-control">삭제</button>								
 								</div>
 							</div>
+							<hr>
 							<div>
 								<span>2.</span>
 								<span class = "quest">Q</span>
@@ -364,5 +493,62 @@
 	</div>
 </div>
 
+
+	<div class = "modal fade" id  ="Alert">
+		<div class = "modal-dialog modal-sm">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title"></h4>
+				</div>
+				<div class = "modal-body">
+					<div id = "iconInfo">
+						<i class="fas fa-info-circle"></i>
+					</div>
+					<div>
+						<p>최대 5개만 사용할 수 있습니다.</p>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "modal fade" id  ="quest">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;자주 하는 질문/답변 등록(수정)</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<form>
+						<div id = "write">
+							<div id = "writeT">
+								<select class = "form-control">
+									<option>카테고리 선택</option>
+								</select>
+								<input type = "text" class = "form-control" placeholder = "순번 입력" />
+								<input type = "text" class = "form-control" placeholder = "제목을 입력하세요!" />
+							</div>
+							<div>
+								<span>에디터 기능</span>
+							</div>
+							<div>
+								<textarea></textarea>
+							</div>							
+							<div id = "buttonGroup">
+								<button type = "submit" class = "btn btn-default">작성 완료</button>
+								<button class = "btn btn-default">작성 취소</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

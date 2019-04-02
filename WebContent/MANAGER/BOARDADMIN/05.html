@@ -48,6 +48,7 @@
 	}
 	table tr{
 		border:1px solid #F2F5F7;
+		cursor:pointer;
 	}
 	table tr th{
 		background-color:#F2F5F7;
@@ -197,7 +198,7 @@
 				<p id = "menuName">Board Managament</p>
 				<p id = "currentIdx">&#124; 게시판 관리 > 커뮤니티 목록</p>
 			</div>
-		<form>
+			<form>
 			<div id = "searchBar">
 				<select class = "form-control">
 					<option>제목 + 내용</option>
@@ -205,6 +206,7 @@
 				<input type = "text" class = "form-control" name = "title" />
 				<button type = "button" class = "btn btn-default">검색</button>
 			</div>
+			</form>
 			<div>
 				<table id = "table" class = "table table-hover">
 					<thead>
@@ -216,61 +218,61 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td><span class = "badge">중요</span></td>
 							<td>폭설로 인한 배송 지연 안내</td>
 							<td>admin</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>9</td>
 							<td>모바일에서 결제를 하면,상품 주문이 되었다고 했는데.... [1]</td>
 							<td>like9</td>
 							<td>2023-01-01</td>
-						</tr>
-						<tr>
+						</tr >
+						<tr onclick = "location.href = '06.html'">
 							<td>8</td>
 							<td>스타일 숍에서 구매를 했는데요. 입금은 어떻게 하면 되나....</td>
 							<td>like8</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>7</td>
 							<td>주문 취소 했는데 결제한 카드는 언제 취소되나요?</td>
 							<td>like7</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>6</td>
 							<td>상품평을 등록 하려고 하는데,주문내용을 확인할 수....</td>
 							<td>like6</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>5</td>
 							<td>주문 취소 했는데 결제한 카드는 언제 취소되나요?</td>
 							<td>like5</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>4</td>
 							<td>구매 했는데 적립금이 적립이 안되었어요!</td>
 							<td>like4</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>3</td>
 							<td>포인트는 어떻게 사용하나요?</td>
 							<td>like3</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>2</td>
 							<td>제주도인데 배송이 되나요?</td>
 							<td>like2</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '06.html'">
 							<td>1</td>
 							<td>옷이 사진과 많이 다른데 환불이 가능한가요?</td>
 							<td>like1</td>
@@ -278,9 +280,8 @@
 						</tr>
 					</tbody>
 				</table>
-				<button id = "write" class = "btn btn-default">글쓰기</button>
+				<button id = "write" class = "btn btn-default" onclick = "location.href = '07.html'">글쓰기</button>
 			</div>
-		</form>
 			<div id = "pagination">
 				<div>
 					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>

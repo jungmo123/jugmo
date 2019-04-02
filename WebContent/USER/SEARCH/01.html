@@ -66,16 +66,23 @@
 		background-color:lightgrey;
 		text-align:center;
 	}
+	table tr{
+		cursor:pointer;
+	}
 	#styleShop,
 	#productReview,
 	#board{
 		width:600px;
 	}
-	#styleShop a,
-	#productReview a,
-	#board a{
+	#styleShop > a,
+	#productReview > a,
+	#board > a{
 		float:right;
+		color:black
+	}
+	#board > div > div >a{
 		color:black;
+		float:left;
 	}
 	#styleShop table,
 	#productReview table,
@@ -128,6 +135,7 @@
 	}
 	#board > div span{
 		margin-right:5px;
+		float:left;
 	}
 	#board > div > div:first-child span:last-child{
 		float:right;
@@ -161,7 +169,7 @@
 				<strong>스타일 숍</strong>
 				<a href = "#">검색 결과 더 보기 ></a>
 				<table class = "table table-hover">
-					<tr>
+					<tr onclick = "location.href = '../GOODS/02.html'">
 						<td>
 							<div>
 							</div>
@@ -182,7 +190,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
+					<tr onclick = "location.href = '../GOODS/02.html'">
 						<td>
 							<div>
 							</div>
@@ -210,7 +218,7 @@
 				<strong>상품평</strong>
 				<a href = "#">검색 결과 더 보기 ></a>
 				<table class = "table table-hover">
-					<tr>
+					<tr onclick = "location.href = '../REVIEWS/01.html'">
 						<td>
 							<div>
 							</div>
@@ -241,7 +249,7 @@
 				<div>
 					<div>
 						<span>{[게시판 경로 표기]}</span>
-						<span>{글 제목 표기}</span>
+						<a href = "../HELP/02.html"><span>{글 제목 표기}</span></a>
 						<span>{작성일}</span>
 					</div>
 					<div>

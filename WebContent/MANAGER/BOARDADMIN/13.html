@@ -144,6 +144,9 @@
 		color:#878787;
 		margin-right:10px;
 	}
+	.none{
+		display:none;
+	}
 </style>
 <body>
 
@@ -312,12 +315,12 @@
 						</td>
 						<td>
 							<div>
-								<button class = "btn btn-default">닫기<span class = "glyphicon glyphicon-triangle-top"></span></button>
+								<button class = "btn btn-default">보기 <span class = "glyphicon glyphicon-triangle-bottom"></span></button>
 							</div>
 						</td>
 					</tr>
 				</table>
-				<div id = "commentRead">
+				<div id = "commentRead" class = "none">
 					<div>
 						<span>
 							{상품평}<br>
@@ -326,7 +329,7 @@
 						</span>
 					</div>
 					<div>
-						<button class = "btn btn-default">수정</button>
+						<button class = "btn btn-default" data-toggle = "modal" data-target = "#pim">수정</button>
 						<button class = "btn btn-default">삭제</button>
 					</div>
 				</div>
@@ -373,6 +376,25 @@
 		</div>
 	</div>
 </div>
+
+	<div class = "modal fade" id  ="pim">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;상품 문의 답변/수정하기</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<textarea class = "form-control" cols = "20" rows = "6" name = "modifyComment"></textarea>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

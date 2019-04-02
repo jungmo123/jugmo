@@ -3,9 +3,12 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="../CSS/Navigation.css"/>
+<link rel="stylesheet" href="../CSS/Navigation.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src = "../JS/Navigation.js"></script>
 <style>
 	#eventSearch{
 		text-align:center;
@@ -25,6 +28,9 @@
 		width:100px;
 		position:relative;
 		bottom:2px;
+	}
+	table tr{
+		cursor:pointer;
 	}
 	table td:nth-child(2){
 		width:200px;
@@ -204,9 +210,8 @@
 				</form>
 			</div>
 			<div id = "eventDiv">
-				<form>
 					<table id = "eventTable" class = "table table-hover">
-						<tr>
+						<tr onclick = "location.href ='17.html'">
 							<td>
 								<input type = "checkbox" name = "deleteSelect" />
 							</td>
@@ -230,7 +235,7 @@
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href ='17.html'">
 							<td>
 								<input type = "checkbox" name = "deleteSelect" />
 							</td>
@@ -255,7 +260,7 @@
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href ='17.html'">
 							<td>
 								<input type = "checkbox" name = "deleteSelect" />
 							</td>
@@ -280,7 +285,7 @@
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href ='17.html'">
 							<td>
 								<input type = "checkbox" name = "deleteSelect" />
 							</td>
@@ -305,7 +310,7 @@
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href ='17.html'">
 							<td>
 								<input type = "checkbox" name = "deleteSelect" />
 							</td>
@@ -334,9 +339,8 @@
 					<hr>
 					<div id = "buttonBox">
 						<button class = "form-control">선택 삭제</button>
-						<button class = "form-control">이벤트 종료</button>
+						<button class = "form-control" onclick = "location.href='18.html'">이벤트 등록</button>
 					</div>
-				</form>
 				<div id = "pagination">
 					<div>
 						<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>

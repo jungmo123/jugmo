@@ -63,6 +63,39 @@
 	#footerDiv button{
 		float:right;
 	}
+	#otom .modal-header{
+		border:0;
+	}
+	#otom .modal-body{
+		padding:0px 15px 0px 15px;
+	}
+	#otom .modal-body textarea{
+		resize: none;
+	}
+	#otom .modal-footer{
+		border:0;
+		text-align:center;
+	}
+	#otom .modal-title{
+		font-weight:bold;
+	}
+	#otom hr{
+		margin:5px;
+	}
+	.modal-body div:first-child{
+		width:100%;
+		height:30px;
+		border-top:1px solid lightgrey;
+		border-left:1px solid lightgrey;
+		border-right:1px solid lightgrey;
+		text-align:center;
+		line-height:30px;
+	}
+	.modal-body textarea{
+		width:100%;
+		height:120px;
+		border:1px solid lightgrey;
+	}
 </style>
 </head>
 <body>
@@ -204,7 +237,7 @@
 			어떻게 하면 이용 할 수 있는 등급이 되나요?<br>
 			빠른 답변 부탁드립니다.
 			<div class = "buttonBox">
-				<button class = "form-control">수정</button>
+				<button class = "form-control" data-toggle = "modal" data-target = "#otom">수정</button>
 				<button class = "form-control">삭제</button>
 			</div>
 		</div>
@@ -229,11 +262,35 @@
 		</div>
 		<div id = "footerDiv">
 			<hr>
-			<button class = "btn btn-default left">목록 보기</button>
+			<button class = "btn btn-default left" onclick = "location.href = '10.html'">목록 보기</button>
 		</div>
 	</div>
 </div>
 </div>
+
+	<div class = "modal fade" id  ="otom">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;상품 문의 답변/수정하기</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<div>
+						<span>에디터 기능</span>
+					</div>
+					<div>
+						<textarea></textarea>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
