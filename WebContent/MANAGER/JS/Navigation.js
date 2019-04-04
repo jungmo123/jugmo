@@ -7,7 +7,6 @@ $(function() {
 	});
 	//6페이지
 	$("#commentDiv button:nth-child(3)").bind("click", function() {
-		console.log("클릭");
 		$("#commentDiv > form").removeClass("none");
 	})
 	// 6페이지
@@ -58,11 +57,22 @@ $(function() {
 			$(this).text("");
 			$(this).text("닫기 ")
 			var span = $("<span></span>");
+			
 			span.addClass("glyphicon glyphicon-triangle-bottom")
 			$(this).append(span);	
 
 			$("#commentRead").removeClass("none");
 		}
+	});
+
+	//13 페이지
+	$("#writeButton").bind("click", function() {
+		$("#writeForm").removeClass("none");
+	});
+
+	//13 페이지
+	$("#writeCancel").bind("click", function() {
+		$("#writeForm").addClass("none");
 	});
 	
 	// 14페이지
