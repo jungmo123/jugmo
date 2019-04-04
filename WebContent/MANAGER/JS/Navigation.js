@@ -131,4 +131,9 @@ $(function() {
 	$("#openTable > div > button:first-child").bind("click",function(e){
 		e.preventDefault();
 	})
+	
+	//GOODSADMIN 05
+	$("#categoryBox > button").click(function(){
+		$("#categoryTable").removeClass("none");
+	})
 })

@@ -10,10 +10,14 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src = "../JS/Navigation.js"></script>
 <style>
+	#AllContent{
+		position:relative;
+		height:620px;
+	}
 	#categoryBox{
 		display:inline-block;
 		width:150px;
-		height:200px;
+		height:400px;
 		text-align:center;
 	}
 	#categoryBox div{
@@ -99,6 +103,9 @@
 	}
 	.modal-footer button{
 		width:100px;
+	}
+	.none{
+		display:none !important;
 	}
 </style>
 </head>
@@ -228,18 +235,15 @@
 				<button class = "btn btn-default">1차 카테고리 생성</button>
 				<div>
 					<p>
-						<span> - 스타일 샵 </span>
-						<a href = "#"><i class="fas fa-caret-square-up"></i></span></a>
-						<a href = "#"><i class="fas fa-caret-square-down"></i></span></a>					
-					</p>
-					<p>
-						<span> - 오픈 샵 </span>
-						<a href = "#"><i class="fas fa-caret-square-up"></i></span></a>
-						<a href = "#"><i class="fas fa-caret-square-down"></i></span></a>					
+						<a href = "5-1.html"><span class = "glyphicon glyphicon-plus"></span></a>
+						<span>스타일 샵
+							<a href = "#"><i class="fas fa-caret-square-up"></i></span></a>
+							<a href = "#"><i class="fas fa-caret-square-down"></i></span></a>
+						</span>	
 					</p>
 				</div>
 			</div>
-			<div id = "categoryTable">
+			<div id = "categoryTable" class = "none">
 				<table>
 					<tr>
 						<td>
@@ -289,6 +293,23 @@
 					<button id = "delete" class = "btn btn-default" data-toggle = "modal" data-target = "#deleteInfo">삭제</button>
 				</div>
 			</div>
+			<div id = "information">
+				<p>
+					<strong>카테고리 등록/수정 안내</strong>
+				</p>
+				<p>
+					<strong>[1차 카테고리 생성]</strong>
+					<span>왼쪽 상단의 '1차 카테고리 생성' 버튼을 클릭하시면 1차 카테고리명,카테고리 노출 여부를 설정 할 수 있습니다.</span>
+				</p>
+				<p>
+					<strong>[2차 카테고리 생성]</strong>
+					<span>생성된 1차 카테고리 목록 하단의 '하위 카테고리 생성' 버튼을을 클릭 하시면 2차 카테고리명,카테고리 노출 여부를 설정 할 수 잇습니다.</span>
+				</p>
+				<p>
+					<strong>[카테고리 수정]</strong>
+					<span>수정하려는 카테고리 선택 시 카테고리를 카테고리명,카테고리 노출 여부를 수정 할 수 있습니다.</span>
+				</p>
+			</div>
 		</div>
 	</div>
 	
@@ -310,7 +331,7 @@
 					</div>
 				</div>
 				<div class ="modal-footer">
-					<button type = "button" class = "btn btn-default" data-dismiss = "modal">예</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal" onclick = "location.href='../MAIN/01.html'">예</button>
 					<button type = "button" class = "btn btn-default" data-dismiss = "modal">아니요</button>
 				</div>
 			</div>
