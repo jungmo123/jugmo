@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+	#footer{
+		width:850px;
+		height:170px;
+		margin-top:50px;
+	}
+	#footerNav{
+		margin-bottom:30px;
+		height:40px;
+		line-height:35px;
+		text-align:center;
+		border-top:1px solid grey;
+		border-bottom:1px solid grey;
+	}
+	#footerNav a{
+		color:black;
+	}
+	#footerLogo{
+		display:inline-block;
+		width:300px;
+		height:170px;
+		float:left;
+	}
+	#footerLogo span{
+		position:relative;
+		top:55px;
+		font-size:35px;
+	}
+	#footerLogo small{
+		position:relative;
+		top:50px;
+	}
+	#footerContent{
+		display:inline-block;
+		width:550px;
+		height:170px;
+		text-align:left;
+		float:left;
+	}
+	#footerTop{
+		height:120px;
+	}
+	#footerTop > div{
+		display:inline-block;
+		height:90px;
+		float:left;		
+	}
+	#footerTop div:first-child{
+		width:200px;
+	}
+	#footerTop div:last-child{
+		width:300px;
+	}
+	#footerTop div p,
+	#footerBottom div p{
+		border-left:1px solid grey;
+	}
+	#footerTop div p strong,
+	#footerTop div p span,
+	#footerBottom div p strong,
+	#footerBottom div p span{
+		margin-left:5px;
+	}
+	#footerTop div button{
+		margin-left:5px;
+		background-color:white;
+	}
+	#footerDiv{
+		text-align:center;
+	}
+	#footerBottom div:nth-child(2){
+		margin-top:30px;
+		text-align:center;
+		color:lightgrey;
+	}
+	#footerBottom div:nth-child(1) > span{
+		border-left:1px solid grey;
+		padding-left:5px;
+		margin-right:5px;
+	}
+</style>
+</head>
+<body>
+
+	<div class = "container" id = "footerDiv">
+		<div id = "footer">
+			<div id = "footerNav">
+				<a href = "#"><span>회사 소개</span></a>
+				<span>&nbsp;&#124;&nbsp;</span>
+				<a href = "#"><span>이용약관</span></a>
+				<span>&nbsp;&#124;&nbsp;</span>
+				<a href = "#"><span>개인정보처리방침</span></a>
+				<span>&nbsp;&#124;&nbsp;</span>
+				<a href = "#"><span>고객센터</span></a>
+			</div>
+			<div id = "footerLogo">
+				<span>라라&nbsp;</span><span>마켓</span>
+				<br>
+				<small>LALA MARKET</small>
+			</div>
+			<div id = "footerContent">
+				<div id = "footerTop">
+					<div>
+						<p><strong>상호명 :</strong><span>(주)라라마켓</span></p>
+						<p><strong>사업자 등록번호 :</strong><span>000-00-0000</span></p>
+						<p><button>사업자번호 확인</button></p>
+					</div>
+					<div>
+						<p><strong>대표자 :</strong><span>최한석</span></p>
+						<p><strong>통신판매업 신고번호 :</strong><span>0000-서울서초-0000</span></p>	
+						<p><strong>개인정보관리책임자 :</strong><span>최한석</span></p>	
+						<p><strong>호스팅 제공 사업자 :</strong><span>OOOO</span></p>				
+					</div>
+				</div>
+				<div id = "footerBottom">
+					<div>
+						<p><strong>주소 :</strong><span>(00000) 서울시 서초구 OOOOO OO</span></p>
+						<span>TEL 070-0000-0000</span><span>FAX (02)000-00000</span><span>Email : help@style.co.kr</span>
+					</div>
+					<div>
+						<strong>Copyright 2023 라라마켓 Corp.All Rights Reserved</strong>
+					</div>		
+				</div>
+			</div>
+		</div>	
+	</div>
+
+</body>
+</html>

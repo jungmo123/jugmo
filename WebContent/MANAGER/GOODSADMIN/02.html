@@ -7,86 +7,95 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
 <link rel ="stylesheet" href = "../CSS/Navigation.css" />
 <style>
-	#introduceTitle,#introduceContent{
+	#productIntroduce #introduceTitle,#introduceContent,#productDetailInfo{
 		margin-top:20px;
 	}
-	#secondTable{
+	#productIntroduce #secondTable{
 		width:800px;
 		color:#878787;
 	}
-	#secondTable tr td{
+	#productIntroduce #secondTable tr td{
 		border-top:1px solid grey;
 		border-bottom:1px solid grey;
 		height:50px;
 	}
-	#secondTable tr td:first-child{
+	#productIntroduce #secondTable tr td:first-child{
 		width:150px;
 		background-color:#F2F5F7;
 		border-right:1px solid grey;
 		text-align:center;
 	}
-	#secondTable tr td:first-child div{
+	#productIntroduce #secondTable tr td:first-child div{
 		float:right;
 	}
-	#secondTable tr td:first-child div strong{
+	#productIntroduce #secondTable tr td:first-child div strong{
 		position:relative;
 		right:10px;
 	}
-	#secondTable tr td:last-child{
+	#productIntroduce #secondTable tr td:last-child{
 		width:500px;
 	}
-	#secondTable tr td:last-child input[type='text']{
+	#productIntroduce #secondTable tr td:last-child input[type='text']{
 		width:400px;
 		margin-left:10px;
 		position:relative;
 		top:5px;
 	}
-	#secondTable tr td:last-child button{
+	#productIntroduce #secondTable tr td:last-child button{
 		position:relative;
 		top:5px;
 		height:26px;
 		background-color:#F2F5F7;
 		border:1px solid grey;
 	}
-	#secondTable tr:nth-child(2) td:last-child{
+	#productIntroduce #secondTable tr:nth-child(2) td:last-child{
 		padding:10px 0 10px 0;
 	}
-	#productDetailInfo{
+	#productIntroduce #productDetailInfo{
 		margin-top:20px;
 	}
-	a{
+	#productDetailInfo a{
 		color:#878787;
 	}
-	#write{
+	#productDetailInfo #write{
 		margin-top:20px;
 		margin-left:10px;
 	}
-	#writeC{
+	#productDetailInfo #writeC{
 		margin-top:20px;
 		padding:10px;
 		background-color:#F2F5F7;
 		border-radius:20px;
 	}
-	#writeC ul{
+	#productDetailInfo .aditorDiv{
+		width:100%;
+		height:40px;
+		border-left:1px solid #878787;
+		border-right:1px solid #878787;
+		background-color:#F2F5F7;
+		text-align:center;
+		line-height:40px;
+	}
+	#productDetailInfo #writeC ul{
 		display:block;
 		border-color:#878787;
 	}
-	#writeC ul .active{
+	#productDetailInfo #writeC ul .active{
 		border-color:color:#878787;
 	}
-	#writeArea{
+	#productDetailInfo #writeArea{
 		border-top:0px;
 		border-color:#878787;
 		resize: none;
 	}
-	.nav-tabs > li.active > a,
-	.nav-tabs > li.active > a:focus,
-	.nav-tabs > li.active > a:hover{
+	#productDetailInfo .nav-tabs > li.active > a,
+	#productDetailInfo .nav-tabs > li.active > a:focus,
+	#productDetailInfo .nav-tabs > li.active > a:hover{
 		border-left:1px solid #878787;
 		border-top:1px solid #878787;
 		border-right:1px solid #878787;
 	}
-	.nav-tabs > li > a:hover{
+	#productDetailInfo .nav-tabs > li > a:hover{
 	  background-color: white !important;
   	  border-radius: 5px 5px 0px 0px;
   	  border-left:1px solid white;
@@ -95,14 +104,14 @@
 	  border-bottom:1px solid #878787;
       color:#000;
 	} 
-	textarea:focus {
+	#productDetailInfo textarea:focus {
 		outline:none;
 	}
-	.tab-content{
+	#productDetailInfo .tab-content{
 		width:100%;
 		height:200px;
 	}
-	.tab-content textarea{
+	#productDetailInfo .tab-content textarea{
 		border-top:0px;
 		border-left:1px solid #878787;
 	  	border-right:1px solid #878787;
@@ -221,6 +230,9 @@
 								<li class = "active"><a data-toggle="tab" href = "#">에디터</a></li>
 								<li><a data-toggle="tab" href = "#">HTML</a></li>
 							</ul>
+							<div class = "aditorDiv">
+								<span>에디터 부분</span>
+							</div>
 							<div class="tab-content">
 								<textarea name = "document" placeholder="내용을 입력해주세요!"></textarea>
 							</div>
