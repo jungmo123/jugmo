@@ -83,7 +83,25 @@
 	}
 	#productTable tr:nth-child(7) td input[type='number']{
 		width:40px;
-		height:24px;
+		height:15px;
+		text-align:center;
+	}
+	#productTable tr:nth-child(7) button{
+		padding:0;
+		width:20px;
+		height:15px;
+		position:relative;
+		bottom:2px;
+	}
+	#productTable tr:nth-child(7) button:nth-child(2) span{
+		margin-left:0;
+		position:relative;
+		bottom:4px;
+	}
+	#productTable tr:nth-child(7) button:nth-child(3) span{
+		margin-left:0;
+		position:relative;
+		bottom:6px;
 	}
 	#buttonGroup{
 		margin-top:10px;
@@ -414,6 +432,42 @@
 	body .container:nth-child(2) > div:last-child{
 		margin-bottom:100px;
 	}
+	.modal-content{
+		width:350px !important;
+	}
+	#iconInfo{
+		display:inline-block;
+		width:80px;
+		height:60px;
+		float:left;
+		margin:10px;
+	}
+	#iconInfo i{
+		font-size:50px;
+	}
+	.modal-body{
+		height:110px;
+	}
+	.modal-body div:nth-child(2){
+		display:inline-block;
+		width:200px;
+		height:60px;
+		font-size:15px;
+		float:left;
+		position:relative;
+		top:25px;
+	}
+	.modal-footer{
+		text-align:center;
+	}
+	.modal-footer button{
+		width:100px;
+	}
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
 </style>
 </head>
 <body>
@@ -500,6 +554,7 @@
 									<td>
 										<select>
 											<option>{옵션1}을 선택해 주세요.</option>
+											<option>{옵션1}</option>
 										</select>
 									</td>
 								</tr>
@@ -510,6 +565,7 @@
 									<td>
 										<select>
 											<option>{옵션2}을 선택해 주세요.</option>
+											<option>{옵션2}</option>
 										</select>
 									</td>
 								</tr>
@@ -519,6 +575,8 @@
 									</td>
 									<td>
 										<input type = "number" name = "amount" value = "1"/>
+										<button id = "pluse" class = "btn btn-default"><span>+</span></button>
+										<button id = "minus" class = "btn btn-default"><span>-</span></button>
 									</td>
 								</tr>
 								<tr>
@@ -540,8 +598,8 @@
 							</table>
 						</form>
 						<div id = "buttonGroup">
-							<button class = "btn btn-default" onclick="location.href='../MYPAGE/SHOPPING/04.html';">장바구니</button>
-							<button class = "btn btn-default" onclick="location.href='../BUY/01.html';">구매하기</button>
+							<button class = "btn btn-default">장바구니</button>
+							<button class = "btn btn-default">구매하기</button>
 						</div>
 					</div>
 				</div>
@@ -920,6 +978,52 @@
 			<span>비닐 제거 시 반품/환불 불가!</span>
 		</div>		
 	</div>
+	
+	<div class = "modal fade" id  ="Alert">
+		<div class = "modal-dialog modal-sm">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title"></h4>
+				</div>
+				<div class = "modal-body">
+					<div id = "iconInfo">
+						<i class="fas fa-info-circle"></i>
+					</div>
+					<div>
+						<p></p>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class = "modal fade" id  ="loginAlert">
+		<div class = "modal-dialog modal-sm">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">Comfirm 2-2</h4>
+				</div>
+				<div class = "modal-body">
+					<div id = "iconInfo">
+						<i class="fas fa-question-circle"></i>
+					</div>
+					<div>
+						<span>로그인 후 이용 가능합니다.</span>
+						<br>
+						<span>로그인 하시겠습니까?</span>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal"  onclick = "location.href = '../LOGIN/01.html'">예</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">아니요</button>
+				</div>
+			</div>
+		</div>
 	
 	<script type ="text/javascript">
 		$(function(){
