@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="../CSS/help.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 	#searchBar{
 		text-align:center;
@@ -40,6 +42,7 @@
 	}
 	table tr{
 		border:1px solid #F2F5F7;
+		cursor:pointer;
 	}
 	table tr th{
 		background-color:#F2F5F7;
@@ -87,16 +90,16 @@
 				</div>
 			<div id="navContent">
 				<div>
-					<a href="#"><span>> 공지사항</span></a>
-					<a href="#" class = "activeMenu"><span>> 커뮤니티</span></a> 
-					<a href="#"><span>> 자주 하는 질문</span></a>
-					<a href="#"><span>> 상품 문의</span></a>
-					<a href="#"><span>> 아이디 찾기</span></a> 
-					<a href="#"><span>> 비밀번호 찾기</span></a>
+					<a href="#"><span onclick = "location.href = '01.html'">> 공지사항</span></a>
+					<a href="#" class = "activeMenu"><span onclick = "location.href = '03.html'">> 커뮤니티</span></a> 
+					<a href="#"><span onclick = "location.href = '06.html'">> 자주 하는 질문</span></a>
+					<a href="#"><span onclick = "location.href = '07.html'">> 상품 문의</span></a>
+					<a href="#"><span onclick = "location.href = '08.html'">> 아이디 찾기</span></a> 
+					<a href="#"><span onclick = "location.href = '09.html'">> 비밀번호 찾기</span></a>
 				</div>
 			</div>
 			</div>
-			<div id = "inquiry" onClick = "location.href='#';">
+			<div id = "inquiry" onClick = "location.href='../HELP/01.';">
 				<div>
 					<strong>1:1 문의</strong>
 				</div>
@@ -139,64 +142,64 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td><span class = "badge">중요</span></td>
 							<td>폭설로 인한 배송 지연 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>10</td>
 							<td>{제목표기}</td>
 							<td>{작성일 표기</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>9</td>
 							<td>택배사 물량 폭주로 배송 불가 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>8</td>
 							<td>신용카드 무이자 할부 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>7</td>
 							<td>신상품 입고 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>6</td>
 							<td>오픈 숍 이용 시 주의사항 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>5</td>
 							<td>신용카드 무이자 할부 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>4</td>
 							<td>신상품 입고 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>3</td>
 							<td>오픈 숍 이용 시 주의사항 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>2</td>
 							<td>1월 신상품 입고 안내</td>
 							<td>2023-01-01</td>
 						</tr>
-						<tr>
+						<tr onclick = "location.href = '04.html'">
 							<td>1</td>
 							<td>게시글 제목이 표기 됩니다.</td>
 							<td>2023-01-01</td>
 						</tr>
 					</tbody>
 				</table>
-				<button id = "write" class = "btn btn-default">글쓰기</button>
+				<button id = "write" class = "btn btn-default" onclick="location.href='05.html'"><a href="05.html">글쓰기</a></button>
 			</div>
 		</form>
 			<div id = "pagination">

@@ -8,6 +8,8 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="../CSS/leftNav.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 #searchBar {
 	display: inline-block;
@@ -184,6 +186,79 @@ table tr:nth-child(3) div:last-child button {
 	position:relative;
 	bottom:25px;
 }
+<!--modal시작-->
+	.modal-body{
+		height:460px;
+	}
+	.modal-footer{
+		border:0;
+		text-align:center;
+	}
+	#selectDiv{
+		padding:10px 10px 0px 10px;
+	}
+	#selectDiv span{
+		float:right;
+	}
+	#textBox{
+		display:inline-block;
+		width:565px;
+		padding:5px 10px 10px 10px
+	}
+	#textBox div:first-child{
+		height:30px;
+		background-color:#F2F5F7;
+		text-align:center;
+		border:1px solid grey;
+		border-bottom:0;
+	}
+	#textBox textarea{
+		width:545px;
+		height:150px;
+		resize:none;
+		border-color:grey;
+		border-top:0;
+	}
+	#grade{
+		width:568px;
+		height:100px;
+		padding:10px;
+	}
+	#grade > div{
+		width:548px;
+		height:70px;
+		border:1px solid grey;
+	}
+	#grade div > div{
+		display:inline-block;
+	}
+	#grade div > div:first-child{
+		width:50px;
+		float:left;
+		text-align:center;
+		position:relative;
+		top:25px;
+		margin-right:10px;
+	}
+	#grade div > div:last-child{
+		position:relative;
+		bottom:10px;
+		width:490px;
+		float:right;
+	}
+	#grade div > div:last-child p:first-child label{
+		margin-right:30px;
+	}
+	#grade div > div:last-child p:last-child label{
+		margin-right:104px;
+	}
+	p{
+		margin-bottom:3px;
+	}
+	#reference{
+		padding:10px;
+		line-height:25px;
+	}
 </style>
 </head>
 <body>
@@ -222,12 +297,12 @@ table tr:nth-child(3) div:last-child button {
 							</div>
 						</td>
 						<td>
-							<div></div>
+							<div onclick = "location.href = '../GOODS/02.html'"></div>
 						</td>
 						<td>
 							<div>
 								<strong>{카테고리명&nbsp;&#60;&nbsp;상품평 표기}</strong>
-								<button class="btn btn-default">상품보기</button>
+								<button class="btn btn-default" onclick = "location.href = '../GOODS/02.html'">상품보기</button>
 							</div>
 							<div>
 								<span>{평점 표기}</span>
@@ -255,12 +330,12 @@ table tr:nth-child(3) div:last-child button {
 							</div>
 						</td>
 						<td>
-							<div></div>
+							<div onclick = "location.href = '../GOODS/02.html'"></div>
 						</td>
 						<td>
 							<div>
 								<strong>Top&nbsp;&#60;&nbsp;티셔츠</strong>
-								<button class="btn btn-default">상품보기</button>
+								<button class="btn btn-default" onclick = "location.href = '../GOODS/02.html'">상품보기</button>
 							</div>
 							<div>
 								<span>매우만족 ★ ★ ★ ★ ★</span>
@@ -331,7 +406,74 @@ table tr:nth-child(3) div:last-child button {
 					<div id="currentBar"></div>
 				</div>
 				<div>
-					<button class = "btn btn-default">상품평 작성하기</button>
+					<button id = "button" class = "btn btn-default" type="button"
+					 data-toggle = "modal" data-target = "#myModal">상품평 작성하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<div class = "modal fade" id = "myModal">
+		<div class = "modal-dialog">
+			<div class = "modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">X</button>
+					<strong>&#124;&nbsp;상품평 작성하기</strong>
+					<span>Write Review</span>
+				</div>
+				<div class = "modal-body">
+					<div id = "selectDiv">
+						<select>
+							<option>구매한 상품을 입력하세요.</option>
+						</select>
+						<span>0/1000자</span>
+					</div>
+					<div id = "editor">
+						<div id = "textBox">
+							<div>
+								<span>에디터(editor)기능 노출</span>
+							</div>
+							<div>
+								<textarea></textarea>
+							</div>
+						</div>						
+					</div>
+					<div id = "grade">
+						<div>
+							<div>
+								<span>평점</span>
+							</div>
+							<div>
+								<p>
+									<input type = 'radio' name = "grade" id = "wellContent" />
+									<label for = "wellContent">매우 만족 ☆☆☆☆☆</label>
+									<input type = 'radio' name = "grade" id = "content" />
+									<label for = "content"> 만족 ☆☆☆☆</label>
+									<input type = 'radio' name = "grade" id = "normal" />
+									<label for = "normal">보통 ☆☆☆</label>
+								</p>
+								<p>
+									<input type = 'radio' name = "grade" id = "highlyUnsatisfactory" />
+									<label for = "highlyUnsatisfactory">불만 ☆☆</label>
+									<input type = 'radio' name = "grade" id = "unsatisfactory " />
+									<label for = "unsatisfactory"> 매우 불만 ☆</label>
+								</p>
+							</div>						
+						</div>
+					</div>
+					<div id = "reference">
+						<strong>※ 참고하세요!</strong>
+						<br>
+						<span>- 상품평은 상품당 1회만 작살 할 수 있습니다.</span>
+						<br>
+						<span>- 상품평이 작성된 상품,구매한지 1개월 지난 상품은 상품평을 작성할 수 없습니다.</span>
+						<br>
+						<span>- 작성한 상품평은 [마이 페이지 > 상품평]에서 수정할 수 있습니다..</span>
+					</div>
+				</div>
+				<div class = "modal-footer">
+					<button class = "btn btn-default"  data-dismiss = "modal">작성 완료</button>
+					<button class = "btn btn-default"  data-dismiss = "modal">작성 취소</button>
 				</div>
 			</div>
 		</div>

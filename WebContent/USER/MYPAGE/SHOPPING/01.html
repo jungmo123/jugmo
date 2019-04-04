@@ -5,6 +5,9 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../CSS/Navigation.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <style>
 	#obTitle div{
 		text-align:center;
@@ -152,6 +155,35 @@
 		color:#878787;
 		margin-right:10px;
 	}
+	<!--modal시작-->
+	.modal-content{
+		width:500px;
+	}
+	#inquiry,#state{
+		margin-top:10px;
+	}
+	#inquiry > div,
+	#state > div{
+		padding:10px;
+	}
+	table{
+		width:440px;
+	}
+	table tr th,
+	table tr td{
+		text-align:center;
+		height:22px;
+	}
+	table thead tr{
+		background-color:#F2F5F7;
+	}
+	table tr td,
+	table tr th{
+		border:1px solid grey;
+	}
+	.modal-footer{
+		text-align:center;
+	}
 </style>
 </head>
 <body>
@@ -165,24 +197,24 @@
 				<p>쇼핑 이용 정보</p>
 				<hr>
 				<div>
-					<a href = "#" class= "activeMenu"><span>> 주문 내역</span></a>
-					<a href = "#"><span>> 장바구니</span></a>
-					<a href = "#"><span>> 포인트 이용 내역</span></a>
+					<a href = "#" class= "activeMenu"><span onclick = "location.href = '01.html'">> 주문 내역</span></a>
+					<a href = "#"><span onclick = "location.href='04.html'">> 장바구니</span></a>
+					<a href = "#"><span onclick = "location.href = '05.html'">> 포인트 이용 내역</span></a>
 				</div>
 				<p>게시판 이용 내역</p>
 				<hr>
 				<div>
-					<a href = "#"><span>> 1:1 문의</span></a>
-					<a href = "#"><span>> 나의 상품평</span></a>
-					<a href = "#"><span>> 나의 상품 문의</span></a>
+					<a href = "#"><span onclick = "location.href = '../BOARD/01.html'">> 1:1 문의</span></a>
+					<a href = "#"><span onclick = "location.href = '../BOARD/04.html'">> 나의 상품평</span></a>
+					<a href = "#"><span onclick = "location.href = '../BOARD/05.html'">> 나의 상품 문의</span></a>
 				</div>
 				<p>개인정보 수정</p>
 				<hr>
 				<div>
-					<a href = "#"><span>> 개인정보 수정</span></a>
-					<a href = "#"><span>> 비밀번호 변경</span></a>
+					<a href = "#"><span onclick = "location.href = '../MYINFO/02.html'">> 개인정보 수정</span></a>
+					<a href = "#"><span onclick = "location.href = '../MYINFO/03.html'">> 비밀번호 변경</span></a>
 				</div>
-				<a href = "#"><span>회원탈퇴</span></a>
+				<a href = "#"><span onclick = "location.href = '../MYINFO/04.html'">회원탈퇴</span></a>
 			</div>
 		</div>
 	
@@ -224,8 +256,8 @@
 							<span>
 								<span><strong>주문일시</strong> 2023-01-01 12:15:15</span>
 								<span><strong>주문번호</strong> 1454460561166</span>
-								<button class = "btn btn-default">주문 상세 내역</button>
-								<button class = "btn btn-default">주문 취소</button>
+								<button class = "btn btn-default" onclick="location.href='02.html'">주문 상세 내역</button>
+								<button class = "btn btn-default" onclick="location.href='#'">주문 취소</button>
 							</span>							
 						</div>				
 						<hr>
@@ -277,8 +309,8 @@
 							<span>
 								<span><strong>주문일시</strong> 2023-01-01 12:15:15</span>
 								<span><strong>주문번호</strong> 1454460561166</span>
-								<button class = "btn btn-default">주문 상세 내역</button>
-								<button class = "btn btn-default">주문 취소</button>
+								<button class = "btn btn-default" onclick="location.href='02.html'">주문 상세 내역</button>
+								<button class = "btn btn-default" onclick="location.href='#'">주문 취소</button>
 							</span>							
 						</div>				
 						<hr>
@@ -330,8 +362,8 @@
 							<span>
 								<span><strong>주문일시</strong> 2023-01-01 12:15:15</span>
 								<span><strong>주문번호</strong> 1454460561166</span>
-								<button class = "btn btn-default">주문 상세 내역</button>
-								<button class = "btn btn-default">주문 취소</button>
+								<button class = "btn btn-default" onclick="location.href='02.html'">주문 상세 내역</button>
+								<button class = "btn btn-default" onclick="location.href='#'">주문 취소</button>
 							</span>							
 						</div>				
 						<hr>
@@ -368,7 +400,8 @@
 									</div>
 									<div>
 										<span>
-											<button class = "btn btn-default">배송중</button>
+											<button class = "btn btn-default"
+											data-toggle = "modal" data-target = "#mySmallModal">배송중</button>
 										</span>
 									</div>								
 								</div>
@@ -392,6 +425,85 @@
 		</div>
 	</div>
 </div>
-
+	
+		<div class = "modal fade" id  ="mySmallModal">
+		<div class = "modal-dialog">
+			<div class ="modal-content">
+				<div class = "modal-body">
+					<div id = "inquiry">
+						<strong>&#124;&nbsp; 배송 조회</strong>
+						<button type = "button" class = "close" data-dismiss = "modal">X</button>
+						<div>
+							<table id = "firstTable">
+								<thead>
+									<tr>
+										<th>택배사</th>
+										<th>송장번호</th>
+										<th>대표번호</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>{택배사명 표기}</td>
+										<td>{송장번호 표기}</td>
+										<td>{대표번호 표기}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id = "state">
+						<strong>&#124;&nbsp; 배송 상황</strong>
+						<div>
+							<table id = "secondTable">
+								<thead>
+									<tr>
+										<th>날짜</th>
+										<th>송장위치</th>
+										<th>배송상태</th>
+										<th>연락처</th>
+										<th>기타정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2023-07-15 13:54</td>
+										<td>이천터미널</td>
+										<td>집하</td>
+										<td>1588-0123</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+									<tr>
+										<td></td><td></td><td></td><td></td><td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

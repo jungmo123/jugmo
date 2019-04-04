@@ -6,6 +6,8 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../CSS/Navigation.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 	.Dtitle{
 		font-weight:bold;
@@ -75,23 +77,24 @@
 				<p>쇼핑 이용 정보</p>
 				<hr>
 				<div>
-					<a href="#"><span>> 주문 내역</span></a> <a href="#"><span>>
-							장바구니</span></a> <a href="#"><span>> 포인트 이용 내역</span></a>
+					<a href = "#"><span onclick="location.href='../SHOPPING/01.html'">> 주문 내역</span></a>
+					<a href = "#"><span onclick="location.href='../SHOPPING/04.html'">> 장바구니</span></a>
+					<a href = "#"><span onclick="location.href='../SHOPPING/05.html'">> 포인트 이용 내역</span></a>
 				</div>
 				<p>게시판 이용 내역</p>
 				<hr>
 				<div>
-					<a href="#" class="activeMenu"><span>> 1:1 문의</span></a> <a
-						href="#"><span>> 나의 상품평</span></a> <a href="#"><span>>
-							나의 상품 문의</span></a>
+					<a href = "#" class= "activeMenu"><span onclick="location.href='01.html'">> 1:1 문의</span></a>
+					<a href = "#"><span onclick="location.href='04.html'">> 나의 상품평</span></a>
+					<a href = "#"><span onclick="location.href='05.html'">> 나의 상품 문의</span></a>
 				</div>
 				<p>개인정보 수정</p>
 				<hr>
 				<div>
-					<a href="#"><span>> 개인정보 수정</span></a> <a href="#"><span>>
-							비밀번호 변경</span></a>
+					<a href = "#"><span onclick = "location.href = '../MYINFO/02.html'">> 개인정보 수정</span></a>
+					<a href = "#"><span onclick = "location.href = '../MYINFO/03.html'">> 비밀번호 변경</span></a>
 				</div>
-				<a href = "#"><span>회원탈퇴</span></a>
+				<a href = "#"><span onclick = "location.href = '../MYINFO/04.html'">회원탈퇴</span></a>
 			</div>
 		</div>
 
@@ -134,7 +137,7 @@
 			</div>
 			<div id = "footerDiv">
 				<hr>
-				<button class = "btn btn-default left">목록 보기</button>
+				<button class = "btn btn-default left" onclick="location.href='01.html'">목록 보기</button>
 			</div>
 		</div>
 	</div>
