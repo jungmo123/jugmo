@@ -3,31 +3,276 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../CSS/Navigation.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src = "../JS/Navigation.js"></script>
 <style>
-	#otom .modal-header{
-		border:0;
+	a{
+		color:#878787;
 	}
-	#otom .modal-body{
-		padding:0px 15px 0px 15px;
-	}
-	#otom .modal-body textarea{
-		resize: none;
-	}
-	#otom .modal-footer{
-		border:0;
+	#searchOption{
 		text-align:center;
 	}
-	#otom .modal-title{
+	#searchMenu,#searchOption hr{
+		margin:10px 0px 10px 0px;
+	}
+	#searchMenu button{
+		display:inline-block;
+		width:90px;
+		margin-left:5px;
+	}
+	.searchList{
+		margin-top:10px;
+	}
+	.searchList input{
+		margin-right:5px;
+	}
+	.searchList div input:nth-child(2){
+		display:inline-block;
+		width:150px;
+	}
+	.searchList div input:nth-child(3){
+		display:inline-block;
+		width:400px;
+	}
+	#searchBar{
+		background-color:#F2F5F7;
+		height:50px;
+		text-align:center;
+		border-radius:20px;
+		margin:50px 0 10px 0;
+	}
+	#searchBar *{
+		position:relative;
+		top:8px;
+	}
+	#searchBar input{
+		display:inline-block;
+		width:88%;
+		border-radius:15px;
+	}
+	#searchBar button{
+		display:inline-block;
+		width:60px;
+		border-radius:15px;
+	}
+	#resultBox #resultBoxIndex{
+		text-align:center;
+		margin-bottom:100px;
+	}
+	#resultBox #resultBoxIndex span{
+		margin-left:10px;
+	}
+	#resultBox #resultBoxIndex #activeIndex{
 		font-weight:bold;
 	}
-	#otom hr{
+	#resultTableT{
+		margin-bottom:10px;
+	}
+	#resultTableC div:nth-child(1){
+		margin-bottom:10px;
+	}
+	.quest{
+		font-size:20px;
+		position:relative;
+		top:2px;
+		margin-right:10px;
+	}
+	#resultTableC #open{
+		display:inline-block;
+		position:relative;
+		top:2px;
+		margin-right:10px;
+	}
+	#resultTableC .form-control{
+		display:inline-block;
+		position:relative;
+		top:75px;
+		width:50px;
+		height:25px;
+		padding:0;
+		margin-right:5px;
+		float:right;
+	}
+	#resultTableC hr{
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	#openTable{
+		width:100%;
+		height:150px;
+		padding:10px 0px 10px 0px;
+		margin-bottom:10px;
+		background-color:#F2F5F7;
+		border-top:1px solid #BABABA;
+	}
+	#openTable span:nth-child(1){
+		margin-left:19px;
+	}
+	#openTable span:nth-child(2){
+		font-size:20px;
+		position:relative;
+		top:2px;
+		margin-right:10px;
+	}
+	#openTable span:nth-child(3){
+		font-size:14px;
+	}
+	#questAdd{
+		width:100px;
+		float:right;
+	}
+	#pagination{
+		margin-top:80px;
+		margin-bottom:100px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
+	}
+	#Alert .modal-content{
+		width:350px !important;
+	}
+	#Alert #iconInfo{
+		display:inline-block;
+		width:80px;
+		height:60px;
+		float:left;
+		margin:10px;
+	}
+	#Alert #iconInfo i{
+		font-size:50px;
+	}
+	#Alert .modal-body{
+		height:110px;
+	}
+	#Alert .modal-body div:nth-child(2){
+		display:inline-block;
+		width:200px;
+		height:60px;
+		font-size:15px;
+		float:left;
+		position:relative;
+		top:25px;
+	}
+	#Alert .modal-footer{
+		text-align:center;
+	}
+	#Alert.modal-footer button{
+		width:100px;
+	}
+	.none{
+		display:none;
+	}
+	#quest .modal-header{
+		border:0;
+		padding-bottom:0;
+	}
+	#quest .modal-header h4{
+		width:90%;
+		position:relative;
+		left:15px;
+	}
+	#quest .modal-header button{
+		position:relative;
+		bottom:10px;
+		font-size:50px;
+	}
+	#quest .modal-body{
+		padding:0px 15px 0px 15px;
+		position:relative;
+		bottom:20px;
+	}
+	#quest .modal-body textarea{
+		resize: none;
+	}
+	#quest .modal-title{
+		font-weight:bold;
+	}
+	#quest #write{
+		margin-top:20px;
+	}
+	#quest .form-control{
+		display:inline;
+	}
+	#quest #writeT input[type="text"]{
+		margin-left:20px;
+		width:500px;
+	}
+	#quest #writeArea{
+		border-top:0px;
+		border-color:#878787;
+		resize: none;
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		border-left:1px solid #878787;
+		border-top:1px solid #878787;
+		border-right:1px solid #878787;
+	}
+	#quest .nav-tabs > li > a:hover{
+	  background-color: white !important;
+  	  border-radius: 5px 5px 0px 0px;
+  	  border-left:1px solid white;
+	  border-top:1px solid white;
+	  border-right:1px solid white;
+	  border-bottom:1px solid #878787;
+      color:#000;
+	} 
+	#quest textarea:focus {
+		outline:none;
+	}
+	#quest .tab-content{
+		width:100%;
+		height:400px;
+	}
+	#quest .tab-content textarea{
+		border-top:0px;
+		border-left:1px solid #878787;
+	  	border-right:1px solid #878787;
+	 	border-bottom:1px solid #878787;
+	 	padding:10px;
+		width:100%;
+		height:100%;
+		resize: none;
+	}
+	#quest #buttonGroup{
+		margin:25px;
+		text-align:center;
+	}
+	#quest #buttonGroup button{
 		margin:5px;
 	}
-	.modal-body div:first-child{
-		width:530px;
+	#quest a{
+		color:#878787;
+	}
+	#quest #writeT .form-control:nth-child(1){
+		display:inline-block;
+		width:140px;
+	}
+	#quest #writeT .form-control:nth-child(2){
+		position:relative;
+		bottom:1px;
+		display:inline-block;
+		width:140px;
+		margin-left:0;
+	}
+	#quest #writeT .form-control:nth-child(3){
+		display:inline-block;
+		width:100%;
+		margin:10px 0px 10px 0px;
+	}
+	#quest #write div:nth-child(2){
+		width:100%;
 		height:30px;
 		border-top:1px solid lightgrey;
 		border-left:1px solid lightgrey;
@@ -35,8 +280,8 @@
 		text-align:center;
 		line-height:30px;
 	}
-	.modal-body textarea{
-		width:530px;
+	#quest #write div:nth-child(3) textarea{
+		width:100%;
 		height:120px;
 		border:1px solid lightgrey;
 	}
@@ -44,31 +289,266 @@
 </head>
 <body>
 
-	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#otom">Modal</button>
-	
-	<div class = "modal fade" id  ="otom">
-		<div class = "modal-dialog modal-md">
+	<div class="container">
+		<div id="title">
+			<div id="logo">
+				<a href="../MAIN/01.html"><span>LALA&nbsp;</span>MARKET</a>
+				<div id="Admin">
+					<h5>Administrator</h5>
+				</div>
+			</div>
+			<div>
+				<span> <i class="far fa-edit"></i>
+				</span> <span>게시판 관리</span>
+				<hr>
+			</div>
+			<div id="submenu">
+				<a href="01.html"><span>스타일 숍 공지</span></a> <a
+					href="02.html"><span>고객센터 공지</span></a> <a href="05.html"><span>커뮤니티</span></a>
+				<a href="08.html"><span>상품 문의</span></a> <a href="10.html"><span>1:1
+						문의</span></a> <a href="13.html"><span>상품평</span></a> <a href="14.html" class="activeMenu"><span>자주
+						하는 질문</span></a> <a href="16.html"><span>이벤트</span></a> <a href="19.html"><span>게시판
+						카테고리 관리</span></a>
+			</div>
+		</div>
+		<div id="content">
+			<div id="navBar">
+				<div id="topmenu">
+					<span> <a href="../../USER/MAIN/01.html">이용자 화면 보기</a> <span>&#124;</span> <a
+						href="../INTRABOARD/01.html">사내 게시판</a> <span>&#124;</span> <a href="../LOGING/01.html">로그아웃</a>
+					</span>
+				</div>
+				<div id="conatiner">
+					<div id="nav" class="btn-group">
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">주문 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../ORDER/01.html">스타일 숍 주문</a></li>
+								<li><a href="../ORDER/04.html">주문 취소</a></li>
+								<li><a href="../ORDER/06.html">교환/환불 신청서</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop is-current">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">게시판 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../BOARDADMIN/01.html">스타일 숍 공지</a></li>
+								<li><a href="../BOARDADMIN/02.html">고객센터 공지</a></li>
+								<li><a href="../BOARDADMIN/05.html">커뮤니티</a></li>
+								<li><a href="../BOARDADMIN/08.html">상품 문의</a></li>
+								<li><a href="../BOARDADMIN/10.html">1:1 문의</a></li>
+								<li><a href="../BOARDADMIN/13.html">상품평</a></li>
+								<li><a href="../BOARDADMIN/14.html">커자주 하는 질문</a></li>
+								<li><a href="../BOARDADMIN/16.html">이벤트</a></li>
+								<li><a href="../BOARDADMIN/19.html">게시판 카테고리 관리</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">회원 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../USER/01.html">회원 목록</a></li>
+								<li><a href="../USER/03.html">탈퇴 회원 목록</a></li>
+								<li><a href="../USER/04.html">메일 관리</a></li>
+								<li><a href="../USER/05.html">SMS 관리</a></li>
+								<li><a href="../USER/06.html">대량 메일 발송</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">메인 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../MAINGOODS/01.html">진열 상품</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">배너 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../BANNER/01.html">GNB</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">상품 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../GOODSADMIN/01.html">상품 등록</a></li>
+								<li><a href="../GOODSADMIN/04.html">상품 목록</a></li>
+								<li><a href="../GOODSADMIN/05.html">카테고리 관리</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">통계</button>
+							<ul class="dropdown-menu">
+								<li><a href="../STATISTICS/01.html">방문자수/페이지뷰</a></li>
+								<li><a href="../STATISTICS/02.html">회원수</a></li>
+								<li><a href="../STATISTICS/03.html">상품 조회수</a></li>
+								<li><a href="../STATISTICS/04.html">카테고리 조회수</a></li>
+								<li><a href="../STATISTICS/05.html">상품 판매 순위</a></li>
+								<li><a href="../STATISTICS/06.html">포인트</a></li>
+								<li><a href="../STATISTICS/07.html">탈퇴 사유</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">기본 정책 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../POLICY/01.html">약관</a></li>
+								<li><a href="../POLICY/02.html">정책</a></li>
+							</ul>
+						</div>
+						<div class="nav-underline"></div>
+					</div>
+					<div id="hr">
+						<hr>
+					</div>
+				</div>
+			</div>
+		<div id = "AllContent">
+			<div id = "menuBar">
+				<p id = "menuName">Board Managament</p>
+				<p id = "currentIdx">&#124; 게시판관리 > 자주 하는 질문 목록</p>
+			</div>
+			<form>
+				<div id = "searchOption">
+					<hr>
+					<div id = "searchMenu">
+						<strong>검색 바로 이동</strong>
+						<button class = "form-control">추가</button>
+						<button class = "form-control">선택 삭제</button>
+						<button class = "form-control">저장</button>
+					</div>
+				</div>
+				<hr>
+				<div id = "searchBar">
+					<input type = "text" class = "form-control" />
+					<button type = "submit" class = "form-control">검색</button>
+				</div>
+				<div id = "resultBox">
+					<div id = "resultBoxIndex">
+						<a href = "#"><span id = "activeIndex">자주 하는 질문 BEST</span></a>
+						<span>&#124;</span>
+						<a href = "#"><span>배송 관련</span></a>
+						<span>&#124;</span>
+						<a href = "#"><span>상품구매/주문절차 및 취소</span></a>
+					</div>
+					<div>
+						<div id = "resultTableT">
+							<span class = "glyphicon glyphicon-triangle-right">{클릭한 카테고리 표기} (예)자주 하는 질문 BEST</span>
+						</div>
+						<div id = "resultTableC">
+							<div>
+								<hr>
+								<span>1.</span>
+								<span class = "quest">Q</span>
+								<span>{관리자에서 등록한 자주 하는 질문 제목 표기}</span>
+								<button id = "open" class = "form-control"><span>열기</span><span class = "glyphicon glyphicon-triangle-bottom"></span></button>
+							</div>
+							<div id = "openTable" class = "none">
+								<span></span>
+								<span>A</span>
+								<span>{관리자에서 등록한 자주 하는 질문 제목 표기}</span>
+								<div>
+									<button class = "form-control" data-toggle = "modal" data-target = "#quest">수정</button>
+									<button class = "form-control">삭제</button>								
+								</div>
+							</div>
+							<hr>
+							<div>
+								<span>2.</span>
+								<span class = "quest">Q</span>
+								<span>모바일에서 결제를하면, 상품 주문이 되었다고 했는데...</span>
+								<button id = "open" class = "form-control"><span>열기</span><span class = "glyphicon glyphicon-triangle-bottom"></span></button>
+							</div>
+							<hr>
+							<div>
+								<span>3.</span>
+								<span class = "quest">Q</span>
+								<span>오픈 숍에서 구매를 했는데요. 입금은 어떻게 하면 되나...</span>
+								<button id = "open" class = "form-control"><span>열기</span><span class = "glyphicon glyphicon-triangle-bottom"></span></button>
+							</div>
+							<hr>
+						</div>
+						<div>
+							<button id = "questAdd" class = "form-control" data-toggle = "modal" data-target = "#quest">등록</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div id = "pagination">
+				<div>
+					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+					<a href = "#"  class = "currentPage">1</a>
+					<a href = "#">2</a>
+					<a href = "#">3</a>
+					<a href = "#">4</a>
+					<a href = "#">5</a>
+					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+					<div id = "currentBar"></div>
+				</div>		
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<div class = "modal fade" id  ="Alert">
+		<div class = "modal-dialog modal-sm">
 			<div class ="modal-content">
 				<div class = "modal-header">
 					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">&#124;&nbsp;상품 문의 답변/수정하기</h4>
-					<hr>
+					<h4 class = "modal-title"></h4>
 				</div>
 				<div class = "modal-body">
-					<div>
-						<span>에디터 기능</span>
+					<div id = "iconInfo">
+						<i class="fas fa-info-circle"></i>
 					</div>
 					<div>
-						<textarea></textarea>
+						<p>최대 5개만 사용할 수 있습니다.</p>
 					</div>
 				</div>
 				<div class ="modal-footer">
-					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
-					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성취소</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">확인</button>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
+	<div class = "modal fade" id  ="quest">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;자주 하는 질문/답변 등록(수정)</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<form>
+						<div id = "write">
+							<div id = "writeT">
+								<select class = "form-control">
+									<option>카테고리 선택</option>
+								</select>
+								<input type = "text" class = "form-control" placeholder = "순번 입력" />
+								<input type = "text" class = "form-control" placeholder = "제목을 입력하세요!" />
+							</div>
+							<div>
+								<span>에디터 기능</span>
+							</div>
+							<div>
+								<textarea></textarea>
+							</div>							
+							<div id = "buttonGroup">
+								<button type = "submit" class = "btn btn-default">작성 완료</button>
+								<button class = "btn btn-default">작성 취소</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

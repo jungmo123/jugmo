@@ -3,53 +3,329 @@
 <head>
 <title>Bootstrap</title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../CSS/Navigation.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src = "../JS/Navigation.js"></script>
 <style>
-	#pim .modal-header{
-		border:0;
+	#searchBar{
+		text-align:center;
+		margin-top:10px;
 	}
-	#pim .modal-body{
-		padding:0px 15px 0px 15px;
+	input[type="text"]{
+		display:inline;
+		width:250px;
 	}
-	#pim .modal-body textarea{
-		resize: none;
+	select{
+		display:inline !important;
+		width:130px !important;
+		position:relative;
+		top:1px;		
 	}
-	#pim .modal-footer{
-		border:0;
+	#searchBar .btn{
+		width:100px;
+		position:relative;
+		bottom:2px;
+	}
+	.table-hover{
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	table tr th:nth-child(1),
+	table tr td:nth-child(1),
+	table tr th:nth-child(2),
+	table tr td:nth-child(2),
+	table tr th:nth-child(3),
+	table tr th:nth-child(4),
+	table tr td:nth-child(4),
+	table tr th:nth-child(5),
+	table tr td:nth-child(5),
+	table tr th:nth-child(6),
+	table tr td:nth-child(6){
 		text-align:center;
 	}
-	#pim .modal-title{
+	#table tr:nth-child(1) th {
+    border-top: 1px solid #878787;
+    border-bottom:0;
+	}
+	table tr{
+		border:1px solid #F2F5F7;
+		cursor:pointer;
+	}
+	table tr th{
+		background-color:#F2F5F7;
+	}
+	tbody tr:last-child{
+		border-bottom:1px solid #878787;
+	}
+	#write{
+		float:right;
+		width:80px;
+	}
+	#pagination{
+		margin-top:30px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
 		font-weight:bold;
 	}
-	#pim hr{
-		margin:5px;
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
 	}
 </style>
 </head>
 <body>
 
-	<button type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#pim">Modal</button>
-	
-	<div class = "modal fade" id  ="pim">
-		<div class = "modal-dialog modal-md">
-			<div class ="modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">&#124;&nbsp;상품 문의 답변/수정하기</h4>
-					<hr>
-				</div>
-				<div class = "modal-body">
-					<textarea class = "form-control" cols = "20" rows = "6" name = "modifyComment"></textarea>
-				</div>
-				<div class ="modal-footer">
-					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
-					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성취소</button>
+	<div class="container">
+		<div id="title">
+			<div id="logo">
+				<a href="../MAIN/01.html"><span>LALA&nbsp;</span>MARKET</a>
+				<div id="Admin">
+					<h5>Administrator</h5>
 				</div>
 			</div>
+			<div>
+				<span> <i class="far fa-edit"></i>
+				</span> <span>게시판 관리</span>
+				<hr>
+			</div>
+			<div id="submenu">
+				<a href="01.html"><span>스타일 숍 공지</span></a> <a
+					href="02.html"><span>고객센터 공지</span></a> <a href="05.html"><span>커뮤니티</span></a>
+				<a href="08.html"><span>상품 문의</span></a> <a href="10.html" class="activeMenu"><span>1:1
+						문의</span></a> <a href="13.html"><span>상품평</span></a> <a href="14.html"><span>자주
+						하는 질문</span></a> <a href="16.html"><span>이벤트</span></a> <a href="19.html"><span>게시판
+						카테고리 관리</span></a>
+			</div>
 		</div>
+		<div id="content">
+			<div id="navBar">
+				<div id="topmenu">
+					<span> <a href="../../USER/MAIN/01.html">이용자 화면 보기</a> <span>&#124;</span> <a
+						href="../INTRABOARD/01.html">사내 게시판</a> <span>&#124;</span> <a href="../LOGING/01.html">로그아웃</a>
+					</span>
+				</div>
+				<div id="conatiner">
+					<div id="nav" class="btn-group">
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">주문 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../ORDER/01.html">스타일 숍 주문</a></li>
+								<li><a href="../ORDER/04.html">주문 취소</a></li>
+								<li><a href="../ORDER/06.html">교환/환불 신청서</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop is-current">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">게시판 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../BOARDADMIN/01.html">스타일 숍 공지</a></li>
+								<li><a href="../BOARDADMIN/02.html">고객센터 공지</a></li>
+								<li><a href="../BOARDADMIN/05.html">커뮤니티</a></li>
+								<li><a href="../BOARDADMIN/08.html">상품 문의</a></li>
+								<li><a href="../BOARDADMIN/10.html">1:1 문의</a></li>
+								<li><a href="../BOARDADMIN/13.html">상품평</a></li>
+								<li><a href="../BOARDADMIN/14.html">커자주 하는 질문</a></li>
+								<li><a href="../BOARDADMIN/16.html">이벤트</a></li>
+								<li><a href="../BOARDADMIN/19.html">게시판 카테고리 관리</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">회원 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../USER/01.html">회원 목록</a></li>
+								<li><a href="../USER/03.html">탈퇴 회원 목록</a></li>
+								<li><a href="../USER/04.html">메일 관리</a></li>
+								<li><a href="../USER/05.html">SMS 관리</a></li>
+								<li><a href="../USER/06.html">대량 메일 발송</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">메인 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../MAINGOODS/01.html">진열 상품</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">배너 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../BANNER/01.html">GNB</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">상품 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../GOODSADMIN/01.html">상품 등록</a></li>
+								<li><a href="../GOODSADMIN/04.html">상품 목록</a></li>
+								<li><a href="../GOODSADMIN/05.html">카테고리 관리</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">통계</button>
+							<ul class="dropdown-menu">
+								<li><a href="../STATISTICS/01.html">방문자수/페이지뷰</a></li>
+								<li><a href="../STATISTICS/02.html">회원수</a></li>
+								<li><a href="../STATISTICS/03.html">상품 조회수</a></li>
+								<li><a href="../STATISTICS/04.html">카테고리 조회수</a></li>
+								<li><a href="../STATISTICS/05.html">상품 판매 순위</a></li>
+								<li><a href="../STATISTICS/06.html">포인트</a></li>
+								<li><a href="../STATISTICS/07.html">탈퇴 사유</a></li>
+							</ul>
+						</div>
+						<div class="btn-group drop">
+							<button type="button" class="btn btn-default dropdown-toggle"
+								type="button" data-toggle="dropdown">기본 정책 관리</button>
+							<ul class="dropdown-menu">
+								<li><a href="../POLICY/01.html">약관</a></li>
+								<li><a href="../POLICY/02.html">정책</a></li>
+							</ul>
+						</div>
+						<div class="nav-underline"></div>
+					</div>
+					<div id="hr">
+						<hr>
+					</div>
+				</div>
+			</div>
+		<div id = "AllContent">
+			<div id = "menuBar">
+				<p id = "menuName">Board Managament</p>
+				<p id = "currentIdx">&#124; 게시판 관리 > 1:1 문의 목록</p>
+			</div>
+			<form>
+			<div id = "searchBar">
+				<div>
+					<label for = "noCommentSearch">답변 없는 문의만 보기</label>
+					<input type = "checkbox" id = "noCommentSearch" />			
+					<select class = "form-control">
+						<option>제목 + 내용</option>
+					</select>
+					<input type = "text" class = "form-control" name = "title" />
+					<button type = "button" class = "btn btn-default">검색</button>
+				</div>
+			</div>
+			</form>
+			<div>
+				<table id = "table" class = "table table-hover">
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>유형</th>
+							<th>제목</th>
+							<th>작성자</th>
+							<th>답변여부</th>
+							<th>작성일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr onclick = "location.href='11.html'">
+							<td>10</td>
+							<td>판매</td>
+							<td>판매자님께 문의 드립니다.</td>
+							<td>like10</td>
+							<td>미답변</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>9</td>
+							<td>결제</td>
+							<td>모바일에서 결제는 주문이 되었다고 했는데요.</td>
+							<td>like9</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>8</td>
+							<td>입금</td>
+							<td>오픈 숍에서 구매는 입금은 어떻게 하면 되나요</td>
+							<td>like8</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>7</td>
+							<td>입금</td>
+							<td>상품평을 등록 하려고 하는데,주문내용을 확인할 수 ...</td>
+							<td>like7</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>6</td>
+							<td>판매</td>
+							<td>주문 취소 했는데 결제한 카드는 언제 취소되나요?</td>
+							<td>like6</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>5</td>
+							<td>결제</td>
+							<td>구매 했는데 적립금이 적립이 안되었어요!</td>
+							<td>like5</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>4</td>
+							<td>기타</td>
+							<td>포인트는 어떻게 사용하나요?</td>
+							<td>like4</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>3</td>
+							<td>배송</td>
+							<td>제주도인데 배송이 되나요?</td>
+							<td>like3</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>2</td>
+							<td>환불</td>
+							<td>옷이 사진과 많이 다른데 환불이 가능한가요?</td>
+							<td>like2</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+						<tr onclick = "location.href='11.html'">
+							<td>1</td>
+							<td>판매</td>
+							<td>관리자님께 문의 드립니다.</td>
+							<td>like1</td>
+							<td>답변완료</td>
+							<td>2023-01-01</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id = "pagination">
+				<div>
+					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+					<a href = "#"  class = "currentPage">1</a>
+					<a href = "#">2</a>
+					<a href = "#">3</a>
+					<a href = "#">4</a>
+					<a href = "#">5</a>
+					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+					<div id = "currentBar"></div>
+				</div>		
+			</div>
 	</div>
+</div>
+</div>
 
 </body>
 </html>

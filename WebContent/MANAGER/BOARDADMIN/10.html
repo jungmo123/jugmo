@@ -10,71 +10,101 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src = "../JS/Navigation.js"></script>
 <style>
-	#searchBar{
-		text-align:center;
-		margin-top:10px;
-	}
-	input[type="text"]{
-		display:inline;
-		width:250px;
-	}
-	select{
-		display:inline !important;
-		width:130px !important;
+	.Dtitle{
+		font-weight:bold;
 		position:relative;
-		top:1px;		
+		left:15px;
 	}
-	#searchBar .btn{
-		width:100px;
+	.Dtitle span{
 		position:relative;
-		bottom:2px;
+		bottom:5px;
 	}
-	.table-hover{
-		margin-top:10px;
+	#requestContent,#responseContent{
+		line-height:25px;
+		padding-left:15px;
 		margin-bottom:10px;
 	}
-	table tr th:nth-child(1),
-	table tr td:nth-child(1),
-	table tr th:nth-child(2),
-	table tr td:nth-child(2),
-	table tr th:nth-child(3),
-	table tr th:nth-child(4),
-	table tr td:nth-child(4),
-	table tr th:nth-child(5),
-	table tr td:nth-child(5),
-	table tr th:nth-child(6),
-	table tr td:nth-child(6){
-		text-align:center;
+	#requestTitle hr,#responseTitle hr,#footerDiv hr{
+		margin:15px 0px 15px 0px;
 	}
-	#table tr:nth-child(1) th {
-    border-top: 1px solid #878787;
-    border-bottom:0;
+	#requestTitle strong,#responseTitle strong{
+		font-size:30px;
+		color:#FF6F43;
+		margin-right:20px;
 	}
-	table tr{
-		border:1px solid #F2F5F7;
-		cursor:pointer;
+	#requestTitle div,#responseTitle div{
+		display:inline-block;
 	}
-	table tr th{
-		background-color:#F2F5F7;
-	}
-	tbody tr:last-child{
-		border-bottom:1px solid #878787;
-	}
-	#write{
+	.Titleinfo{
 		float:right;
-		width:80px;
+		font-weight:bold;
+		position:relative;
+		right:15px;
+		top:10px;
 	}
-	#pagination{
-		margin-top:30px;
+	.buttonBox{
+		width:100%;
+		height:100px;
+	}
+	.buttonBox button{
+		display:inline-block;
+		position:relative;
+		top:75px;
+		width:50px;
+		height:25px;
+		padding:0;
+		margin-right:5px;
+		float:right;
+	}
+	.buttonBox button:last-child{
+		display:inline-block;
+		position:relative;
+		top:75px;
+		width:80px;
+		height:25px;
+		padding:0;
+		margin-right:5px;
+		float:right;		
+	}
+	.glyphicon::before{
+		position:relative;
+		top:2px;
+	}
+	#footerDiv button{
+		float:right;
+	}
+	#otom .modal-header{
+		border:0;
+	}
+	#otom .modal-body{
+		padding:0px 15px 0px 15px;
+	}
+	#otom .modal-body textarea{
+		resize: none;
+	}
+	#otom .modal-footer{
+		border:0;
 		text-align:center;
 	}
-	#pagination .currentPage{
-		color:#727272 !important;
+	#otom .modal-title{
 		font-weight:bold;
 	}
-	#pagination a{
-		color:#878787;
-		margin-right:10px;
+	#otom hr{
+		margin:5px;
+	}
+	.modal-body div:first-child{
+		width:100%;
+		height:30px;
+		border-top:1px solid lightgrey;
+		border-left:1px solid lightgrey;
+		border-right:1px solid lightgrey;
+		text-align:center;
+		line-height:30px;
+	}
+	.modal-body textarea{
+		width:100%;
+		height:120px;
+		border:1px solid lightgrey;
 	}
 </style>
 </head>
@@ -200,132 +230,78 @@
 		<div id = "AllContent">
 			<div id = "menuBar">
 				<p id = "menuName">Board Managament</p>
-				<p id = "currentIdx">&#124; 게시판 관리 > 1:1 문의 목록</p>
+				<p id = "currentIdx">&#124; 게시판 관리 > 1:1 문의 목록 > 상세 보기</p>
 			</div>
-			<form>
-			<div id = "searchBar">
-				<div>
-					<label for = "noCommentSearch">답변 없는 문의만 보기</label>
-					<input type = "checkbox" id = "noCommentSearch" />			
-					<select class = "form-control">
-						<option>제목 + 내용</option>
-					</select>
-					<input type = "text" class = "form-control" name = "title" />
-					<button type = "button" class = "btn btn-default">검색</button>
-				</div>
+		<div id = "requestTitle">
+			<hr>
+			<span class = "Dtitle"><strong>Q</strong><span>[판매] 스타일 숍 이용 문의</span></span>
+			<div class = "Titleinfo">
+				<span class = "Did">{작성자 ID 표기}</span>
+				<span>&#124;</span>
+				<span class = "Ddate">{작성일 표기}</span>
 			</div>
-			</form>
-			<div>
-				<table id = "table" class = "table table-hover">
-					<thead>
-						<tr>
-							<th>번호</th>
-							<th>유형</th>
-							<th>제목</th>
-							<th>작성자</th>
-							<th>답변여부</th>
-							<th>작성일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr onclick = "location.href='11.html'">
-							<td>10</td>
-							<td>판매</td>
-							<td>판매자님께 문의 드립니다.</td>
-							<td>like10</td>
-							<td>미답변</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>9</td>
-							<td>결제</td>
-							<td>모바일에서 결제는 주문이 되었다고 했는데요.</td>
-							<td>like9</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>8</td>
-							<td>입금</td>
-							<td>오픈 숍에서 구매는 입금은 어떻게 하면 되나요</td>
-							<td>like8</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>7</td>
-							<td>입금</td>
-							<td>상품평을 등록 하려고 하는데,주문내용을 확인할 수 ...</td>
-							<td>like7</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>6</td>
-							<td>판매</td>
-							<td>주문 취소 했는데 결제한 카드는 언제 취소되나요?</td>
-							<td>like6</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>5</td>
-							<td>결제</td>
-							<td>구매 했는데 적립금이 적립이 안되었어요!</td>
-							<td>like5</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>4</td>
-							<td>기타</td>
-							<td>포인트는 어떻게 사용하나요?</td>
-							<td>like4</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>3</td>
-							<td>배송</td>
-							<td>제주도인데 배송이 되나요?</td>
-							<td>like3</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>2</td>
-							<td>환불</td>
-							<td>옷이 사진과 많이 다른데 환불이 가능한가요?</td>
-							<td>like2</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-						<tr onclick = "location.href='11.html'">
-							<td>1</td>
-							<td>판매</td>
-							<td>관리자님께 문의 드립니다.</td>
-							<td>like1</td>
-							<td>답변완료</td>
-							<td>2023-01-01</td>
-						</tr>
-					</tbody>
-				</table>
+			<hr>
+		</div>
+		<div id = "requestContent">
+			상품 등록 버튼을 클릭하면 이용 가능한 등급이 아니라고 나옵니다.<br>
+			어떻게 하면 이용 할 수 있는 등급이 되나요?<br>
+			빠른 답변 부탁드립니다.
+			<div class = "buttonBox">
+				<button class = "form-control" data-toggle = "modal" data-target = "#otom">수정</button>
+				<button class = "form-control">삭제</button>
 			</div>
-			<div id = "pagination">
-				<div>
-					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
-					<a href = "#"  class = "currentPage">1</a>
-					<a href = "#">2</a>
-					<a href = "#">3</a>
-					<a href = "#">4</a>
-					<a href = "#">5</a>
-					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
-					<div id = "currentBar"></div>
-				</div>		
+		</div>
+		<div id = "responseTitle">
+			<hr>
+			<span class = "Dtitle"><strong>A</strong><span>답변 준비 중</span></span>
+			<div class = "Titleinfo">
+				<span class = "Did">admin02</span>
+				<span>&#124;</span>
+				<span class = "Ddate">2023-01-02 12:10:32</span>
 			</div>
+			<hr>
+		</div>
+		<div id = "responseContent">
+			답변을 준비 중입니다.
+			신속한 답변을 원하신다면 고객센터로 문의해 주세요.<br>
+			<span class = "glyphicon glyphicon-triangle-right">고객센터 : 070-0000-0000</span>
+			<div class = "buttonBox">
+				<button class = "form-control">수정</button>
+				<button class = "form-control">삭제</button>
+				<button class = "form-control" data-toggle = "modal" data-target = "#otom">답변하기</button>
+			</div>
+		</div>
+		<div id = "footerDiv">
+			<hr>
+			<button class = "btn btn-default left" onclick = "location.href = '10.html'">목록 보기</button>
+		</div>
 	</div>
 </div>
 </div>
+
+	<div class = "modal fade" id  ="otom">
+		<div class = "modal-dialog modal-md">
+			<div class ="modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">&#124;&nbsp;상품 문의 답변/수정하기</h4>
+					<hr>
+				</div>
+				<div class = "modal-body">
+					<div>
+						<span>에디터 기능</span>
+					</div>
+					<div>
+						<textarea></textarea>
+					</div>
+				</div>
+				<div class ="modal-footer">
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
+					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

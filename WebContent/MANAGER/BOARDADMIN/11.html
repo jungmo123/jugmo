@@ -10,104 +10,144 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src = "../JS/Navigation.js"></script>
 <style>
-	.Dtitle{
-		font-weight:bold;
-		position:relative;
-		left:15px;
+	#productSearch{
+		text-align:center;
+		margin:10px 0px 20px 0px;
 	}
-	.Dtitle span{
-		position:relative;
-		bottom:5px;
+	#productSearch input[type="text"]{
+		display:inline;
+		width:350px;
 	}
-	#requestContent,#responseContent{
-		line-height:25px;
-		padding-left:15px;
-		margin-bottom:10px;
-	}
-	#requestTitle hr,#responseTitle hr,#footerDiv hr{
-		margin:15px 0px 15px 0px;
-	}
-	#requestTitle strong,#responseTitle strong{
-		font-size:30px;
-		color:#FF6F43;
-		margin-right:20px;
-	}
-	#requestTitle div,#responseTitle div{
+	#productSearch select{
 		display:inline-block;
-	}
-	.Titleinfo{
-		float:right;
-		font-weight:bold;
+		width:130px;
 		position:relative;
-		right:15px;
-		top:10px;
+		top:1px;		
 	}
-	.buttonBox{
-		width:100%;
+	#productSearch button{
+		width:100px;
+		position:relative;
+		bottom:2px;
+	}
+	#productTable{
+		margin-bottom:0;
+	}
+	table td:nth-child(1) span{
+		position:relative;
+		top:45px;
+	}
+	table td:nth-child(2){
+		width:120px;
 		height:100px;
-	}
-	.buttonBox button{
-		display:inline-block;
-		position:relative;
-		top:75px;
-		width:50px;
-		height:25px;
-		padding:0;
-		margin-right:5px;
-		float:right;
-	}
-	.buttonBox button:last-child{
-		display:inline-block;
-		position:relative;
-		top:75px;
-		width:80px;
-		height:25px;
-		padding:0;
-		margin-right:5px;
-		float:right;		
-	}
-	.glyphicon::before{
-		position:relative;
-		top:2px;
-	}
-	#footerDiv button{
-		float:right;
-	}
-	#otom .modal-header{
-		border:0;
-	}
-	#otom .modal-body{
-		padding:0px 15px 0px 15px;
-	}
-	#otom .modal-body textarea{
-		resize: none;
-	}
-	#otom .modal-footer{
-		border:0;
 		text-align:center;
 	}
-	#otom .modal-title{
-		font-weight:bold;
+	table td:nth-child(2) div{
+		height:120px;
+		border:1px solid black;
 	}
-	#otom hr{
-		margin:5px;
+	table td:nth-child(3) div{
+		line-height:20px;
 	}
-	.modal-body div:first-child{
-		width:100%;
-		height:30px;
-		border-top:1px solid lightgrey;
-		border-left:1px solid lightgrey;
-		border-right:1px solid lightgrey;
-		text-align:center;
+	table td:nth-child(3) div div:nth-child(1) span:nth-child(2){
+		float:right;
+	}
+	table td:nth-child(3) div div:nth-child(1) button{
+		margin-left:10px;
+		padding:0;
+		width:60px;
+		height:22px;
+		background-color:grey;
+		color:white;
+	}
+	table td:nth-child(3) div div:nth-child(3){
+		height:50px;
+	}
+	table td:nth-child(4) button{
+		position:relative;
+		top:40px;
+		border:0;
+		
+	}
+	#commentRead{
+		border-top:1px dotted #BABABA;
+		padding:10px;
+		background-color:#F2F5F7;
+	}
+	#commentRead div{
+		display:inline-block;
 		line-height:30px;
 	}
-	.modal-body textarea{
-		width:100%;
-		height:120px;
-		border:1px solid lightgrey;
+	#commentRead div:nth-child(2){
+		float:right;
+	}
+	#commentRead div:nth-child(2) button{
+		padding:0;
+		width:40px;
+		height:23px;
+	}
+	#commentWrite  button{
+		width:42px;
+		height:22px;
+		padding:0;
+		font-size:12px;
+		font-weight:bold;
+	}
+	#commentWrite hr{
+		margin:10px;	
+	}
+	#commentWrite strong{
+		margin-right:20px;
+	}
+	#commentWrite textarea{
+		resize: none;
+		padding:5px;
+		border-radius:5px;
+	}
+	#commentWrite form div button{
+		width:130px;
+		height:70px;
+		float:right;
+		margin-right:10px;
+	}
+	.commentInfo{
+		margin:10px;
+	}
+	.commentInfo span{
+		position:relative;
+		bottom:4px;
+		margin-left:5px;
+	}
+	.commentInfo span:nth-child(2){
+		font-weight:bold;
+	}
+	.commentInfo button{
+		float:right;
+		margin-right:5px;
+	}
+	.fa-comment-dots{
+		font-size:25px;
+	}
+	.commentContent{
+		margin:10px 0px 50px 10px;
+		line-height:25px;
+	}
+	#pagination{
+		margin-top:30px;
+		margin-bottom:100px;
+		text-align:center;
+	}
+	#pagination .currentPage{
+		color:#727272 !important;
+		font-weight:bold;
+	}
+	#pagination a{
+		color:#878787;
+		margin-right:10px;
+	}
+	.none{
+		display:none;
 	}
 </style>
-</head>
 <body>
 
 	<div class="container">
@@ -126,8 +166,8 @@
 			<div id="submenu">
 				<a href="01.html"><span>스타일 숍 공지</span></a> <a
 					href="02.html"><span>고객센터 공지</span></a> <a href="05.html"><span>커뮤니티</span></a>
-				<a href="08.html"><span>상품 문의</span></a> <a href="10.html" class="activeMenu"><span>1:1
-						문의</span></a> <a href="13.html"><span>상품평</span></a> <a href="14.html"><span>자주
+				<a href="08.html"><span>상품 문의</span></a> <a href="10.html"><span>1:1
+						문의</span></a> <a href="13.html" class="activeMenu"><span>상품평</span></a> <a href="14.html"><span>자주
 						하는 질문</span></a> <a href="16.html"><span>이벤트</span></a> <a href="19.html"><span>게시판
 						카테고리 관리</span></a>
 			</div>
@@ -230,56 +270,114 @@
 		<div id = "AllContent">
 			<div id = "menuBar">
 				<p id = "menuName">Board Managament</p>
-				<p id = "currentIdx">&#124; 게시판 관리 > 1:1 문의 목록 > 상세 보기</p>
-			</div>
-		<div id = "requestTitle">
-			<hr>
-			<span class = "Dtitle"><strong>Q</strong><span>[판매] 스타일 숍 이용 문의</span></span>
-			<div class = "Titleinfo">
-				<span class = "Did">{작성자 ID 표기}</span>
-				<span>&#124;</span>
-				<span class = "Ddate">{작성일 표기}</span>
+				<p id = "currentIdx">&#124; 게시판 관리 > 상품평 목록</p>
 			</div>
 			<hr>
-		</div>
-		<div id = "requestContent">
-			상품 등록 버튼을 클릭하면 이용 가능한 등급이 아니라고 나옵니다.<br>
-			어떻게 하면 이용 할 수 있는 등급이 되나요?<br>
-			빠른 답변 부탁드립니다.
-			<div class = "buttonBox">
-				<button class = "form-control" data-toggle = "modal" data-target = "#otom">수정</button>
-				<button class = "form-control">삭제</button>
+			<div id = "productSearch">
+				<form>
+					<select class = "form-control">
+						<option>카테고리 전체</option>
+					</select>
+					<input type = "text" class = "form-control" name = "title" />
+					<button type = "button" class = "btn btn-default">검색</button>
+				</form>
 			</div>
-		</div>
-		<div id = "responseTitle">
-			<hr>
-			<span class = "Dtitle"><strong>A</strong><span>답변 준비 중</span></span>
-			<div class = "Titleinfo">
-				<span class = "Did">admin02</span>
-				<span>&#124;</span>
-				<span class = "Ddate">2023-01-02 12:10:32</span>
+			<div	id = "product">
+				<table id = "productTable" class = "table table-hover">
+					<tr>
+						<td>
+							<span>15.</span>
+						</td>
+						<td>
+							<div>
+								목록 이미지
+							</div>
+						</td>
+						<td>
+							<div>
+								<div>
+									<span>{카테고리명&nbsp;&#60;&nbsp;상품평 표기}</span>
+									<button class = "btn btn-default" onclick = "location.href = '../../USER/GOODS/02.html'">제품보기</button>
+								</div>
+								<div>
+									<span>{평점 표기}</span>
+								</div>
+								<div>
+									<span>본문 내용 000자 (2줄 표기)</span>
+								</div>
+								<div>
+									<span>{아이디}</span>
+									<span>&#124;</span>
+									<span>{작성일}</span>
+									<span>댓글{댓글수}개</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div>
+								<button class = "btn btn-default">보기 <span class = "glyphicon glyphicon-triangle-bottom"></span></button>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div id = "commentRead" class = "none">
+					<div>
+						<span>
+							{상품평}<br>
+							상품이 정말 너무 예뻐요.빠른 배송도 너무 감사합니다.<br>
+							앞으로 자주 이용할게요~
+						</span>
+					</div>
+					<div>
+						<button class = "btn btn-default" data-toggle = "modal" data-target = "#pim">수정</button>
+						<button class = "btn btn-default">삭제</button>
+					</div>
+				</div>
+				<div id = "commentWrite">
+					<hr>
+					<strong>작성된 댓글 (1개)</strong>
+					<button id = "writeButton" class = "btn btn-default">작성</button>
+					<button id = "writeCancel" class = "btn btn-default">취소</button>
+					<hr>
+					<form id = "writeForm">
+						<div>
+							<textarea cols = "85" rows ="3" placeholder = "- 최대 000자까지 작성할 수 있습니다(띄어쓰기 포함).
+	※욕설, 영업에 방해되는 글은 관리자에 의해 삭제됩니다."></textarea>
+							<button class = "btn btn-default">등록</button>
+						</div>
+					</form>
+					<hr>
+					<div class = "commentInfo">
+						<i class="far fa-comment-dots"></i>
+						<span>Admin</span>
+						<span>&#124;</span>
+						<span>2023-01-01 16:10</span>
+						<button class = "btn btn-default">수정</button>
+						<button class = "btn btn-default">삭제</button>
+					</div>
+					<div class = "commentContent" >
+					<span>안녕하세요! 고객님 저희 쇼핑몰을 이용해주셔서 감사합니다. 더욱 노력하겠습니다.</span>
+					</div>
+					<hr>
+				</div>
 			</div>
-			<hr>
-		</div>
-		<div id = "responseContent">
-			답변을 준비 중입니다.
-			신속한 답변을 원하신다면 고객센터로 문의해 주세요.<br>
-			<span class = "glyphicon glyphicon-triangle-right">고객센터 : 070-0000-0000</span>
-			<div class = "buttonBox">
-				<button class = "form-control">수정</button>
-				<button class = "form-control">삭제</button>
-				<button class = "form-control" data-toggle = "modal" data-target = "#otom">답변하기</button>
+			<div id = "pagination">
+				<div>
+					<a href = "#"><span class = "glyphicon glyphicon-chevron-left"></span></a>
+					<a href = "#"  class = "currentPage">1</a>
+					<a href = "#">2</a>
+					<a href = "#">3</a>
+					<a href = "#">4</a>
+					<a href = "#">5</a>
+					<a href = "#" ><span class = "glyphicon glyphicon-chevron-right"></span></a>
+					<div id = "currentBar"></div>
+				</div>		
 			</div>
-		</div>
-		<div id = "footerDiv">
-			<hr>
-			<button class = "btn btn-default left" onclick = "location.href = '10.html'">목록 보기</button>
 		</div>
 	</div>
 </div>
-</div>
 
-	<div class = "modal fade" id  ="otom">
+	<div class = "modal fade" id  ="pim">
 		<div class = "modal-dialog modal-md">
 			<div class ="modal-content">
 				<div class = "modal-header">
@@ -288,12 +386,7 @@
 					<hr>
 				</div>
 				<div class = "modal-body">
-					<div>
-						<span>에디터 기능</span>
-					</div>
-					<div>
-						<textarea></textarea>
-					</div>
+					<textarea class = "form-control" cols = "20" rows = "6" name = "modifyComment"></textarea>
 				</div>
 				<div class ="modal-footer">
 					<button type = "button" class = "btn btn-default" data-dismiss = "modal">작성완료</button>
