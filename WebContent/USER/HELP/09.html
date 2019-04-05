@@ -142,13 +142,24 @@
 	float:left;
 }
 #register-form > div:nth-child(3){
-	width:150px;
+	width:600px;
 	height:100px;
 	float:left;
+}
+#register-form > div:nth-child(4){
+	width:150px;
+	height:100px;
+	float:right;
 }
 #register-submit{
 	width:120px;
 	height:160px;
+}
+.row .panel-body{
+	height:260px;
+}
+.none{
+	display:none !important;
 }
 </style>
 </head>
@@ -252,6 +263,9 @@
 												<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="이메일" value="">
 											</div>										
 										</div>
+										<div class = "none">
+											<span>가입시 등록하신 메일 주소로 임시 비밀번호를 발송해 드렸습니다.</span>
+										</div>
 										<div class="form-group">
 											<div class="row">
 												<div class="col-sm-6 col-sm-offset-3">
@@ -286,6 +300,21 @@
 			$(this).addClass('active');
 			e.preventDefault();
 		});
+		
+		$("#register-submit").click(function(e){
+			e.preventDefault();
+		if($("#register-form > div:nth-child(2)").hasClass("none")){
+			$("#login-submit").val("확인");
+			
+			$("#register-form > div:nth-child(2)").removeClass("none");
+			$("#register-form > div:nth-child(3)").addClass("none");
+		}else{
+			$("#register-submit").val("다시찾기");
+			
+			$("#register-form > div:nth-child(3)").removeClass("none");
+			$("#register-form > div:nth-child(2)").addClass("none");
+		}
+	})
 
 	});
 	

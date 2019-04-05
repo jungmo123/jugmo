@@ -8,6 +8,8 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../CSS/Navigation.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 	#mWGuide{
 		width:600px;
@@ -142,10 +144,21 @@
 				</div>
 			</div>
 			<div id = "buttonGroup">
-				<button class = "btn btn-default" onclick="location.href='../../MAIN/01.html'">확인</button>
+				<button id = "leave" class = "btn btn-default" onclick="location.href='../../MAIN/01.html'">확인</button>
 				<button class = "btn btn-default" onclick="location.href='../../MAIN/01.html'">취소</button>
 			</div>
 		</div>
 	</div>
+	
+	<script>
+		$("#leave").click(function(){
+			var setCookie = function(name, value, exp) {
+				var date = new Date();
+				date.setTime(date.getTime() + exp*10);
+				document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+				};
+			setCookie("login","login",-1);
+		})
+	</script>
 </body>
 </html>
